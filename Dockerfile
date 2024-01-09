@@ -10,3 +10,6 @@ WORKDIR /src
 COPY npm/ npm
 
 RUN cd npm && npm ci
+
+# Execute the test script
+CMD ["node", "./npm/test.js"]
