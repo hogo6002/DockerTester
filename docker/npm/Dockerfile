@@ -7,9 +7,9 @@ RUN apt-get update && apt-get upgrade -y && \
 RUN mkdir /src
 WORKDIR /src
 
-COPY npm/ npm
+COPY src/ src
 
-RUN cd npm && npm ci
+RUN cd src && npm ci
 
 # Execute the test script
-CMD ["node", "./npm/test.js"]
+CMD ["node", "./src/test.js"]
