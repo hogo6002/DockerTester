@@ -1,4 +1,4 @@
-linux:~$ SNYK_TOKEN=<token> snyk container test docker-scanning-test-go
+
 Testing docker-scanning-test-go...
 
 ✗ Low severity vulnerability found in util-linux/libblkid1
@@ -922,5 +922,6 @@ Licenses:          enabled
 
 
 Tested 24 projects, 2 contained vulnerable paths.
+
 
 

@@ -8,7 +8,8 @@ WORKDIR /src
 COPY src/ src
 
 # Install required packages
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y \
     golang \
     git
 
@@ -19,4 +20,4 @@ RUN cd ./src && go get -u github.com/blevesearch/bleve
 RUN cd ./src && go build -o main .
 
 # Command to run the executable
-CMD ["./src/main"]
+ENTRYPOINT ["./src/main"]

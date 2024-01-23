@@ -1,25 +1,3 @@
-linux:~$ docker scout quickview docker-scanning-test-go
-    i New version 1.3.0 available (installed version is 1.2.2) at https://github.com/docker/scout-cli
-    ✓ SBOM of image already cached, 357 packages indexed
-
-  Target               │  docker-scanning-test-go:latest  │    1C     2H     3M    45L     2?   
-    digest             │  fc506c389a36                    │                                     
-  Base image           │  debian:testing-slim             │    1C     1H     2M     7L     2?   
-  Refreshed base image │  debian:testing-slim             │    0C     1H     1M     8L     1?   
-                       │                                  │    -1            -1     +1     -1   
-  Updated base image   │  debian:stable-slim              │    0C     0H     0M    19L          
-                       │                                  │    -1     -1     -2    +12     -2   
-
-What's Next?
-  View vulnerabilities → docker scout cves docker-scanning-test-go
-  View base image update recommendations → docker scout recommendations docker-scanning-test-go
-  Include policy results in your quickview by supplying an organization → docker scout quickview docker-scanning-test-go --org <organization>
-
-
-linux:~$ docker scout cves docker-scanning-test-go
-    i New version 1.3.0 available (installed version is 1.2.2) at https://github.com/docker/scout-cli
-    ✓ SBOM of image already cached, 357 packages indexed
-    ✗ Detected 21 vulnerable packages with a total of 53 vulnerabilities
 
 
 ## Overview
@@ -29,7 +7,7 @@ linux:~$ docker scout cves docker-scanning-test-go
   Target            │  docker-scanning-test-go:latest     
     digest          │  fc506c389a36                       
     platform        │ linux/amd64                         
-    vulnerabilities │    1C     2H     3M    45L     2?   
+    vulnerabilities │    1C     2H     3M    39L     2?   
     size            │ 638 MB                              
     packages        │ 357                                 
 
@@ -186,40 +164,6 @@ pkg:deb/debian/tiff@4.5.1+git230720-3?os_distro=trixie&os_name=debian&os_version
       Fixed version  : not fixed            
     
 
-   0C     0H     0M     6L  binutils 2.41.90.20240115-1
-pkg:deb/debian/binutils@2.41.90.20240115-1?os_distro=trixie&os_name=debian&os_version=unstable
-
-    ✗ LOW CVE-2021-32256
-      https://scout.docker.com/v/CVE-2021-32256
-      Affected range : >=2.41.90.20240115-1  
-      Fixed version  : not fixed             
-    
-    ✗ LOW CVE-2018-9996
-      https://scout.docker.com/v/CVE-2018-9996
-      Affected range : >=2.41.90.20240115-1  
-      Fixed version  : not fixed             
-    
-    ✗ LOW CVE-2018-20712
-      https://scout.docker.com/v/CVE-2018-20712
-      Affected range : >=2.41.90.20240115-1  
-      Fixed version  : not fixed             
-    
-    ✗ LOW CVE-2018-20673
-      https://scout.docker.com/v/CVE-2018-20673
-      Affected range : >=2.41.90.20240115-1  
-      Fixed version  : not fixed             
-    
-    ✗ LOW CVE-2018-18483
-      https://scout.docker.com/v/CVE-2018-18483
-      Affected range : >=2.41.90.20240115-1  
-      Fixed version  : not fixed             
-    
-    ✗ LOW CVE-2017-13716
-      https://scout.docker.com/v/CVE-2017-13716
-      Affected range : >=2.41.90.20240115-1  
-      Fixed version  : not fixed             
-    
-
    0C     0H     0M     4L  openssl 3.1.4-2
 pkg:deb/debian/openssl@3.1.4-2?os_distro=trixie&os_name=debian&os_version=unstable
 
@@ -268,20 +212,6 @@ pkg:deb/debian/patch@2.7.6-7?os_distro=trixie&os_name=debian&os_version=unstable
       Fixed version  : not fixed  
     
 
-   0C     0H     0M     2L  glibc 2.37-13
-pkg:deb/debian/glibc@2.37-13?os_distro=trixie&os_name=debian&os_version=unstable
-
-    ✗ LOW CVE-2018-20796
-      https://scout.docker.com/v/CVE-2018-20796
-      Affected range : >=2.37-13  
-      Fixed version  : not fixed  
-    
-    ✗ LOW CVE-2010-4756
-      https://scout.docker.com/v/CVE-2010-4756
-      Affected range : >=2.37-13  
-      Fixed version  : not fixed  
-    
-
    0C     0H     0M     2L  shadow 1:4.13+dfsg1-3
 pkg:deb/debian/shadow@1:4.13+dfsg1-3?os_distro=trixie&os_name=debian&os_version=unstable
 
@@ -294,6 +224,20 @@ pkg:deb/debian/shadow@1:4.13+dfsg1-3?os_distro=trixie&os_name=debian&os_version=
       https://scout.docker.com/v/CVE-2007-5686
       Affected range : >=1:4.13+dfsg1-3  
       Fixed version  : not fixed         
+    
+
+   0C     0H     0M     2L  glibc 2.37-13
+pkg:deb/debian/glibc@2.37-13?os_distro=trixie&os_name=debian&os_version=unstable
+
+    ✗ LOW CVE-2018-20796
+      https://scout.docker.com/v/CVE-2018-20796
+      Affected range : >=2.37-13  
+      Fixed version  : not fixed  
+    
+    ✗ LOW CVE-2010-4756
+      https://scout.docker.com/v/CVE-2010-4756
+      Affected range : >=2.37-13  
+      Fixed version  : not fixed  
     
 
    0C     0H     0M     2L  git 1:2.43.0-1
@@ -324,24 +268,6 @@ pkg:deb/debian/tar@1.34+dfsg-1.2?os_distro=trixie&os_name=debian&os_version=unst
       Fixed version  : 1.34+dfsg-1.3   
     
 
-   0C     0H     0M     1L  perl 5.38.2-3
-pkg:deb/debian/perl@5.38.2-3?os_distro=trixie&os_name=debian&os_version=unstable
-
-    ✗ LOW CVE-2011-4116
-      https://scout.docker.com/v/CVE-2011-4116
-      Affected range : >=5.38.2-3  
-      Fixed version  : not fixed   
-    
-
-   0C     0H     0M     1L  jbigkit 2.1-6.1
-pkg:deb/debian/jbigkit@2.1-6.1?os_distro=trixie&os_name=debian&os_version=unstable
-
-    ✗ LOW CVE-2017-9937
-      https://scout.docker.com/v/CVE-2017-9937
-      Affected range : >=2.1-6.1  
-      Fixed version  : not fixed  
-    
-
    0C     0H     0M     1L  gnupg2 2.2.40-1.1
 pkg:deb/debian/gnupg2@2.2.40-1.1?os_distro=trixie&os_name=debian&os_version=unstable
 
@@ -351,12 +277,12 @@ pkg:deb/debian/gnupg2@2.2.40-1.1?os_distro=trixie&os_name=debian&os_version=unst
       Fixed version  : not fixed     
     
 
-   0C     0H     0M     1L  libpng1.6 1.6.40-3
-pkg:deb/debian/libpng1.6@1.6.40-3?os_distro=trixie&os_name=debian&os_version=unstable
+   0C     0H     0M     1L  krb5 1.20.1-5
+pkg:deb/debian/krb5@1.20.1-5?os_distro=trixie&os_name=debian&os_version=unstable
 
-    ✗ LOW CVE-2021-4214
-      https://scout.docker.com/v/CVE-2021-4214
-      Affected range : >=1.6.40-3  
+    ✗ LOW CVE-2018-5709
+      https://scout.docker.com/v/CVE-2018-5709
+      Affected range : >=1.20.1-5  
       Fixed version  : not fixed   
     
 
@@ -369,12 +295,30 @@ pkg:deb/debian/libgcrypt20@1.10.3-2?os_distro=trixie&os_name=debian&os_version=u
       Fixed version  : not fixed   
     
 
-   0C     0H     0M     1L  krb5 1.20.1-5
-pkg:deb/debian/krb5@1.20.1-5?os_distro=trixie&os_name=debian&os_version=unstable
+   0C     0H     0M     1L  libpng1.6 1.6.40-3
+pkg:deb/debian/libpng1.6@1.6.40-3?os_distro=trixie&os_name=debian&os_version=unstable
 
-    ✗ LOW CVE-2018-5709
-      https://scout.docker.com/v/CVE-2018-5709
-      Affected range : >=1.20.1-5  
+    ✗ LOW CVE-2021-4214
+      https://scout.docker.com/v/CVE-2021-4214
+      Affected range : >=1.6.40-3  
+      Fixed version  : not fixed   
+    
+
+   0C     0H     0M     1L  jbigkit 2.1-6.1
+pkg:deb/debian/jbigkit@2.1-6.1?os_distro=trixie&os_name=debian&os_version=unstable
+
+    ✗ LOW CVE-2017-9937
+      https://scout.docker.com/v/CVE-2017-9937
+      Affected range : >=2.1-6.1  
+      Fixed version  : not fixed  
+    
+
+   0C     0H     0M     1L  perl 5.38.2-3
+pkg:deb/debian/perl@5.38.2-3?os_distro=trixie&os_name=debian&os_version=unstable
+
+    ✗ LOW CVE-2011-4116
+      https://scout.docker.com/v/CVE-2011-4116
+      Affected range : >=5.38.2-3  
       Fixed version  : not fixed   
     
 
@@ -388,9 +332,9 @@ pkg:deb/debian/pam@1.5.2-9.1?os_distro=trixie&os_name=debian&os_version=unstable
     
 
 
-53 vulnerabilities found in 21 packages
+47 vulnerabilities found in 20 packages
   UNSPECIFIED  2   
-  LOW          45  
+  LOW          39  
   MEDIUM       3   
   HIGH         2   
   CRITICAL     1   
