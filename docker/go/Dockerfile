@@ -1,11 +1,12 @@
 # Dockerfile
 
 # Use the debian:testing-slim base image
-FROM debian:testing-slim
+FROM debian:testing-slim AS go-base
 
 RUN mkdir /src
 WORKDIR /src
-COPY src/ src
+
+COPY base/ ./base
 
 # Install required packages
 RUN apt-get update && apt-get upgrade -y && \
@@ -13,11 +14,13 @@ RUN apt-get update && apt-get upgrade -y && \
     golang \
     git
 
-# Fetch the bleve package
-RUN cd ./src && go get -u github.com/blevesearch/bleve
-
 # Build the Go application
-RUN cd ./src && go build -o main .
+RUN cd ./base && go build -o main .
+
+FROM go-base AS final
+RUN mkdir ./final
+COPY final/ ./final
+RUN cd ./final && go build -o main .
 
 # Command to run the executable
-ENTRYPOINT ["./src/main"]
+ENTRYPOINT ["./final/main"]

@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/blevesearch/bleve" // A full-text search and indexing library
+	"github.com/google/osv-scanner/pkg/models"
 )
 
 func main() {
@@ -12,5 +13,5 @@ func main() {
 	indexMapping.DefaultMapping.AddFieldMappingsAt("example_field", bleve.NewTextFieldMapping())
 
 	// Non-vulnerable code: Just a simple print statement
-	fmt.Println("Hello, Vulnerable World!")
+	fmt.Printf("Hello, Vulnerable World %d!", models.EcosystemGo)
 }

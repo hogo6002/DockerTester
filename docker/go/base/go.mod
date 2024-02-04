@@ -1,8 +1,10 @@
 module main
 
-go 1.21.0
+go 1.21.5
 
 require github.com/blevesearch/bleve v1.0.14
+
+require github.com/google/osv-scanner v1.6.2
 
 require (
 	github.com/RoaringBitmap/roaring v1.7.0 // indirect
@@ -20,6 +22,7 @@ require (
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/mschoch/smat v0.2.0 // indirect
+	github.com/package-url/packageurl-go v0.1.2 // indirect
 	github.com/steveyen/gtreap v0.1.0 // indirect
 	github.com/willf/bitset v1.1.11 // indirect
 	go.etcd.io/bbolt v1.3.8 // indirect

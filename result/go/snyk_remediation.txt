@@ -17,6 +17,7 @@ Testing docker-scanning-test-go...
   Introduced through: tiff/libtiff6@4.5.1+git230720-4, glibc/libc-devtools@2.37-15~deb13u1
   From: tiff/libtiff6@4.5.1+git230720-4
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > tiff/libtiff6@4.5.1+git230720-4
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in tiff/libtiff6
   Description: Use After Free
@@ -24,6 +25,7 @@ Testing docker-scanning-test-go...
   Introduced through: tiff/libtiff6@4.5.1+git230720-4, glibc/libc-devtools@2.37-15~deb13u1
   From: tiff/libtiff6@4.5.1+git230720-4
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > tiff/libtiff6@4.5.1+git230720-4
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in tiff/libtiff6
   Description: NULL Pointer Dereference
@@ -31,6 +33,7 @@ Testing docker-scanning-test-go...
   Introduced through: tiff/libtiff6@4.5.1+git230720-4, glibc/libc-devtools@2.37-15~deb13u1
   From: tiff/libtiff6@4.5.1+git230720-4
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > tiff/libtiff6@4.5.1+git230720-4
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in tiff/libtiff6
   Description: Out-of-bounds Read
@@ -38,6 +41,7 @@ Testing docker-scanning-test-go...
   Introduced through: tiff/libtiff6@4.5.1+git230720-4, glibc/libc-devtools@2.37-15~deb13u1
   From: tiff/libtiff6@4.5.1+git230720-4
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > tiff/libtiff6@4.5.1+git230720-4
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in tiff/libtiff6
   Description: Out-of-bounds Read
@@ -45,6 +49,7 @@ Testing docker-scanning-test-go...
   Introduced through: tiff/libtiff6@4.5.1+git230720-4, glibc/libc-devtools@2.37-15~deb13u1
   From: tiff/libtiff6@4.5.1+git230720-4
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > tiff/libtiff6@4.5.1+git230720-4
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in tiff/libtiff6
   Description: Missing Release of Resource after Effective Lifetime
@@ -52,6 +57,7 @@ Testing docker-scanning-test-go...
   Introduced through: tiff/libtiff6@4.5.1+git230720-4, glibc/libc-devtools@2.37-15~deb13u1
   From: tiff/libtiff6@4.5.1+git230720-4
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > tiff/libtiff6@4.5.1+git230720-4
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in tiff/libtiff6
   Description: Out-of-bounds Read
@@ -59,6 +65,7 @@ Testing docker-scanning-test-go...
   Introduced through: tiff/libtiff6@4.5.1+git230720-4, glibc/libc-devtools@2.37-15~deb13u1
   From: tiff/libtiff6@4.5.1+git230720-4
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > tiff/libtiff6@4.5.1+git230720-4
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in tiff/libtiff6
   Description: Out-of-bounds Write
@@ -66,6 +73,7 @@ Testing docker-scanning-test-go...
   Introduced through: tiff/libtiff6@4.5.1+git230720-4, glibc/libc-devtools@2.37-15~deb13u1
   From: tiff/libtiff6@4.5.1+git230720-4
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > tiff/libtiff6@4.5.1+git230720-4
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in tiff/libtiff6
   Description: Out-of-bounds Write
@@ -73,6 +81,7 @@ Testing docker-scanning-test-go...
   Introduced through: tiff/libtiff6@4.5.1+git230720-4, glibc/libc-devtools@2.37-15~deb13u1
   From: tiff/libtiff6@4.5.1+git230720-4
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > tiff/libtiff6@4.5.1+git230720-4
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in tar
   Description: CVE-2005-2541
@@ -129,6 +138,7 @@ Testing docker-scanning-test-go...
   From: adduser@3.137 > shadow/passwd@1:4.13+dfsg1-3+b1
   From: openssh/openssh-client@1:9.6p1-3 > shadow/passwd@1:4.13+dfsg1-3+b1
   and 1 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in shadow/passwd
   Description: Incorrect Permission Assignment for Critical Resource
@@ -138,6 +148,7 @@ Testing docker-scanning-test-go...
   From: adduser@3.137 > shadow/passwd@1:4.13+dfsg1-3+b1
   From: openssh/openssh-client@1:9.6p1-3 > shadow/passwd@1:4.13+dfsg1-3+b1
   and 1 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in perl/perl-modules-5.38
   Description: Link Following
@@ -154,24 +165,28 @@ Testing docker-scanning-test-go...
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-PATCH-2324791
   Introduced through: patch@2.7.6-7
   From: patch@2.7.6-7
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in patch
   Description: Double Free
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-PATCH-303860
   Introduced through: patch@2.7.6-7
   From: patch@2.7.6-7
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in patch
   Description: NULL Pointer Dereference
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-PATCH-303879
   Introduced through: patch@2.7.6-7
   From: patch@2.7.6-7
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in patch
   Description: Directory Traversal
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-PATCH-303895
   Introduced through: patch@2.7.6-7
   From: patch@2.7.6-7
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in pam/libpam0g
   Description: CVE-2024-22365
@@ -212,55 +227,72 @@ Testing docker-scanning-test-go...
   From: libfido2/libfido2-1@1.14.0-1 > openssl/libssl3@3.1.4-2
   and 7 more...
   Image layer: 'apt-get install -y golang git'
-  Fixed in: 3.1.5-1
+
+✗ Low severity vulnerability found in openssl/libssl3
+  Description: CVE-2024-0727
+  Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSL-6190222
+  Introduced through: coreutils/coreutils@9.4-3+b1, cyrus-sasl2/libsasl2-modules@2.1.28+dfsg1-4+b1, libfido2/libfido2-1@1.14.0-1, openssh/openssh-client@1:9.6p1-3, ca-certificates@20230311, git@1:2.43.0-1, openssl@3.1.4-2
+  From: coreutils/coreutils@9.4-3+b1 > openssl/libssl3@3.1.4-2
+  From: cyrus-sasl2/libsasl2-modules@2.1.28+dfsg1-4+b1 > openssl/libssl3@3.1.4-2
+  From: libfido2/libfido2-1@1.14.0-1 > openssl/libssl3@3.1.4-2
+  and 7 more...
+  Image layer: 'apt-get install -y golang git'
 
 ✗ Low severity vulnerability found in openssh/openssh-client
   Description: CVE-2016-20012
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSH-1585652
   Introduced through: openssh/openssh-client@1:9.6p1-3
   From: openssh/openssh-client@1:9.6p1-3
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in openssh/openssh-client
   Description: Information Exposure
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSH-368623
   Introduced through: openssh/openssh-client@1:9.6p1-3
   From: openssh/openssh-client@1:9.6p1-3
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in openssh/openssh-client
   Description: Access Restriction Bypass
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSH-368834
   Introduced through: openssh/openssh-client@1:9.6p1-3
   From: openssh/openssh-client@1:9.6p1-3
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in openssh/openssh-client
   Description: Information Exposure
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSH-368926
   Introduced through: openssh/openssh-client@1:9.6p1-3
   From: openssh/openssh-client@1:9.6p1-3
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in openssh/openssh-client
   Description: Improper Authentication
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSH-369017
   Introduced through: openssh/openssh-client@1:9.6p1-3
   From: openssh/openssh-client@1:9.6p1-3
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in openssh/openssh-client
   Description: Inappropriate Encoding for Output Context
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSH-369026
   Introduced through: openssh/openssh-client@1:9.6p1-3
   From: openssh/openssh-client@1:9.6p1-3
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in openssh/openssh-client
   Description: Information Exposure
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSH-574761
   Introduced through: openssh/openssh-client@1:9.6p1-3
   From: openssh/openssh-client@1:9.6p1-3
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in openssh/openssh-client
   Description: OS Command Injection
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSH-590141
   Introduced through: openssh/openssh-client@1:9.6p1-3
   From: openssh/openssh-client@1:9.6p1-3
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in openldap/libldap-2.5-0
   Description: Improper Initialization
@@ -301,6 +333,7 @@ Testing docker-scanning-test-go...
   From: libpng1.6/libpng16-16@1.6.40-3
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > libpng1.6/libpng16-16@1.6.40-3
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > fontconfig/libfontconfig1@2.14.2-6+b1 > freetype/libfreetype6@2.13.2+dfsg-1+b1 > libpng1.6/libpng16-16@1.6.40-3
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in libgcrypt20
   Description: Use of a Broken or Risky Cryptographic Algorithm
@@ -310,6 +343,7 @@ Testing docker-scanning-test-go...
   From: apt@2.7.10 > apt/libapt-pkg6.0@2.7.10 > libgcrypt20@1.10.3-2
   From: apt@2.7.10 > gnupg2/gpgv@2.2.40-1.1+b1 > libgcrypt20@1.10.3-2
   and 1 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in krb5/libgssapi-krb5-2
   Description: Integer Overflow or Wraparound
@@ -327,6 +361,7 @@ Testing docker-scanning-test-go...
   Introduced through: jbigkit/libjbig0@2.1-6.1, glibc/libc-devtools@2.37-15~deb13u1
   From: jbigkit/libjbig0@2.1-6.1
   From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > tiff/libtiff6@4.5.1+git230720-4 > jbigkit/libjbig0@2.1-6.1
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in jansson/libjansson4
   Description: Out-of-bounds Read
@@ -334,6 +369,7 @@ Testing docker-scanning-test-go...
   Introduced through: jansson/libjansson4@2.14-2+b2, binutils@2.41.90.20240122-1
   From: jansson/libjansson4@2.14-2+b2
   From: binutils@2.41.90.20240122-1 > binutils/binutils-x86-64-linux-gnu@2.41.90.20240122-1 > jansson/libjansson4@2.14-2+b2
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in gnutls28/libgnutls30
   Description: Improper Input Validation
@@ -351,6 +387,7 @@ Testing docker-scanning-test-go...
   Introduced through: gnupg2/gpgv@2.2.40-1.1+b1, apt@2.7.10
   From: gnupg2/gpgv@2.2.40-1.1+b1
   From: apt@2.7.10 > gnupg2/gpgv@2.2.40-1.1+b1
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Uncontrolled Recursion
@@ -360,6 +397,7 @@ Testing docker-scanning-test-go...
   From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Uncontrolled Recursion
@@ -369,6 +407,7 @@ Testing docker-scanning-test-go...
   From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Resource Management Errors
@@ -378,6 +417,7 @@ Testing docker-scanning-test-go...
   From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Out-of-Bounds
@@ -387,6 +427,7 @@ Testing docker-scanning-test-go...
   From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Use of Insufficiently Random Values
@@ -396,6 +437,7 @@ Testing docker-scanning-test-go...
   From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Information Exposure
@@ -405,6 +447,7 @@ Testing docker-scanning-test-go...
   From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: CVE-2019-1010023
@@ -414,6 +457,7 @@ Testing docker-scanning-test-go...
   From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: CVE-2023-6780
@@ -423,6 +467,7 @@ Testing docker-scanning-test-go...
   From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
   Fixed in: 2.37-15
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
@@ -433,6 +478,7 @@ Testing docker-scanning-test-go...
   From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
   Fixed in: 2.37-15
 
 ✗ Low severity vulnerability found in git/git-man
@@ -464,18 +510,21 @@ Testing docker-scanning-test-go...
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-COREUTILS-317471
   Introduced through: coreutils/coreutils@9.4-3+b1
   From: coreutils/coreutils@9.4-3+b1
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in coreutils/coreutils
   Description: Race Condition
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-COREUTILS-317495
   Introduced through: coreutils/coreutils@9.4-3+b1
   From: coreutils/coreutils@9.4-3+b1
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in coreutils/coreutils
   Description: CVE-2024-0684
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-COREUTILS-6180568
   Introduced through: coreutils/coreutils@9.4-3+b1
   From: coreutils/coreutils@9.4-3+b1
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in binutils/binutils-common
   Description: Allocation of Resources Without Limits or Throttling
@@ -485,6 +534,7 @@ Testing docker-scanning-test-go...
   From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   and 19 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in binutils/binutils-common
   Description: Out-of-bounds Write
@@ -494,6 +544,7 @@ Testing docker-scanning-test-go...
   From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   and 19 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in binutils/binutils-common
   Description: Out-of-bounds Read
@@ -503,6 +554,7 @@ Testing docker-scanning-test-go...
   From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   and 19 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in binutils/binutils-common
   Description: Integer Overflow or Wraparound
@@ -512,6 +564,7 @@ Testing docker-scanning-test-go...
   From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   and 19 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in binutils/binutils-common
   Description: Uncontrolled Recursion
@@ -521,6 +574,7 @@ Testing docker-scanning-test-go...
   From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   and 19 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in binutils/binutils-common
   Description: Out-of-bounds Write
@@ -530,6 +584,7 @@ Testing docker-scanning-test-go...
   From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
   and 19 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Low severity vulnerability found in apt/libapt-pkg6.0
   Description: Improper Verification of Cryptographic Signature
@@ -538,6 +593,7 @@ Testing docker-scanning-test-go...
   From: apt/libapt-pkg6.0@2.7.10
   From: apt@2.7.10 > apt/libapt-pkg6.0@2.7.10
   From: apt@2.7.10
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ Medium severity vulnerability found in openssl/libssl3
   Description: Out-of-bounds Write
@@ -548,24 +604,13 @@ Testing docker-scanning-test-go...
   From: libfido2/libfido2-1@1.14.0-1 > openssl/libssl3@3.1.4-2
   and 7 more...
   Image layer: 'apt-get install -y golang git'
-  Fixed in: 3.1.5-1
-
-✗ Medium severity vulnerability found in openssl/libssl3
-  Description: CVE-2024-0727
-  Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSL-6190222
-  Introduced through: coreutils/coreutils@9.4-3+b1, cyrus-sasl2/libsasl2-modules@2.1.28+dfsg1-4+b1, libfido2/libfido2-1@1.14.0-1, openssh/openssh-client@1:9.6p1-3, ca-certificates@20230311, git@1:2.43.0-1, openssl@3.1.4-2
-  From: coreutils/coreutils@9.4-3+b1 > openssl/libssl3@3.1.4-2
-  From: cyrus-sasl2/libsasl2-modules@2.1.28+dfsg1-4+b1 > openssl/libssl3@3.1.4-2
-  From: libfido2/libfido2-1@1.14.0-1 > openssl/libssl3@3.1.4-2
-  and 7 more...
-  Image layer: 'apt-get install -y golang git'
-  Fixed in: 3.1.5-1
 
 ✗ High severity vulnerability found in openssh/openssh-client
   Description: CVE-2023-51767
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSH-6139208
   Introduced through: openssh/openssh-client@1:9.6p1-3
   From: openssh/openssh-client@1:9.6p1-3
+  Image layer: Introduced by your base image (debian:testing-slim)
 
 ✗ High severity vulnerability found in openldap/libldap-2.5-0
   Description: NULL Pointer Dereference
@@ -583,23 +628,33 @@ Testing docker-scanning-test-go...
   From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
+  Image layer: Introduced by your base image (debian:testing-slim)
   Fixed in: 2.37-15
 
 
 
 Organization:      hogo6002
 Package manager:   deb
+Target file:       ../../docker/go/Dockerfile
 Project name:      docker-image|docker-scanning-test-go
 Docker image:      docker-scanning-test-go
 Platform:          linux/amd64
+Base image:        debian:testing-slim
 Licenses:          enabled
 
 Tested 219 dependencies for known issues, found 72 issues.
 
-Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
-Example: $ snyk container test docker-scanning-test-go --file=path/to/Dockerfile
+Recommendations for debian:testing-slim are not available, as we haven't found any recent updates to this base image.
+Consider upgrading your base image.
+See above for details and fixes on individual vulnerabilities
 
-To remove this message in the future, please run `snyk config set disableSuggestions=true`
+Pro tip: use `--exclude-base-image-vulns` to exclude from display Docker base image vulnerabilities.
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
+
+Learn more: https://docs.snyk.io/products/snyk-container/getting-around-the-snyk-container-ui/base-image-detection
 
 -------------------------------------------------------
 
@@ -635,8 +690,7 @@ Project name:      d3-pprof
 Docker image:      docker-scanning-test-go
 Licenses:          enabled
 
-Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
-Example: $ snyk container test docker-scanning-test-go --file=path/to/Dockerfile
+Pro tip: use `--exclude-base-image-vulns` to exclude from display Docker base image vulnerabilities.
 
 Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
 
