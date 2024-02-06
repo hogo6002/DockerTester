@@ -314,10 +314,10 @@ Testing docker-scanning-test-go...
 ✗ Low severity vulnerability found in krb5/libgssapi-krb5-2
   Description: Integer Overflow or Wraparound
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-KRB5-395958
-  Introduced through: openssh/openssh-client@1:9.6p1-3, git@1:2.43.0-1, gcc-defaults/g++@4:13.2.0-2, krb5/krb5-locales@1.20.1-5
+  Introduced through: openssh/openssh-client@1:9.6p1-3, git@1:2.43.0-1, gcc-defaults/g++@4:13.2.0-7, krb5/krb5-locales@1.20.1-5
   From: openssh/openssh-client@1:9.6p1-3 > krb5/libgssapi-krb5-2@1.20.1-5
   From: git@1:2.43.0-1 > curl/libcurl3-gnutls@8.5.0-2 > krb5/libgssapi-krb5-2@1.20.1-5
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > libnsl/libnsl-dev@1.3.0-3 > libnsl/libnsl2@1.3.0-3 > libtirpc/libtirpc3@1.3.4+ds-1 > krb5/libgssapi-krb5-2@1.20.1-5
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > libnsl/libnsl-dev@1.3.0-3 > libnsl/libnsl2@1.3.0-3 > libtirpc/libtirpc3@1.3.4+ds-1 > krb5/libgssapi-krb5-2@1.20.1-5
   and 7 more...
   Image layer: 'apt-get install -y golang git'
 
@@ -331,9 +331,9 @@ Testing docker-scanning-test-go...
 ✗ Low severity vulnerability found in jansson/libjansson4
   Description: Out-of-bounds Read
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-JANSSON-1264525
-  Introduced through: jansson/libjansson4@2.14-2+b2, binutils@2.41.90.20240122-1
+  Introduced through: jansson/libjansson4@2.14-2+b2, binutils@2.42-2
   From: jansson/libjansson4@2.14-2+b2
-  From: binutils@2.41.90.20240122-1 > binutils/binutils-x86-64-linux-gnu@2.41.90.20240122-1 > jansson/libjansson4@2.14-2+b2
+  From: binutils@2.42-2 > binutils/binutils-x86-64-linux-gnu@2.42-2 > jansson/libjansson4@2.14-2+b2
 
 ✗ Low severity vulnerability found in gnutls28/libgnutls30
   Description: Improper Input Validation
@@ -355,72 +355,72 @@ Testing docker-scanning-test-go...
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Uncontrolled Recursion
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-GLIBC-338097
-  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-2, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
+  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-7, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
   From: glibc/libc-dev-bin@2.37-15~deb13u1
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Uncontrolled Recursion
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-GLIBC-338174
-  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-2, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
+  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-7, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
   From: glibc/libc-dev-bin@2.37-15~deb13u1
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Resource Management Errors
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-GLIBC-356736
-  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-2, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
+  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-7, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
   From: glibc/libc-dev-bin@2.37-15~deb13u1
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Out-of-Bounds
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-GLIBC-452130
-  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-2, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
+  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-7, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
   From: glibc/libc-dev-bin@2.37-15~deb13u1
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Use of Insufficiently Random Values
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-GLIBC-452151
-  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-2, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
+  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-7, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
   From: glibc/libc-dev-bin@2.37-15~deb13u1
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: Information Exposure
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-GLIBC-452711
-  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-2, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
+  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-7, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
   From: glibc/libc-dev-bin@2.37-15~deb13u1
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: CVE-2019-1010023
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-GLIBC-452916
-  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-2, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
+  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-7, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
   From: glibc/libc-dev-bin@2.37-15~deb13u1
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
 
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: CVE-2023-6780
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-GLIBC-6210093
-  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-2, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
+  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-7, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
   From: glibc/libc-dev-bin@2.37-15~deb13u1
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
   Fixed in: 2.37-15
@@ -428,9 +428,9 @@ Testing docker-scanning-test-go...
 ✗ Low severity vulnerability found in glibc/libc-dev-bin
   Description: CVE-2023-6779
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-GLIBC-6210094
-  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-2, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
+  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-7, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
   From: glibc/libc-dev-bin@2.37-15~deb13u1
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
   Fixed in: 2.37-15
@@ -477,59 +477,59 @@ Testing docker-scanning-test-go...
   Introduced through: coreutils/coreutils@9.4-3+b1
   From: coreutils/coreutils@9.4-3+b1
 
-✗ Low severity vulnerability found in binutils/binutils-common
+✗ Low severity vulnerability found in binutils/libbinutils
   Description: Allocation of Resources Without Limits or Throttling
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-BINUTILS-403702
-  Introduced through: binutils/binutils-common@2.41.90.20240122-1, binutils@2.41.90.20240122-1, binutils/libbinutils@2.41.90.20240122-1, binutils/libctf-nobfd0@2.41.90.20240122-1, binutils/libctf0@2.41.90.20240122-1, binutils/libgprofng0@2.41.90.20240122-1, binutils/libsframe1@2.41.90.20240122-1, binutils/binutils-x86-64-linux-gnu@2.41.90.20240122-1, gcc-defaults/g++@4:13.2.0-2
-  From: binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  and 19 more...
+  Introduced through: binutils/libbinutils@2.42-2, binutils@2.42-2, binutils/libctf-nobfd0@2.42-2, binutils/libctf0@2.42-2, binutils/libgprofng0@2.42-2, binutils/binutils-x86-64-linux-gnu@2.42-2, gcc-defaults/g++@4:13.2.0-7, binutils/binutils-common@2.42-2, binutils/libsframe1@2.42-2
+  From: binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/binutils-x86-64-linux-gnu@2.42-2 > binutils/libbinutils@2.42-2
+  and 15 more...
 
-✗ Low severity vulnerability found in binutils/binutils-common
+✗ Low severity vulnerability found in binutils/libbinutils
   Description: Out-of-bounds Write
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-BINUTILS-403874
-  Introduced through: binutils/binutils-common@2.41.90.20240122-1, binutils@2.41.90.20240122-1, binutils/libbinutils@2.41.90.20240122-1, binutils/libctf-nobfd0@2.41.90.20240122-1, binutils/libctf0@2.41.90.20240122-1, binutils/libgprofng0@2.41.90.20240122-1, binutils/libsframe1@2.41.90.20240122-1, binutils/binutils-x86-64-linux-gnu@2.41.90.20240122-1, gcc-defaults/g++@4:13.2.0-2
-  From: binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  and 19 more...
+  Introduced through: binutils/libbinutils@2.42-2, binutils@2.42-2, binutils/libctf-nobfd0@2.42-2, binutils/libctf0@2.42-2, binutils/libgprofng0@2.42-2, binutils/binutils-x86-64-linux-gnu@2.42-2, gcc-defaults/g++@4:13.2.0-7, binutils/binutils-common@2.42-2, binutils/libsframe1@2.42-2
+  From: binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/binutils-x86-64-linux-gnu@2.42-2 > binutils/libbinutils@2.42-2
+  and 15 more...
 
-✗ Low severity vulnerability found in binutils/binutils-common
+✗ Low severity vulnerability found in binutils/libbinutils
   Description: Out-of-bounds Read
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-BINUTILS-404139
-  Introduced through: binutils/binutils-common@2.41.90.20240122-1, binutils@2.41.90.20240122-1, binutils/libbinutils@2.41.90.20240122-1, binutils/libctf-nobfd0@2.41.90.20240122-1, binutils/libctf0@2.41.90.20240122-1, binutils/libgprofng0@2.41.90.20240122-1, binutils/libsframe1@2.41.90.20240122-1, binutils/binutils-x86-64-linux-gnu@2.41.90.20240122-1, gcc-defaults/g++@4:13.2.0-2
-  From: binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  and 19 more...
+  Introduced through: binutils/libbinutils@2.42-2, binutils@2.42-2, binutils/libctf-nobfd0@2.42-2, binutils/libctf0@2.42-2, binutils/libgprofng0@2.42-2, binutils/binutils-x86-64-linux-gnu@2.42-2, gcc-defaults/g++@4:13.2.0-7, binutils/binutils-common@2.42-2, binutils/libsframe1@2.42-2
+  From: binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/binutils-x86-64-linux-gnu@2.42-2 > binutils/libbinutils@2.42-2
+  and 15 more...
 
-✗ Low severity vulnerability found in binutils/binutils-common
+✗ Low severity vulnerability found in binutils/libbinutils
   Description: Integer Overflow or Wraparound
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-BINUTILS-404151
-  Introduced through: binutils/binutils-common@2.41.90.20240122-1, binutils@2.41.90.20240122-1, binutils/libbinutils@2.41.90.20240122-1, binutils/libctf-nobfd0@2.41.90.20240122-1, binutils/libctf0@2.41.90.20240122-1, binutils/libgprofng0@2.41.90.20240122-1, binutils/libsframe1@2.41.90.20240122-1, binutils/binutils-x86-64-linux-gnu@2.41.90.20240122-1, gcc-defaults/g++@4:13.2.0-2
-  From: binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  and 19 more...
+  Introduced through: binutils/libbinutils@2.42-2, binutils@2.42-2, binutils/libctf-nobfd0@2.42-2, binutils/libctf0@2.42-2, binutils/libgprofng0@2.42-2, binutils/binutils-x86-64-linux-gnu@2.42-2, gcc-defaults/g++@4:13.2.0-7, binutils/binutils-common@2.42-2, binutils/libsframe1@2.42-2
+  From: binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/binutils-x86-64-linux-gnu@2.42-2 > binutils/libbinutils@2.42-2
+  and 15 more...
 
-✗ Low severity vulnerability found in binutils/binutils-common
+✗ Low severity vulnerability found in binutils/libbinutils
   Description: Uncontrolled Recursion
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-BINUTILS-404195
-  Introduced through: binutils/binutils-common@2.41.90.20240122-1, binutils@2.41.90.20240122-1, binutils/libbinutils@2.41.90.20240122-1, binutils/libctf-nobfd0@2.41.90.20240122-1, binutils/libctf0@2.41.90.20240122-1, binutils/libgprofng0@2.41.90.20240122-1, binutils/libsframe1@2.41.90.20240122-1, binutils/binutils-x86-64-linux-gnu@2.41.90.20240122-1, gcc-defaults/g++@4:13.2.0-2
-  From: binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  and 19 more...
+  Introduced through: binutils/libbinutils@2.42-2, binutils@2.42-2, binutils/libctf-nobfd0@2.42-2, binutils/libctf0@2.42-2, binutils/libgprofng0@2.42-2, binutils/binutils-x86-64-linux-gnu@2.42-2, gcc-defaults/g++@4:13.2.0-7, binutils/binutils-common@2.42-2, binutils/libsframe1@2.42-2
+  From: binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/binutils-x86-64-linux-gnu@2.42-2 > binutils/libbinutils@2.42-2
+  and 15 more...
 
-✗ Low severity vulnerability found in binutils/binutils-common
+✗ Low severity vulnerability found in binutils/libbinutils
   Description: Out-of-bounds Write
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-BINUTILS-5803142
-  Introduced through: binutils/binutils-common@2.41.90.20240122-1, binutils@2.41.90.20240122-1, binutils/libbinutils@2.41.90.20240122-1, binutils/libctf-nobfd0@2.41.90.20240122-1, binutils/libctf0@2.41.90.20240122-1, binutils/libgprofng0@2.41.90.20240122-1, binutils/libsframe1@2.41.90.20240122-1, binutils/binutils-x86-64-linux-gnu@2.41.90.20240122-1, gcc-defaults/g++@4:13.2.0-2
-  From: binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  From: binutils@2.41.90.20240122-1 > binutils/libbinutils@2.41.90.20240122-1 > binutils/binutils-common@2.41.90.20240122-1
-  and 19 more...
+  Introduced through: binutils/libbinutils@2.42-2, binutils@2.42-2, binutils/libctf-nobfd0@2.42-2, binutils/libctf0@2.42-2, binutils/libgprofng0@2.42-2, binutils/binutils-x86-64-linux-gnu@2.42-2, gcc-defaults/g++@4:13.2.0-7, binutils/binutils-common@2.42-2, binutils/libsframe1@2.42-2
+  From: binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/libbinutils@2.42-2
+  From: binutils@2.42-2 > binutils/binutils-x86-64-linux-gnu@2.42-2 > binutils/libbinutils@2.42-2
+  and 15 more...
 
 ✗ Low severity vulnerability found in apt/libapt-pkg6.0
   Description: Improper Verification of Cryptographic Signature
@@ -578,9 +578,9 @@ Testing docker-scanning-test-go...
 ✗ High severity vulnerability found in glibc/libc-dev-bin
   Description: Out-of-bounds Write
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-GLIBC-6210086
-  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-2, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
+  Introduced through: glibc/libc-dev-bin@2.37-15~deb13u1, gcc-defaults/g++@4:13.2.0-7, glibc/libc6-dev@2.37-15~deb13u1, glibc/libc-bin@2.37-15~deb13u1, glibc/libc-devtools@2.37-15~deb13u1, glibc/libc6@2.37-15~deb13u1
   From: glibc/libc-dev-bin@2.37-15~deb13u1
-  From: gcc-defaults/g++@4:13.2.0-2 > gcc-13/g++-13@13.2.0-10 > gcc-13/libstdc++-13-dev@13.2.0-10 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
+  From: gcc-defaults/g++@4:13.2.0-7 > gcc-13/g++-13@13.2.0-13 > gcc-13/g++-13-x86-64-linux-gnu@13.2.0-13 > gcc-13/libstdc++-13-dev@13.2.0-13 > glibc/libc6-dev@2.37-15~deb13u1 > glibc/libc-dev-bin@2.37-15~deb13u1
   From: glibc/libc6-dev@2.37-15~deb13u1
   and 4 more...
   Fixed in: 2.37-15
@@ -594,7 +594,7 @@ Docker image:      docker-scanning-test-go
 Platform:          linux/amd64
 Licenses:          enabled
 
-Tested 219 dependencies for known issues, found 72 issues.
+Tested 226 dependencies for known issues, found 72 issues.
 
 Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
 Example: $ snyk container test docker-scanning-test-go --file=path/to/Dockerfile
@@ -653,7 +653,7 @@ Project name:      final
 Docker image:      docker-scanning-test-go
 Licenses:          enabled
 
-✔ Tested 23 dependencies for known issues, no vulnerable paths found.
+✔ Tested 26 dependencies for known issues, no vulnerable paths found.
 
 -------------------------------------------------------
 

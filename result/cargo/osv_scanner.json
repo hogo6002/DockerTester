@@ -1,0 +1,299 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/usr/local/google/home/gongh/Desktop/code/DockerTester/docker/cargo/example/Cargo.lock",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "inventory",
+            "version": "0.1.11",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-09-11T20:43:41Z",
+              "published": "2023-09-11T20:43:41Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-36xm-35qq-795w",
+              "summary": "Inventory exposes reference to non-Sync data to an arbitrary thread",
+              "details": "Affected versions do not enforce a `Sync` bound on the type of caller-provided value held in the plugin registry. References to these values are made accessible to arbitrary threads other than the one that constructed them.\n\nA caller could use this flaw to submit thread-unsafe data into inventory, then access it as a reference simultaneously from multiple threads.\n\nThe flaw was corrected by enforcing that data submitted by the caller into inventory is `Sync`.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "inventory",
+                    "purl": "pkg:cargo/inventory"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.2.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-36xm-35qq-795w/GHSA-36xm-35qq-795w.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dtolnay/inventory/pull/42"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dtolnay/inventory/commit/e1e347d2725b9c9dd4a70b63eb08532ca9687652"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dtolnay/inventory"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0058.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-09-11T20:43:41Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-09-11T20:43:17Z",
+              "published": "2023-09-11T20:43:17Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-ghc8-5cgm-5rpf",
+              "summary": "Inventory fails to prohibit standard library access prior to initialization of Rust standard library runtime",
+              "details": "Affected versions allow arbitrary caller-provided code to execute before the lifetime of `main`.\n\nIf the caller-provided code accesses particular pieces of the standard library that require an initialized Rust runtime, such as `std::io` or `std::thread`, these may not behave as documented. Panics are likely; UB is possible.\n\nThe flaw was corrected by enforcing that only code written within the `inventory` crate, which is guaranteed not to access runtime-dependent parts of the standard library, runs before `main`. Caller-provided code is restricted to running at compile time.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "inventory",
+                    "purl": "pkg:cargo/inventory"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.2.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-ghc8-5cgm-5rpf/GHSA-ghc8-5cgm-5rpf.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dtolnay/inventory/pull/43"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dtolnay/inventory/commit/b853350a3800e38d2cb9950355b80bc8b8d3959c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dtolnay/inventory"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0057.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-09-11T20:43:17Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-09-10T17:34:00Z",
+              "published": "2023-09-10T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2023-0057",
+              "summary": "Fails to prohibit standard library access prior to initialization of Rust standard library runtime",
+              "details": "Affected versions allow arbitrary caller-provided code to execute before the\nlifetime of `main`.\n\nIf the caller-provided code accesses particular pieces of the standard library\nthat require an initialized Rust runtime, such as `std::io` or `std::thread`,\nthese may not behave as documented. Panics are likely; UB is possible.\n\nThe flaw was corrected by enforcing that only code written within the\n`inventory` crate, which is guaranteed not to access runtime-dependent parts of\nthe standard library, runs before `main`. Caller-provided code is restricted to\nrunning at compile time.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "inventory",
+                    "purl": "pkg:cargo/inventory"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.2.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [],
+                    "cvss": null,
+                    "informational": "unsound",
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2023-0057.json"
+                  },
+                  "ecosystem_specific": {
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/inventory"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0057.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dtolnay/inventory/pull/43"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            },
+            {
+              "modified": "2023-09-11T00:54:53Z",
+              "published": "2023-09-10T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2023-0058",
+              "summary": "Exposes reference to non-Sync data to an arbitrary thread",
+              "details": "Affected versions do not enforce a `Sync` bound on the type of caller-provided\nvalue held in the plugin registry. References to these values are made\naccessible to arbitrary threads other than the one that constructed them.\n\nA caller could use this flaw to submit thread-unsafe data into inventory, then\naccess it as a reference simultaneously from multiple threads.\n\nThe flaw was corrected by enforcing that data submitted by the caller into\ninventory is `Sync`.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "inventory",
+                    "purl": "pkg:cargo/inventory"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.2.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "thread-safety"
+                    ],
+                    "cvss": null,
+                    "informational": "unsound",
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2023-0058.json"
+                  },
+                  "ecosystem_specific": {
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/inventory"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0058.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dtolnay/inventory/pull/42"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-36xm-35qq-795w"
+              ],
+              "aliases": [
+                "GHSA-36xm-35qq-795w"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-ghc8-5cgm-5rpf"
+              ],
+              "aliases": [
+                "GHSA-ghc8-5cgm-5rpf"
+              ]
+            },
+            {
+              "ids": [
+                "RUSTSEC-2023-0057"
+              ],
+              "aliases": [
+                "RUSTSEC-2023-0057"
+              ]
+            },
+            {
+              "ids": [
+                "RUSTSEC-2023-0058"
+              ],
+              "aliases": [
+                "RUSTSEC-2023-0058"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

@@ -1,793 +1,124 @@
 
-docker-scanning-test-maven (oracle 8.5)
-=======================================
-Total: 187 (UNKNOWN: 0, LOW: 10, MEDIUM: 110, HIGH: 67, CRITICAL: 0)
+docker-scanning-test-maven (debian trixie/sid)
+==============================================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
 
-┌────────────────────────────┬────────────────┬──────────┬────────┬──────────────────────┬──────────────────────────┬──────────────────────────────────────────────────────────────┐
-│          Library           │ Vulnerability  │ Severity │ Status │  Installed Version   │      Fixed Version       │                            Title                             │
-├────────────────────────────┼────────────────┼──────────┼────────┼──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ binutils                   │ CVE-2022-4285  │ MEDIUM   │ fixed  │ 2.30-108.0.2.el8_5.1 │ 2.30-119.0.2.el8_8.2     │ binutils: NULL pointer dereference in                        │
-│                            │                │          │        │                      │                          │ _bfd_elf_get_symbol_version_string leads to segfault         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-4285                    │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ curl                       │ CVE-2022-22576 │          │        │ 7.61.1-22.el8        │ 7.61.1-22.el8_6.3        │ curl: OAUTH2 bearer bypass in connection re-use              │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-22576                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-27774 │          │        │                      │                          │ curl: credential leak on redirect                            │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-27774                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-27776 │          │        │                      │                          │ curl: auth/cookie leak on redirect                           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-27776                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-27782 │          │        │                      │                          │ TLS and SSH connection too eager reuse                       │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-27782                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-32206 │          │        │                      │ 7.61.1-22.el8_6.4        │ HTTP compression denial of service                           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-32206                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-32208 │          │        │                      │                          │ FTP-KRB bad message verification                             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-32208                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-23916 │          │        │                      │ 7.61.1-25.el8_7.3        │ curl: HTTP multi-header compression denial of service        │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-23916                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-27535 │          │        │                      │ 7.61.1-30.el8_8.2        │ curl: FTP too eager connection reuse                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-27535                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-27536 │          │        │                      │ 7.61.1-30.el8_8.3        │ curl: GSS delegation too eager connection re-use             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-27536                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-28321 │          │        │                      │                          │ curl: IDN wildcard match may lead to Improper Cerificate     │
-│                            │                │          │        │                      │                          │ Validation                                                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-28321                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-35252 │ LOW      │        │                      │ 7.61.1-30.el8            │ curl: Incorrect handling of control code characters in       │
-│                            │                │          │        │                      │                          │ cookies                                                      │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-35252                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-43552 │          │        │                      │                          │ curl: Use-after-free triggered by an HTTP proxy deny         │
-│                            │                │          │        │                      │                          │ response                                                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-43552                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ emacs-filesystem           │ CVE-2023-2491  │ HIGH     │        │ 1:26.1-7.el8         │ 1:26.1-10.el8_8.2        │ emacs: Regression of CVE-2023-28617 fixes in the Red Hat     │
-│                            │                │          │        │                      │                          │ Enterprise Linux                                             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-2491                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-28617 │          │        │                      │ 1:26.1-7.el8_7.1         │ emacs: command injection vulnerability in org-mode           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-28617                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-45939 │ MEDIUM   │        │                      │ 1:26.1-9.el8             │ emacs: ctags local command execution vulnerability           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-45939                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-48337 │          │        │                      │ 1:26.1-11.el8            │ emacs: command execution via shell metacharacters            │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-48337                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-48339 │          │        │                      │                          │ emacs: command injection vulnerability in htmlfontify.el     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-48339                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ expat                      │ CVE-2022-40674 │ HIGH     │        │ 2.2.5-4.0.1.el8_5.3  │ 2.2.5-8.0.1.el8_6.3      │ expat: a use-after-free in the doContent function in         │
-│                            │                │          │        │                      │                          │ xmlparse.c                                                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-40674                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-25313 │ MEDIUM   │        │                      │ 2.2.5-8.0.1.el8_6.2      │ expat: Stack exhaustion in doctype parsing                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-25313                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-25314 │          │        │                      │                          │ expat: Integer overflow in copyString()                      │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-25314                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-43680 │          │        │                      │ 2.2.5-10.0.1.el8_7.1     │ expat: use-after free caused by overeager destruction of a   │
-│                            │                │          │        │                      │                          │ shared DTD in...                                             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-43680                   │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ freetype                   │ CVE-2022-27404 │          │        │ 2.9.1-4.el8_3.1      │ 2.9.1-9.el8              │ FreeType: Buffer overflow in sfnt_init_face                  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-27404                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-27405 │          │        │                      │                          │ FreeType: Segmentation violation via FNT_Size_Request        │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-27405                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-27406 │          │        │                      │                          │ Freetype: Segmentation violation via FT_Request_Size         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-27406                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ git                        │ CVE-2022-23521 │ HIGH     │        │ 2.27.0-1.el8         │ 2.31.1-3.el8_7           │ git: gitattributes parsing integer overflow                  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-23521                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-41903 │          │        │                      │                          │ git: Heap overflow in `git archive`, `git log --format`      │
-│                            │                │          │        │                      │                          │ leading to RCE...                                            │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-41903                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-22490 │          │        │                      │ 2.39.3-1.el8_8           │ git: data exfiltration with maliciously crafted repository   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-22490                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-23946 │          │        │                      │                          │ git: git apply: a path outside the working tree can be       │
-│                            │                │          │        │                      │                          │ overwritten...                                               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-23946                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-25652 │          │        │                      │                          │ git: by feeding specially crafted input to `git apply        │
-│                            │                │          │        │                      │                          │ --reject`, a path...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-25652                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-25815 │          │        │                      │                          │ git: malicious placement of crafted messages when git was    │
-│                            │                │          │        │                      │                          │ compiled with runtime...                                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-25815                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-29007 │          │        │                      │                          │ git: arbitrary configuration injection when renaming or      │
-│                            │                │          │        │                      │                          │ deleting a section from a...                                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-29007                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-24765 │ MEDIUM   │        │                      │ 2.39.1-1.el8             │ git: On multi-user machines Git users might find themselves  │
-│                            │                │          │        │                      │                          │ unexpectedly in a...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-24765                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-29187 │          │        │                      │                          │ git: Bypass of safe.directory protections                    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-29187                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-39253 │          │        │                      │                          │ git: exposure of sensitive information to a malicious actor  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-39253                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-39260 │          │        │                      │                          │ git: git shell function that splits command arguments can    │
-│                            │                │          │        │                      │                          │ lead to arbitrary...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-39260                   │
-├────────────────────────────┼────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ git-core                   │ CVE-2022-23521 │ HIGH     │        │                      │ 2.31.1-3.el8_7           │ git: gitattributes parsing integer overflow                  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-23521                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-41903 │          │        │                      │                          │ git: Heap overflow in `git archive`, `git log --format`      │
-│                            │                │          │        │                      │                          │ leading to RCE...                                            │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-41903                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-22490 │          │        │                      │ 2.39.3-1.el8_8           │ git: data exfiltration with maliciously crafted repository   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-22490                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-23946 │          │        │                      │                          │ git: git apply: a path outside the working tree can be       │
-│                            │                │          │        │                      │                          │ overwritten...                                               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-23946                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-25652 │          │        │                      │                          │ git: by feeding specially crafted input to `git apply        │
-│                            │                │          │        │                      │                          │ --reject`, a path...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-25652                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-25815 │          │        │                      │                          │ git: malicious placement of crafted messages when git was    │
-│                            │                │          │        │                      │                          │ compiled with runtime...                                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-25815                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-29007 │          │        │                      │                          │ git: arbitrary configuration injection when renaming or      │
-│                            │                │          │        │                      │                          │ deleting a section from a...                                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-29007                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-24765 │ MEDIUM   │        │                      │ 2.39.1-1.el8             │ git: On multi-user machines Git users might find themselves  │
-│                            │                │          │        │                      │                          │ unexpectedly in a...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-24765                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-29187 │          │        │                      │                          │ git: Bypass of safe.directory protections                    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-29187                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-39253 │          │        │                      │                          │ git: exposure of sensitive information to a malicious actor  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-39253                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-39260 │          │        │                      │                          │ git: git shell function that splits command arguments can    │
-│                            │                │          │        │                      │                          │ lead to arbitrary...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-39260                   │
-├────────────────────────────┼────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ git-core-doc               │ CVE-2022-23521 │ HIGH     │        │                      │ 2.31.1-3.el8_7           │ git: gitattributes parsing integer overflow                  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-23521                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-41903 │          │        │                      │                          │ git: Heap overflow in `git archive`, `git log --format`      │
-│                            │                │          │        │                      │                          │ leading to RCE...                                            │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-41903                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-22490 │          │        │                      │ 2.39.3-1.el8_8           │ git: data exfiltration with maliciously crafted repository   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-22490                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-23946 │          │        │                      │                          │ git: git apply: a path outside the working tree can be       │
-│                            │                │          │        │                      │                          │ overwritten...                                               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-23946                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-25652 │          │        │                      │                          │ git: by feeding specially crafted input to `git apply        │
-│                            │                │          │        │                      │                          │ --reject`, a path...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-25652                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-25815 │          │        │                      │                          │ git: malicious placement of crafted messages when git was    │
-│                            │                │          │        │                      │                          │ compiled with runtime...                                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-25815                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-29007 │          │        │                      │                          │ git: arbitrary configuration injection when renaming or      │
-│                            │                │          │        │                      │                          │ deleting a section from a...                                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-29007                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-24765 │ MEDIUM   │        │                      │ 2.39.1-1.el8             │ git: On multi-user machines Git users might find themselves  │
-│                            │                │          │        │                      │                          │ unexpectedly in a...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-24765                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-29187 │          │        │                      │                          │ git: Bypass of safe.directory protections                    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-29187                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-39253 │          │        │                      │                          │ git: exposure of sensitive information to a malicious actor  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-39253                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-39260 │          │        │                      │                          │ git: git shell function that splits command arguments can    │
-│                            │                │          │        │                      │                          │ lead to arbitrary...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-39260                   │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ glib2                      │ CVE-2022-22624 │          │        │ 2.56.4-156.el8       │ 2.56.4-159.0.1.el8       │ webkitgtk: Use-after-free leading to arbitrary code          │
-│                            │                │          │        │                      │                          │ execution                                                    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-22624                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-22628 │          │        │                      │                          │ webkitgtk: Use-after-free leading to arbitrary code          │
-│                            │                │          │        │                      │                          │ execution                                                    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-22628                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-22629 │          │        │                      │                          │ webkitgtk: Buffer overflow leading to arbitrary code         │
-│                            │                │          │        │                      │                          │ execution                                                    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-22629                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ glibc                      │ CVE-2023-4527  │ HIGH     │        │ 2.28-164.0.5.el8_5.3 │ 2.28-225.0.4.el8_8.6     │ glibc: Stack read overflow in getaddrinfo in no-aaaa mode    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4527                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4806  │          │        │                      │                          │ glibc: potential use-after-free in getaddrinfo()             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4806                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4813  │          │        │                      │                          │ glibc: potential use-after-free in gaih_inet()               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4813                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4911  │          │        │                      │                          │ glibc: buffer overflow in ld.so leading to privilege         │
-│                            │                │          │        │                      │                          │ escalation                                                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4911                    │
-├────────────────────────────┼────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│ glibc-common               │ CVE-2023-4527  │          │        │                      │                          │ glibc: Stack read overflow in getaddrinfo in no-aaaa mode    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4527                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4806  │          │        │                      │                          │ glibc: potential use-after-free in getaddrinfo()             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4806                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4813  │          │        │                      │                          │ glibc: potential use-after-free in gaih_inet()               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4813                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4911  │          │        │                      │                          │ glibc: buffer overflow in ld.so leading to privilege         │
-│                            │                │          │        │                      │                          │ escalation                                                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4911                    │
-├────────────────────────────┼────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│ glibc-minimal-langpack     │ CVE-2023-4527  │          │        │                      │                          │ glibc: Stack read overflow in getaddrinfo in no-aaaa mode    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4527                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4806  │          │        │                      │                          │ glibc: potential use-after-free in getaddrinfo()             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4806                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4813  │          │        │                      │                          │ glibc: potential use-after-free in gaih_inet()               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4813                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4911  │          │        │                      │                          │ glibc: buffer overflow in ld.so leading to privilege         │
-│                            │                │          │        │                      │                          │ escalation                                                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4911                    │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ gnupg2                     │ CVE-2022-34903 │ MEDIUM   │        │ 2.2.20-2.el8         │ 2.2.20-3.el8_6           │ Signature spoofing via status line injection                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-34903                   │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ gnutls                     │ CVE-2021-20231 │          │        │ 3.6.16-4.el8         │ 10:3.6.16-4.0.1.el8_fips │ gnutls: Use after free in client key_share extension         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-20231                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-20232 │          │        │                      │                          │ gnutls: Use after free in client_send_params in              │
-│                            │                │          │        │                      │                          │ lib/ext/pre_shared_key.c                                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-20232                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-3580  │          │        │                      │                          │ Remote crash in RSA decryption via manipulated ciphertext    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-3580                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-2509  │          │        │                      │ 3.6.16-5.el8_6           │ gnutls: Double free during gnutls_pkcs7_verify               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-2509                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-0361  │          │        │                      │ 3.6.16-6.el8_7           │ gnutls: timing side-channel in the TLS RSA key exchange code │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-0361                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-5981  │          │        │                      │ 3.6.16-8.el8_9           │ gnutls: timing side-channel in the RSA-PSK authentication    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-5981                    │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ krb5-libs                  │ CVE-2022-42898 │ HIGH     │        │ 1.18.2-14.0.1.el8    │ 1.18.2-22.0.1.el8_7      │ krb5: integer overflow vulnerabilities in PAC parsing        │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-42898                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libarchive                 │ CVE-2022-36227 │ LOW      │        │ 3.3.3-3.el8_5        │ 3.3.3-5.el8              │ libarchive: NULL pointer dereference in archive_write.c      │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-36227                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libcap                     │ CVE-2023-2602  │ MEDIUM   │        │ 2.26-5.el8           │ 2.48-5.el8_8             │ libcap: Memory Leak on pthread_create() Error                │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-2602                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-2603  │          │        │                      │                          │ libcap: Integer Overflow in _libcap_strdup()                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-2603                    │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libcom_err                 │ CVE-2022-1304  │          │        │ 1.45.6-2.el8         │ 1.45.6-5.el8             │ e2fsprogs: out-of-bounds read/write via crafted filesystem   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-1304                    │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libcurl                    │ CVE-2022-22576 │          │        │ 7.61.1-22.el8        │ 7.61.1-22.el8_6.3        │ curl: OAUTH2 bearer bypass in connection re-use              │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-22576                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-27774 │          │        │                      │                          │ curl: credential leak on redirect                            │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-27774                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-27776 │          │        │                      │                          │ curl: auth/cookie leak on redirect                           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-27776                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-27782 │          │        │                      │                          │ TLS and SSH connection too eager reuse                       │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-27782                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-32206 │          │        │                      │ 7.61.1-22.el8_6.4        │ HTTP compression denial of service                           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-32206                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-32208 │          │        │                      │                          │ FTP-KRB bad message verification                             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-32208                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-23916 │          │        │                      │ 7.61.1-25.el8_7.3        │ curl: HTTP multi-header compression denial of service        │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-23916                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-27535 │          │        │                      │ 7.61.1-30.el8_8.2        │ curl: FTP too eager connection reuse                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-27535                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-27536 │          │        │                      │ 7.61.1-30.el8_8.3        │ curl: GSS delegation too eager connection re-use             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-27536                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-28321 │          │        │                      │                          │ curl: IDN wildcard match may lead to Improper Cerificate     │
-│                            │                │          │        │                      │                          │ Validation                                                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-28321                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-35252 │ LOW      │        │                      │ 7.61.1-30.el8            │ curl: Incorrect handling of control code characters in       │
-│                            │                │          │        │                      │                          │ cookies                                                      │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-35252                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-43552 │          │        │                      │                          │ curl: Use-after-free triggered by an HTTP proxy deny         │
-│                            │                │          │        │                      │                          │ response                                                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-43552                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libgcc                     │ CVE-2022-40982 │ HIGH     │        │ 8.5.0-4.0.2.el8_5    │ 8.5.0-18.0.5.el8         │ hw: Intel: Gather Data Sampling (GDS) side channel           │
-│                            │                │          │        │                      │                          │ vulnerability                                                │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-40982                   │
-│                            ├────────────────┼──────────┤        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4039  │ LOW      │        │                      │                          │ gcc: -fstack-protector fails to guard dynamic stack          │
-│                            │                │          │        │                      │                          │ allocations on ARM64                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4039                    │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libgcrypt                  │ CVE-2021-40528 │ HIGH     │        │ 1.8.5-6.el8          │ 10:1.8.5-7.el8_6_fips    │ libgcrypt: ElGamal implementation allows plaintext recovery  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-40528                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-33560 │ MEDIUM   │        │                      │ 10:1.8.5-6.el8_fips      │ mishandles ElGamal encryption because it lacks exponent      │
-│                            │                │          │        │                      │                          │ blinding to address a side-channel...                        │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-33560                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libksba                    │ CVE-2022-3515  │ HIGH     │        │ 1.3.5-7.el8          │ 1.3.5-8.el8_6            │ libksba: integer overflow may lead to remote code execution  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-3515                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-47629 │          │        │                      │ 1.3.5-9.el8_7            │ libksba: integer overflow to code execution                  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-47629                   │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libnghttp2                 │ CVE-2023-44487 │          │        │ 1.33.0-3.el8_2.1     │ 1.33.0-5.el8_8           │ HTTP/2: Multiple HTTP/2 enabled web servers are vulnerable   │
-│                            │                │          │        │                      │                          │ to a DDoS attack...                                          │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-44487                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libssh                     │ CVE-2023-1667  │ MEDIUM   │        │ 0.9.4-3.el8          │ 0.9.6-10.el8_8           │ libssh: NULL pointer dereference during rekeying with        │
-│                            │                │          │        │                      │                          │ algorithm guessing                                           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-1667                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-2283  │          │        │                      │                          │ libssh: authorization bypass in pki_verify_data_signature    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-2283                    │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-3634  │ LOW      │        │                      │ 0.9.6-3.el8              │ libssh: possible heap-based buffer overflow when rekeying    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-3634                    │
-├────────────────────────────┼────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libssh-config              │ CVE-2023-1667  │ MEDIUM   │        │                      │ 0.9.6-10.el8_8           │ libssh: NULL pointer dereference during rekeying with        │
-│                            │                │          │        │                      │                          │ algorithm guessing                                           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-1667                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-2283  │          │        │                      │                          │ libssh: authorization bypass in pki_verify_data_signature    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-2283                    │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-3634  │ LOW      │        │                      │ 0.9.6-3.el8              │ libssh: possible heap-based buffer overflow when rekeying    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-3634                    │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libstdc++                  │ CVE-2022-40982 │ HIGH     │        │ 8.5.0-4.0.2.el8_5    │ 8.5.0-18.0.5.el8         │ hw: Intel: Gather Data Sampling (GDS) side channel           │
-│                            │                │          │        │                      │                          │ vulnerability                                                │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-40982                   │
-│                            ├────────────────┼──────────┤        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-4039  │ LOW      │        │                      │                          │ gcc: -fstack-protector fails to guard dynamic stack          │
-│                            │                │          │        │                      │                          │ allocations on ARM64                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4039                    │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libtasn1                   │ CVE-2021-46848 │ MEDIUM   │        │ 4.13-3.el8           │ 4.13-4.el8_7             │ libtasn1: Out-of-bound access in ETYPE_OK                    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-46848                   │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ libxml2                    │ CVE-2016-3709  │          │        │ 2.9.7-12.el8_5       │ 2.9.7-15.el8             │ libxml2: Incorrect server side include parsing can lead to   │
-│                            │                │          │        │                      │                          │ XSS                                                          │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2016-3709                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-29824 │          │        │                      │ 2.9.7-13.el8_6.1         │ libxml2: integer overflows in xmlBuf and xmlBuffer lead to   │
-│                            │                │          │        │                      │                          │ out-of-bounds write                                          │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-29824                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-40303 │          │        │                      │ 2.9.7-15.el8_7.1         │ libxml2: integer overflows with XML_PARSE_HUGE               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-40303                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-40304 │          │        │                      │                          │ libxml2: dict corruption caused by entity reference cycles   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-40304                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-28484 │          │        │                      │ 2.9.7-16.el8_8.1         │ libxml2: NULL dereference in xmlSchemaFixupComplexType       │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-28484                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-29469 │          │        │                      │                          │ libxml2: Hashing of empty dict strings isn't deterministic   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-29469                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-39615 │          │        │                      │ 2.9.7-18.el8_9           │ libxml2: crafted xml can cause global buffer overflow        │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-39615                   │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ ncurses                    │ CVE-2023-29491 │          │        │ 6.1-9.20180224.el8   │ 6.1-9.20180224.el8_8.1   │ ncurses: Local users can trigger security-relevant memory    │
-│                            │                │          │        │                      │                          │ corruption via malformed data                                │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-29491                   │
-├────────────────────────────┤                │          │        │                      │                          │                                                              │
-│ ncurses-base               │                │          │        │                      │                          │                                                              │
-│                            │                │          │        │                      │                          │                                                              │
-│                            │                │          │        │                      │                          │                                                              │
-├────────────────────────────┤                │          │        │                      │                          │                                                              │
-│ ncurses-libs               │                │          │        │                      │                          │                                                              │
-│                            │                │          │        │                      │                          │                                                              │
-│                            │                │          │        │                      │                          │                                                              │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ openssh                    │ CVE-2023-38408 │ HIGH     │        │ 8.0p1-10.el8         │ 8.0p1-19.el8_8           │ Remote code execution in ssh-agent PKCS#11 support           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-38408                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-41617 │ MEDIUM   │        │                      │ 8.0p1-13.el8             │ privilege escalation when AuthorizedKeysCommand or           │
-│                            │                │          │        │                      │                          │ AuthorizedPrincipalsCommand are configured                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-41617                   │
-├────────────────────────────┼────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ openssh-clients            │ CVE-2023-38408 │ HIGH     │        │                      │ 8.0p1-19.el8_8           │ Remote code execution in ssh-agent PKCS#11 support           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-38408                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-41617 │ MEDIUM   │        │                      │ 8.0p1-13.el8             │ privilege escalation when AuthorizedKeysCommand or           │
-│                            │                │          │        │                      │                          │ AuthorizedPrincipalsCommand are configured                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-41617                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ openssl-libs               │ CVE-2022-4304  │ HIGH     │        │ 1:1.1.1k-6.el8_5     │ 1:1.1.1k-9.el8_7         │ openssl: timing attack in RSA Decryption implementation      │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-4304                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-4450  │          │        │                      │                          │ openssl: double free after calling PEM_read_bio_ex           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-4450                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-0215  │          │        │                      │                          │ openssl: use-after-free following BIO_new_NDEF               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-0215                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-0286  │          │        │                      │                          │ openssl: X.400 address type confusion in X.509 GeneralName   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-0286                    │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ pcre2                      │ CVE-2022-1586  │ MEDIUM   │        │ 10.32-2.el8          │ 10.32-3.el8_6            │ pcre2: Out-of-bounds read in compile_xclass_matchingpath in  │
-│                            │                │          │        │                      │                          │ pcre2_jit_compile.c                                          │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-1586                    │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ perl-Git                   │ CVE-2022-23521 │ HIGH     │        │ 2.27.0-1.el8         │ 2.31.1-3.el8_7           │ git: gitattributes parsing integer overflow                  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-23521                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-41903 │          │        │                      │                          │ git: Heap overflow in `git archive`, `git log --format`      │
-│                            │                │          │        │                      │                          │ leading to RCE...                                            │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-41903                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-22490 │          │        │                      │ 2.39.3-1.el8_8           │ git: data exfiltration with maliciously crafted repository   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-22490                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-23946 │          │        │                      │                          │ git: git apply: a path outside the working tree can be       │
-│                            │                │          │        │                      │                          │ overwritten...                                               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-23946                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-25652 │          │        │                      │                          │ git: by feeding specially crafted input to `git apply        │
-│                            │                │          │        │                      │                          │ --reject`, a path...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-25652                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-25815 │          │        │                      │                          │ git: malicious placement of crafted messages when git was    │
-│                            │                │          │        │                      │                          │ compiled with runtime...                                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-25815                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-29007 │          │        │                      │                          │ git: arbitrary configuration injection when renaming or      │
-│                            │                │          │        │                      │                          │ deleting a section from a...                                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-29007                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-24765 │ MEDIUM   │        │                      │ 2.39.1-1.el8             │ git: On multi-user machines Git users might find themselves  │
-│                            │                │          │        │                      │                          │ unexpectedly in a...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-24765                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-29187 │          │        │                      │                          │ git: Bypass of safe.directory protections                    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-29187                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-39253 │          │        │                      │                          │ git: exposure of sensitive information to a malicious actor  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-39253                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-39260 │          │        │                      │                          │ git: git shell function that splits command arguments can    │
-│                            │                │          │        │                      │                          │ lead to arbitrary...                                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-39260                   │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ perl-HTTP-Tiny             │ CVE-2023-31486 │          │        │ 0.074-1.el8          │ 0.074-2.el8              │ http-tiny: insecure TLS cert default                         │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-31486                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ platform-python            │ CVE-2022-0391  │ HIGH     │        │ 3.6.8-41.0.1.el8     │ 3.6.8-47.0.1.el8_6       │ python: urllib.parse does not sanitize URLs containing ASCII │
-│                            │                │          │        │                      │                          │ newline and tabs                                             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-0391                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-24329 │          │        │                      │ 3.6.8-51.0.1.el8_8.1     │ python: urllib.parse url blocklisting bypass                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-24329                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-40217 │          │        │                      │ 3.6.8-51.0.1.el8_8.2     │ python: TLS handshake bypass                                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-40217                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2007-4559  │ MEDIUM   │        │                      │ 3.6.8-56.0.1.el8_9       │ python: tarfile module directory traversal                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2007-4559                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2015-20107 │          │        │                      │ 3.6.8-47.0.1.el8_6       │ python: mailcap: findmatch() function does not sanitize the  │
-│                            │                │          │        │                      │                          │ second argument                                              │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2015-20107                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2020-10735 │          │        │                      │ 3.6.8-48.0.1.el8_7.1     │ python: int() type in PyLong_FromString() does not limit     │
-│                            │                │          │        │                      │                          │ amount of digits converting...                               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2020-10735                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-28861 │          │        │                      │                          │ python: open redirection vulnerability in lib/http/server.py │
-│                            │                │          │        │                      │                          │ may lead to information disclosure                           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-28861                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-3737  │          │        │                      │ 3.6.8-45.0.1.el8         │ HTTP client possible infinite loop on a 100 Continue         │
-│                            │                │          │        │                      │                          │ response                                                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-3737                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-4189  │          │        │                      │                          │ ftplib should not use the host from the PASV response        │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-4189                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-45061 │          │        │                      │ 3.6.8-48.0.1.el8_7.1     │ python: CPU denial of service via inefficient IDNA decoder   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-45061                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-48560 │          │        │                      │ 3.6.8-56.0.1.el8_9.2     │ python: use after free in heappushpop() of heapq module      │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-48560                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-48564 │          │        │                      │                          │ python: DoS when processing malformed Apple Property List    │
-│                            │                │          │        │                      │                          │ files in binary format...                                    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-48564                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-27043 │          │        │                      │ 3.6.8-56.0.1.el8_9.3     │ python: Parsing errors in email/_parseaddr.py lead to        │
-│                            │                │          │        │                      │                          │ incorrect value in email address...                          │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-27043                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ platform-python-setuptools │ CVE-2022-40897 │ HIGH     │        │ 39.2.0-6.el8         │ 39.2.0-6.el8_7.1         │ pypa-setuptools: Regular Expression Denial of Service        │
-│                            │                │          │        │                      │                          │ (ReDoS) in package_index.py                                  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-40897                   │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-libs               │ CVE-2022-0391  │          │        │ 3.6.8-41.0.1.el8     │ 3.6.8-47.0.1.el8_6       │ python: urllib.parse does not sanitize URLs containing ASCII │
-│                            │                │          │        │                      │                          │ newline and tabs                                             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-0391                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-24329 │          │        │                      │ 3.6.8-51.0.1.el8_8.1     │ python: urllib.parse url blocklisting bypass                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-24329                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-40217 │          │        │                      │ 3.6.8-51.0.1.el8_8.2     │ python: TLS handshake bypass                                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-40217                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2007-4559  │ MEDIUM   │        │                      │ 3.6.8-56.0.1.el8_9       │ python: tarfile module directory traversal                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2007-4559                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2015-20107 │          │        │                      │ 3.6.8-47.0.1.el8_6       │ python: mailcap: findmatch() function does not sanitize the  │
-│                            │                │          │        │                      │                          │ second argument                                              │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2015-20107                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2020-10735 │          │        │                      │ 3.6.8-48.0.1.el8_7.1     │ python: int() type in PyLong_FromString() does not limit     │
-│                            │                │          │        │                      │                          │ amount of digits converting...                               │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2020-10735                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-28861 │          │        │                      │                          │ python: open redirection vulnerability in lib/http/server.py │
-│                            │                │          │        │                      │                          │ may lead to information disclosure                           │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-28861                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-3737  │          │        │                      │ 3.6.8-45.0.1.el8         │ HTTP client possible infinite loop on a 100 Continue         │
-│                            │                │          │        │                      │                          │ response                                                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-3737                    │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2021-4189  │          │        │                      │                          │ ftplib should not use the host from the PASV response        │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2021-4189                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-45061 │          │        │                      │ 3.6.8-48.0.1.el8_7.1     │ python: CPU denial of service via inefficient IDNA decoder   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-45061                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-48560 │          │        │                      │ 3.6.8-56.0.1.el8_9.2     │ python: use after free in heappushpop() of heapq module      │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-48560                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-48564 │          │        │                      │                          │ python: DoS when processing malformed Apple Property List    │
-│                            │                │          │        │                      │                          │ files in binary format...                                    │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-48564                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-27043 │          │        │                      │ 3.6.8-56.0.1.el8_9.3     │ python: Parsing errors in email/_parseaddr.py lead to        │
-│                            │                │          │        │                      │                          │ incorrect value in email address...                          │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-27043                   │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-pip-wheel          │ CVE-2007-4559  │          │        │ 9.0.3-20.el8         │ 9.0.3-23.el8             │ python: tarfile module directory traversal                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2007-4559                    │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ python3-setuptools-wheel   │ CVE-2022-40897 │ HIGH     │        │ 39.2.0-6.el8         │ 39.2.0-6.el8_7.1         │ pypa-setuptools: Regular Expression Denial of Service        │
-│                            │                │          │        │                      │                          │ (ReDoS) in package_index.py                                  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-40897                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ shadow-utils               │ CVE-2023-4641  │ LOW      │        │ 2:4.6-14.el8         │ 2:4.6-19.el8             │ shadow-utils: possible password leak during passwd(1) change │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-4641                    │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ sqlite-libs                │ CVE-2020-24736 │ MEDIUM   │        │ 3.26.0-15.el8        │ 3.26.0-18.0.1.el8_8      │ sqlite: Crash due to misuse of window functions.             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2020-24736                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2020-35525 │          │        │                      │ 3.26.0-16.el8_6          │ sqlite: Null pointer derreference in src/select.c            │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2020-35525                   │
-│                            ├────────────────┤          │        │                      │                          ├──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2020-35527 │          │        │                      │                          │ sqlite: Out of bounds access during table rename             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2020-35527                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-35737 │          │        │                      │ 3.26.0-17.el8_7          │ sqlite: an array-bounds overflow if billions of bytes are    │
-│                            │                │          │        │                      │                          │ used in a...                                                 │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-35737                   │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-7104  │          │        │                      │ 3.26.0-19.0.1.el8_9      │ sqlite: heap-buffer-overflow at sessionfuzz                  │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-7104                    │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ systemd-libs               │ CVE-2022-2526  │ HIGH     │        │ 239-51.0.1.el8_5.5   │ 239-58.0.1.el8_6.4       │ systemd-resolved: use-after-free when dealing with DnsStream │
-│                            │                │          │        │                      │                          │ in resolved-dns-stream.c                                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-2526                    │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-3821  │ MEDIUM   │        │                      │ 239-68.0.2.el8_7.1       │ systemd: buffer overrun in format_timespan() function        │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-3821                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-4415  │          │        │                      │ 239-68.0.2.el8_7.4       │ systemd: local information leak due to systemd-coredump not  │
-│                            │                │          │        │                      │                          │ respecting fs.suid_dumpable kernel setting...                │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-4415                    │
-│                            ├────────────────┤          │        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2023-26604 │          │        │                      │ 239-74.0.4.el8_8.2       │ systemd: privilege escalation via the less pager             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2023-26604                   │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ tar                        │ CVE-2022-48303 │          │        │ 2:1.30-5.el8         │ 2:1.30-6.el8_7.1         │ heap buffer overflow at from_header() in list.c via          │
-│                            │                │          │        │                      │                          │ specially crafted checksum                                   │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-48303                   │
-├────────────────────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ xz-libs                    │ CVE-2022-1271  │ HIGH     │        │ 5.2.4-3.el8          │ 5.2.4-4.el8_6            │ gzip: arbitrary-file-write vulnerability                     │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-1271                    │
-├────────────────────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ zlib                       │ CVE-2018-25032 │          │        │ 1.2.11-17.el8        │ 1.2.11-18.el8_5          │ zlib: A flaw found in zlib when compressing (not             │
-│                            │                │          │        │                      │                          │ decompressing) certain inputs...                             │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2018-25032                   │
-│                            ├────────────────┼──────────┤        │                      ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                            │ CVE-2022-37434 │ MEDIUM   │        │                      │ 1.2.11-19.el8_6          │ zlib: heap-based buffer over-read and overflow in inflate()  │
-│                            │                │          │        │                      │                          │ in inflate.c via a...                                        │
-│                            │                │          │        │                      │                          │ https://avd.aquasec.com/nvd/cve-2022-37434                   │
-└────────────────────────────┴────────────────┴──────────┴────────┴──────────────────────┴──────────────────────────┴──────────────────────────────────────────────────────────────┘
 
 Java (jar)
 ==========
-Total: 37 (UNKNOWN: 0, LOW: 3, MEDIUM: 17, HIGH: 7, CRITICAL: 10)
+Total: 31 (UNKNOWN: 0, LOW: 2, MEDIUM: 13, HIGH: 7, CRITICAL: 9)
 
-┌────────────────────────────────────────────────────────────┬──────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────────┬──────────────────────────────────────────────────────────────┐
-│                          Library                           │  Vulnerability   │ Severity │ Status │ Installed Version │          Fixed Version           │                            Title                             │
-├────────────────────────────────────────────────────────────┼──────────────────┼──────────┼────────┼───────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ com.google.guava:guava (guava-25.1-android.jar)            │ CVE-2023-2976    │ MEDIUM   │ fixed  │ 25.1-android      │ 32.0.0-android                   │ guava: insecure temporary directory creation                 │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2023-2976                    │
-│                                                            ├──────────────────┼──────────┤        │                   │                                  ├──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2020-8908    │ LOW      │        │                   │                                  │ local information disclosure via temporary directory created │
-│                                                            │                  │          │        │                   │                                  │ with unsafe permissions                                      │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2020-8908                    │
-├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ commons-io:commons-io (maven-surefire-common-2.22.1.jar)   │ CVE-2021-29425   │ MEDIUM   │        │ 2.2               │ 2.7                              │ apache-commons-io: Limited path traversal in Apache Commons  │
-│                                                            │                  │          │        │                   │                                  │ IO 2.2 to 2.6                                                │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-29425                   │
-├────────────────────────────────────────────────────────────┤                  │          │        │                   │                                  │                                                              │
-│ commons-io:commons-io (surefire-api-2.22.1.jar)            │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┤                  │          │        │                   │                                  │                                                              │
-│ commons-io:commons-io (surefire-junit4-2.22.1.jar)         │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                              │
-│ commons-io:commons-io (commons-io-2.5.jar)                 │                  │          │        │ 2.5               │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┤                  │          │        │                   │                                  │                                                              │
-│ commons-io:commons-io (surefire-booter-2.22.1.jar)         │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                              │
-│ commons-io:commons-io (commons-io-2.6.jar)                 │                  │          │        │ 2.6               │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┤                  │          │        │                   │                                  │                                                              │
-│ commons-io:commons-io (wagon-http-3.5.1-shaded.jar)        │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┼──────────────────┤          │        ├───────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ junit:junit (junit-4.11.jar)                               │ CVE-2020-15250   │          │        │ 4.11              │ 4.13.1                           │ TemporaryFolder is shared between all users across system    │
-│                                                            │                  │          │        │                   │                                  │ which could result in...                                     │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2020-15250                   │
-├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                              │
-│ junit:junit (junit-4.12.jar)                               │                  │          │        │ 4.12              │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ org.apache.commons:commons-compress                        │ CVE-2021-35515   │ HIGH     │        │ 1.11              │ 1.21                             │ apache-commons-compress: infinite loop when reading a        │
-│ (commons-compress-1.11.jar)                                │                  │          │        │                   │                                  │ specially crafted 7Z archive                                 │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-35515                   │
-│                                                            ├──────────────────┤          │        │                   │                                  ├──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2021-35516   │          │        │                   │                                  │ apache-commons-compress: excessive memory allocation when    │
-│                                                            │                  │          │        │                   │                                  │ reading a specially crafted 7Z archive                       │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-35516                   │
-│                                                            ├──────────────────┤          │        │                   │                                  ├──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2021-35517   │          │        │                   │                                  │ apache-commons-compress: excessive memory allocation when    │
-│                                                            │                  │          │        │                   │                                  │ reading a specially crafted TAR archive                      │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-35517                   │
-│                                                            ├──────────────────┤          │        │                   │                                  ├──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2021-36090   │          │        │                   │                                  │ apache-commons-compress: excessive memory allocation when    │
-│                                                            │                  │          │        │                   │                                  │ reading a specially crafted ZIP archive                      │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-36090                   │
-│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2018-11771   │ MEDIUM   │        │                   │ 1.18                             │ apache-commons-compress: ZipArchiveInputStream.read() fails  │
-│                                                            │                  │          │        │                   │                                  │ to identify correct EOF allowing for DoS via crafted...      │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2018-11771                   │
-│                                                            ├──────────────────┤          │        │                   ├──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2018-1324    │          │        │                   │ 1.16                             │ apache-commons-compress: Infinite loop via extra field       │
-│                                                            │                  │          │        │                   │                                  │ parser in ZipFile and ZipArchiveInputStream...               │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2018-1324                    │
-├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ org.apache.maven.shared:maven-shared-utils                 │ CVE-2022-29599   │ CRITICAL │        │ 0.9               │ 3.3.3                            │ maven-shared-utils: Command injection via Commandline class  │
-│ (maven-surefire-common-2.22.1.jar)                         │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-29599                   │
-├────────────────────────────────────────────────────────────┤                  │          │        │                   │                                  │                                                              │
-│ org.apache.maven.shared:maven-shared-utils                 │                  │          │        │                   │                                  │                                                              │
-│ (surefire-api-2.22.1.jar)                                  │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┤                  │          │        │                   │                                  │                                                              │
-│ org.apache.maven.shared:maven-shared-utils                 │                  │          │        │                   │                                  │                                                              │
-│ (surefire-junit4-2.22.1.jar)                               │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                              │
-│ org.apache.maven.shared:maven-shared-utils                 │                  │          │        │ 3.0.0             │                                  │                                                              │
-│ (maven-shared-utils-3.0.0.jar)                             │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                              │
-│ org.apache.maven.shared:maven-shared-utils                 │                  │          │        │ 3.0.1             │                                  │                                                              │
-│ (maven-shared-utils-3.0.1.jar)                             │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                              │
-│ org.apache.maven.shared:maven-shared-utils                 │                  │          │        │ 3.2.1             │                                  │                                                              │
-│ (maven-shared-utils-3.2.1.jar)                             │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┼──────────────────┤          │        ├───────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ org.apache.maven:maven-core (maven-core-2.2.1.jar)         │ CVE-2021-26291   │          │        │ 2.2.1             │ 3.8.1                            │ Block repositories using http by default                     │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-26291                   │
-├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                              │
-│ org.apache.maven:maven-core (maven-core-3.0.jar)           │                  │          │        │ 3.0               │                                  │                                                              │
-│                                                            │                  │          │        │                   │                                  │                                                              │
-├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ org.codehaus.plexus:plexus-archiver                        │ CVE-2023-37460   │ HIGH     │        │ 3.4               │ 4.8.0                            │ plexus-archiver: Arbitrary File Creation in                  │
-│ (plexus-archiver-3.4.jar)                                  │                  │          │        │                   │                                  │ AbstractUnArchiver                                           │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2023-37460                   │
-│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2018-1002200 │ MEDIUM   │        │                   │ 3.6.0                            │ plexus-archiver: arbitrary file write vulnerability /        │
-│                                                            │                  │          │        │                   │                                  │ arbitrary code execution using a specially...                │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2018-1002200                 │
-├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ org.codehaus.plexus:plexus-utils (plexus-utils-1.5.15.jar) │ CVE-2017-1000487 │ CRITICAL │        │ 1.5.15            │ 3.0.16                           │ plexus-utils: Mishandled strings in Commandline class allow  │
-│                                                            │                  │          │        │                   │                                  │ for command injection                                        │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2017-1000487                 │
-│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2022-4244    │ HIGH     │        │                   │ 3.0.24                           │ codehaus-plexus: Directory Traversal                         │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-4244                    │
-│                                                            ├──────────────────┼──────────┤        │                   │                                  ├──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2022-4245    │ MEDIUM   │        │                   │                                  │ codehaus-plexus: XML External Entity (XXE) Injection         │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-4245                    │
-├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ org.codehaus.plexus:plexus-utils (plexus-utils-2.0.4.jar)  │ CVE-2017-1000487 │ CRITICAL │        │ 2.0.4             │ 3.0.16                           │ plexus-utils: Mishandled strings in Commandline class allow  │
-│                                                            │                  │          │        │                   │                                  │ for command injection                                        │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2017-1000487                 │
-│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2022-4244    │ HIGH     │        │                   │ 3.0.24                           │ codehaus-plexus: Directory Traversal                         │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-4244                    │
-│                                                            ├──────────────────┼──────────┤        │                   │                                  ├──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2022-4245    │ MEDIUM   │        │                   │                                  │ codehaus-plexus: XML External Entity (XXE) Injection         │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-4245                    │
-├────────────────────────────────────────────────────────────┼──────────────────┤          │        ├───────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ org.eclipse.jetty:jetty-http                               │ CVE-2023-40167   │          │        │ 9.4.40.v20210413  │ 9.4.52, 10.0.16, 11.0.16, 12.0.1 │ jetty: Improper validation of HTTP/1 content-length          │
-│ (jetty-http-9.4.40.v20210413.jar)                          │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2023-40167                   │
-│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2022-2047    │ LOW      │        │                   │ 9.4.47, 10.0.10, 11.0.10         │ improver hostname input handling                             │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-2047                    │
-├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        │                   ├──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ org.eclipse.jetty:jetty-servlets                           │ CVE-2021-28169   │ MEDIUM   │        │                   │ 9.4.41, 10.0.3, 11.0.3           │ jetty: requests to the ConcatServlet and WelcomeFilter are   │
-│ (jetty-servlets-9.4.40.v20210413.jar)                      │                  │          │        │                   │                                  │ able to access protected...                                  │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-28169                   │
-│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                                            │ CVE-2023-36479   │ LOW      │        │                   │ 9.4.52, 10.0.16, 11.0.16         │ jetty: Improper addition of quotation marks to user inputs   │
-│                                                            │                  │          │        │                   │                                  │ in CgiServlet                                                │
-│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2023-36479                   │
-└────────────────────────────────────────────────────────────┴──────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────────┴──────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────┬──────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────────┬─────────────────────────────────────────────────────────────┐
+│                          Library                           │  Vulnerability   │ Severity │ Status │ Installed Version │          Fixed Version           │                            Title                            │
+├────────────────────────────────────────────────────────────┼──────────────────┼──────────┼────────┼───────────────────┼──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ commons-io:commons-io (maven-surefire-common-2.22.1.jar)   │ CVE-2021-29425   │ MEDIUM   │ fixed  │ 2.2               │ 2.7                              │ apache-commons-io: Limited path traversal in Apache Commons │
+│                                                            │                  │          │        │                   │                                  │ IO 2.2 to 2.6                                               │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-29425                  │
+├────────────────────────────────────────────────────────────┤                  │          │        │                   │                                  │                                                             │
+│ commons-io:commons-io (surefire-api-2.22.1.jar)            │                  │          │        │                   │                                  │                                                             │
+│                                                            │                  │          │        │                   │                                  │                                                             │
+│                                                            │                  │          │        │                   │                                  │                                                             │
+├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                             │
+│ commons-io:commons-io (commons-io-2.5.jar)                 │                  │          │        │ 2.5               │                                  │                                                             │
+│                                                            │                  │          │        │                   │                                  │                                                             │
+│                                                            │                  │          │        │                   │                                  │                                                             │
+├────────────────────────────────────────────────────────────┤                  │          │        │                   │                                  │                                                             │
+│ commons-io:commons-io (surefire-booter-2.22.1.jar)         │                  │          │        │                   │                                  │                                                             │
+│                                                            │                  │          │        │                   │                                  │                                                             │
+│                                                            │                  │          │        │                   │                                  │                                                             │
+├────────────────────────────────────────────────────────────┼──────────────────┤          │        ├───────────────────┼──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ junit:junit (junit-4.11.jar)                               │ CVE-2020-15250   │          │        │ 4.11              │ 4.13.1                           │ TemporaryFolder is shared between all users across system   │
+│                                                            │                  │          │        │                   │                                  │ which could result in...                                    │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2020-15250                  │
+├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                             │
+│ junit:junit (junit-4.12.jar)                               │                  │          │        │ 4.12              │                                  │                                                             │
+│                                                            │                  │          │        │                   │                                  │                                                             │
+│                                                            │                  │          │        │                   │                                  │                                                             │
+├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ org.apache.commons:commons-compress                        │ CVE-2021-35515   │ HIGH     │        │ 1.11              │ 1.21                             │ apache-commons-compress: infinite loop when reading a       │
+│ (commons-compress-1.11.jar)                                │                  │          │        │                   │                                  │ specially crafted 7Z archive                                │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-35515                  │
+│                                                            ├──────────────────┤          │        │                   │                                  ├─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2021-35516   │          │        │                   │                                  │ apache-commons-compress: excessive memory allocation when   │
+│                                                            │                  │          │        │                   │                                  │ reading a specially crafted 7Z archive                      │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-35516                  │
+│                                                            ├──────────────────┤          │        │                   │                                  ├─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2021-35517   │          │        │                   │                                  │ apache-commons-compress: excessive memory allocation when   │
+│                                                            │                  │          │        │                   │                                  │ reading a specially crafted TAR archive                     │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-35517                  │
+│                                                            ├──────────────────┤          │        │                   │                                  ├─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2021-36090   │          │        │                   │                                  │ apache-commons-compress: excessive memory allocation when   │
+│                                                            │                  │          │        │                   │                                  │ reading a specially crafted ZIP archive                     │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-36090                  │
+│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2018-11771   │ MEDIUM   │        │                   │ 1.18                             │ apache-commons-compress: ZipArchiveInputStream.read() fails │
+│                                                            │                  │          │        │                   │                                  │ to identify correct EOF allowing for DoS via crafted...     │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2018-11771                  │
+│                                                            ├──────────────────┤          │        │                   ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2018-1324    │          │        │                   │ 1.16                             │ apache-commons-compress: Infinite loop via extra field      │
+│                                                            │                  │          │        │                   │                                  │ parser in ZipFile and ZipArchiveInputStream...              │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2018-1324                   │
+├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ org.apache.maven.shared:maven-shared-utils                 │ CVE-2022-29599   │ CRITICAL │        │ 0.9               │ 3.3.3                            │ maven-shared-utils: Command injection via Commandline class │
+│ (maven-surefire-common-2.22.1.jar)                         │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-29599                  │
+├────────────────────────────────────────────────────────────┤                  │          │        │                   │                                  │                                                             │
+│ org.apache.maven.shared:maven-shared-utils                 │                  │          │        │                   │                                  │                                                             │
+│ (surefire-api-2.22.1.jar)                                  │                  │          │        │                   │                                  │                                                             │
+├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                             │
+│ org.apache.maven.shared:maven-shared-utils                 │                  │          │        │ 3.0.0             │                                  │                                                             │
+│ (maven-shared-utils-3.0.0.jar)                             │                  │          │        │                   │                                  │                                                             │
+├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                             │
+│ org.apache.maven.shared:maven-shared-utils                 │                  │          │        │ 3.0.1             │                                  │                                                             │
+│ (maven-shared-utils-3.0.1.jar)                             │                  │          │        │                   │                                  │                                                             │
+├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                             │
+│ org.apache.maven.shared:maven-shared-utils                 │                  │          │        │ 3.2.1             │                                  │                                                             │
+│ (maven-shared-utils-3.2.1.jar)                             │                  │          │        │                   │                                  │                                                             │
+├────────────────────────────────────────────────────────────┼──────────────────┤          │        ├───────────────────┼──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ org.apache.maven:maven-core (maven-core-2.2.1.jar)         │ CVE-2021-26291   │          │        │ 2.2.1             │ 3.8.1                            │ maven: Block repositories using http by default             │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-26291                  │
+├────────────────────────────────────────────────────────────┤                  │          │        ├───────────────────┤                                  │                                                             │
+│ org.apache.maven:maven-core (maven-core-3.0.jar)           │                  │          │        │ 3.0               │                                  │                                                             │
+│                                                            │                  │          │        │                   │                                  │                                                             │
+├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ org.codehaus.plexus:plexus-archiver                        │ CVE-2023-37460   │ HIGH     │        │ 3.4               │ 4.8.0                            │ plexus-archiver: Arbitrary File Creation in                 │
+│ (plexus-archiver-3.4.jar)                                  │                  │          │        │                   │                                  │ AbstractUnArchiver                                          │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2023-37460                  │
+│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2018-1002200 │ MEDIUM   │        │                   │ 3.6.0                            │ plexus-archiver: arbitrary file write vulnerability /       │
+│                                                            │                  │          │        │                   │                                  │ arbitrary code execution using a specially...               │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2018-1002200                │
+├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ org.codehaus.plexus:plexus-utils (plexus-utils-1.5.15.jar) │ CVE-2017-1000487 │ CRITICAL │        │ 1.5.15            │ 3.0.16                           │ plexus-utils: Mishandled strings in Commandline class allow │
+│                                                            │                  │          │        │                   │                                  │ for command injection                                       │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2017-1000487                │
+│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2022-4244    │ HIGH     │        │                   │ 3.0.24                           │ codehaus-plexus: Directory Traversal                        │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-4244                   │
+│                                                            ├──────────────────┼──────────┤        │                   │                                  ├─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2022-4245    │ MEDIUM   │        │                   │                                  │ codehaus-plexus: XML External Entity (XXE) Injection        │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-4245                   │
+├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ org.codehaus.plexus:plexus-utils (plexus-utils-2.0.4.jar)  │ CVE-2017-1000487 │ CRITICAL │        │ 2.0.4             │ 3.0.16                           │ plexus-utils: Mishandled strings in Commandline class allow │
+│                                                            │                  │          │        │                   │                                  │ for command injection                                       │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2017-1000487                │
+│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2022-4244    │ HIGH     │        │                   │ 3.0.24                           │ codehaus-plexus: Directory Traversal                        │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-4244                   │
+│                                                            ├──────────────────┼──────────┤        │                   │                                  ├─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2022-4245    │ MEDIUM   │        │                   │                                  │ codehaus-plexus: XML External Entity (XXE) Injection        │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-4245                   │
+├────────────────────────────────────────────────────────────┼──────────────────┤          │        ├───────────────────┼──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ org.eclipse.jetty:jetty-http                               │ CVE-2023-40167   │          │        │ 9.4.40.v20210413  │ 9.4.52, 10.0.16, 11.0.16, 12.0.1 │ jetty: Improper validation of HTTP/1 content-length         │
+│ (jetty-http-9.4.40.v20210413.jar)                          │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2023-40167                  │
+│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2022-2047    │ LOW      │        │                   │ 9.4.47, 10.0.10, 11.0.10         │ improver hostname input handling                            │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2022-2047                   │
+├────────────────────────────────────────────────────────────┼──────────────────┼──────────┤        │                   ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ org.eclipse.jetty:jetty-servlets                           │ CVE-2021-28169   │ MEDIUM   │        │                   │ 9.4.41, 10.0.3, 11.0.3           │ jetty: requests to the ConcatServlet and WelcomeFilter are  │
+│ (jetty-servlets-9.4.40.v20210413.jar)                      │                  │          │        │                   │                                  │ able to access protected...                                 │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2021-28169                  │
+│                                                            ├──────────────────┼──────────┤        │                   ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│                                                            │ CVE-2023-36479   │ LOW      │        │                   │ 9.4.52, 10.0.16, 11.0.16         │ jetty: Improper addition of quotation marks to user inputs  │
+│                                                            │                  │          │        │                   │                                  │ in CgiServlet                                               │
+│                                                            │                  │          │        │                   │                                  │ https://avd.aquasec.com/nvd/cve-2023-36479                  │
+└────────────────────────────────────────────────────────────┴──────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────────┴─────────────────────────────────────────────────────────────┘

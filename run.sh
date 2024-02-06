@@ -1,5 +1,6 @@
 ecosystem=$1
 buildImage=$2
+osv=$3
 
 if [ -z "$ecosystem" ]; then
   echo "Please specify an ecosystem."
@@ -12,9 +13,15 @@ if ! [ -z "$buildImage" ]; then
   docker build -t $docker ./docker/$ecosystem/
 fi
 
+if ! [ -z "$osv" ]; then
+  echo "Running osv-scanner for source folder"
+  ~/go/bin/osv-scanner scan -r --json --output ./result/$ecosystem/osv_scanner.json ./docker/$ecosystem/
+  ~/go/bin/osv-scanner scan -r --output ./result/$ecosystem/osv_scanner.txt ./docker/$ecosystem/
+fi
+
 echo "$(date +"%Y-%m-%d %T") Running trivy" 
-trivy image --format json $docker > ./result/$ecosystem/trivy.json
-trivy image $docker > ./result/$ecosystem/trivy.txt
+trivy image --format json --scanners vuln $docker > ./result/$ecosystem/trivy.json
+trivy image --scanners vuln $docker > ./result/$ecosystem/trivy.txt
 echo "$(date +"%Y-%m-%d %T") Running grype"
 grype $docker --scope all-layers -o json > ./result/$ecosystem/grype.json
 grype $docker > ./result/$ecosystem/grype.txt

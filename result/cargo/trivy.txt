@@ -1,0 +1,21 @@
+
+docker-scanning-test-cargo (debian trixie/sid)
+==============================================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+
+src/Cargo.lock (cargo)
+======================
+Total: 2 (UNKNOWN: 0, LOW: 0, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
+
+┌───────────┬─────────────────────┬──────────┬────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
+│  Library  │    Vulnerability    │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                             │
+├───────────┼─────────────────────┼──────────┼────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ inventory │ GHSA-36xm-35qq-795w │ MEDIUM   │ fixed  │ 0.1.11            │ 0.2.0         │ Inventory exposes reference to non-Sync data to an arbitrary │
+│           │                     │          │        │                   │               │ thread                                                       │
+│           │                     │          │        │                   │               │ https://github.com/advisories/GHSA-36xm-35qq-795w            │
+│           ├─────────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│           │ GHSA-ghc8-5cgm-5rpf │          │        │                   │               │ Inventory fails to prohibit standard library access prior to │
+│           │                     │          │        │                   │               │ initialization of Rust...                                    │
+│           │                     │          │        │                   │               │ https://github.com/advisories/GHSA-ghc8-5cgm-5rpf            │
+└───────────┴─────────────────────┴──────────┴────────┴───────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘

@@ -1,0 +1,192 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2024-02-06T07:03:02.879375683Z",
+  "ArtifactName": "docker-scanning-test-cargo",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "debian",
+      "Name": "trixie/sid"
+    },
+    "ImageID": "sha256:2a2eaad163c6718f946c3a7a9b2bfe91928cd0a9bbdc933ab37e00d75e46d803",
+    "DiffIDs": [
+      "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e",
+      "sha256:2063ea9d3a4800d9e3183626d759d8db122d290af136f9c3ecc7e23f1a715a39",
+      "sha256:2e33d89c0916df6e9d8eac93210db146aaf121522045eca6d158179d8aad64cc",
+      "sha256:da6b2da8881e85f9771e2a1687a64ab4c36477ed32d5d45b047e633eac1aa854",
+      "sha256:93fb3f64419f9b38717046d7d03ad8b67407afb0be6d4647cbca1709dec3e3ce",
+      "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+      "sha256:e5f79968552a74b586dd552fc6060ac4d7e85ad099a5da044ec7113bd77897ca",
+      "sha256:f62baf94e3bb2fb8deb0abae6ef02d4ec2167e1edd1d3d9a238800402948b149"
+    ],
+    "RepoTags": [
+      "docker-scanning-test-cargo:latest"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2024-02-06T06:57:43.615147561Z",
+      "history": [
+        {
+          "created": "2024-01-31T22:37:49Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:78f5e584e45cc3316db2f908517a75399e41b10f9055de8915646c20535298fc in / "
+        },
+        {
+          "created": "2024-01-31T22:37:49Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"bash\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2024-02-06T06:50:58Z",
+          "created_by": "ENV DEBIAN_FRONTEND=noninteractive",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2024-02-06T06:50:58Z",
+          "created_by": "RUN /bin/sh -c apt-get -y update \u0026\u0026     apt-get -y install     pkg-config     build-essential     curl # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-02-06T06:51:20Z",
+          "created_by": "RUN /bin/sh -c curl https://sh.rustup.rs -sSf | bash -s -- -y # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-02-06T06:51:20Z",
+          "created_by": "ENV PATH=/root/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2024-02-06T06:54:55Z",
+          "created_by": "RUN /bin/sh -c rustup default stable # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-02-06T06:54:55Z",
+          "created_by": "RUN /bin/sh -c mkdir /src # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-02-06T06:54:55Z",
+          "created_by": "WORKDIR /src",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-02-06T06:57:34Z",
+          "created_by": "COPY example/ ./ # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-02-06T06:57:43Z",
+          "created_by": "RUN /bin/sh -c cargo build --release # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-02-06T06:57:43Z",
+          "created_by": "ENTRYPOINT [\"./target/release/example\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e",
+          "sha256:2063ea9d3a4800d9e3183626d759d8db122d290af136f9c3ecc7e23f1a715a39",
+          "sha256:2e33d89c0916df6e9d8eac93210db146aaf121522045eca6d158179d8aad64cc",
+          "sha256:da6b2da8881e85f9771e2a1687a64ab4c36477ed32d5d45b047e633eac1aa854",
+          "sha256:93fb3f64419f9b38717046d7d03ad8b67407afb0be6d4647cbca1709dec3e3ce",
+          "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+          "sha256:e5f79968552a74b586dd552fc6060ac4d7e85ad099a5da044ec7113bd77897ca",
+          "sha256:f62baf94e3bb2fb8deb0abae6ef02d4ec2167e1edd1d3d9a238800402948b149"
+        ]
+      },
+      "config": {
+        "Entrypoint": [
+          "./target/release/example"
+        ],
+        "Env": [
+          "PATH=/root/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "DEBIAN_FRONTEND=noninteractive"
+        ],
+        "WorkingDir": "/src"
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "docker-scanning-test-cargo (debian trixie/sid)",
+      "Class": "os-pkgs",
+      "Type": "debian"
+    },
+    {
+      "Target": "src/Cargo.lock",
+      "Class": "lang-pkgs",
+      "Type": "cargo",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "GHSA-36xm-35qq-795w",
+          "PkgID": "inventory@0.1.11",
+          "PkgName": "inventory",
+          "InstalledVersion": "0.1.11",
+          "FixedVersion": "0.2.0",
+          "Status": "fixed",
+          "Layer": {
+            "DiffID": "sha256:e5f79968552a74b586dd552fc6060ac4d7e85ad099a5da044ec7113bd77897ca"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://github.com/advisories/GHSA-36xm-35qq-795w",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "Inventory exposes reference to non-Sync data to an arbitrary thread",
+          "Description": "Affected versions do not enforce a `Sync` bound on the type of caller-provided value held in the plugin registry. References to these values are made accessible to arbitrary threads other than the one that constructed them.\n\nA caller could use this flaw to submit thread-unsafe data into inventory, then access it as a reference simultaneously from multiple threads.\n\nThe flaw was corrected by enforcing that data submitted by the caller into inventory is `Sync`.",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "ghsa": 2
+          },
+          "References": [
+            "https://github.com/dtolnay/inventory",
+            "https://github.com/dtolnay/inventory/commit/e1e347d2725b9c9dd4a70b63eb08532ca9687652",
+            "https://github.com/dtolnay/inventory/pull/42",
+            "https://rustsec.org/advisories/RUSTSEC-2023-0058.html"
+          ]
+        },
+        {
+          "VulnerabilityID": "GHSA-ghc8-5cgm-5rpf",
+          "PkgID": "inventory@0.1.11",
+          "PkgName": "inventory",
+          "InstalledVersion": "0.1.11",
+          "FixedVersion": "0.2.0",
+          "Status": "fixed",
+          "Layer": {
+            "DiffID": "sha256:e5f79968552a74b586dd552fc6060ac4d7e85ad099a5da044ec7113bd77897ca"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://github.com/advisories/GHSA-ghc8-5cgm-5rpf",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Rust",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Arust"
+          },
+          "Title": "Inventory fails to prohibit standard library access prior to initialization of Rust standard library runtime",
+          "Description": "Affected versions allow arbitrary caller-provided code to execute before the lifetime of `main`.\n\nIf the caller-provided code accesses particular pieces of the standard library that require an initialized Rust runtime, such as `std::io` or `std::thread`, these may not behave as documented. Panics are likely; UB is possible.\n\nThe flaw was corrected by enforcing that only code written within the `inventory` crate, which is guaranteed not to access runtime-dependent parts of the standard library, runs before `main`. Caller-provided code is restricted to running at compile time.\n",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "ghsa": 2
+          },
+          "References": [
+            "https://github.com/dtolnay/inventory",
+            "https://github.com/dtolnay/inventory/commit/b853350a3800e38d2cb9950355b80bc8b8d3959c",
+            "https://github.com/dtolnay/inventory/pull/43",
+            "https://rustsec.org/advisories/RUSTSEC-2023-0057.html"
+          ]
+        }
+      ]
+    }
+  ]
+}

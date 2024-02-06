@@ -1,11 +1,11 @@
-FROM maven:3-openjdk-17 AS builder
+FROM debian:testing-slim AS builder
 
 RUN mkdir /src
 WORKDIR /src
 COPY src/ src
 
-RUN mvn package -f ./src/pom.xml
-# COPY --from=build ./src/target/src-1.0-SNAPSHOT.jar ./src/example.jar
+# Install required packages
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y maven
 
-ENTRYPOINT ["java -cp ./src/target/src-1.0-SNAPSHOT.jar example.Main"] 
-# ENTRYPOINT ["java", "-jar", "example.jar"]
+RUN mvn package -f ./src/pom.xml

@@ -1,0 +1,21 @@
+Scanning dir ./docker/go/
+Scanned /usr/local/google/home/gongh/Desktop/code/DockerTester/docker/go/base/go.mod file and found 25 packages
+Scanned /usr/local/google/home/gongh/Desktop/code/DockerTester/docker/go/final/go.mod file and found 28 packages
++-------------------------------------+------+-----------+----------------------------------+---------+------------------------+
+| OSV URL                             | CVSS | ECOSYSTEM | PACKAGE                          | VERSION | SOURCE                 |
++-------------------------------------+------+-----------+----------------------------------+---------+------------------------+
+| https://osv.dev/GHSA-h3q2-8whx-c29h | 5.5  | Go        | github.com/goreleaser/goreleaser | 1.23.0  | docker/go/final/go.mod |
++-------------------------------------+------+-----------+----------------------------------+---------+------------------------+
+| Uncalled vulnerabilities            |      |           |                                  |         |                        |
++-------------------------------------+------+-----------+----------------------------------+---------+------------------------+
+| https://osv.dev/GHSA-9w9f-6mg8-jp7w | 5.5  | Go        | github.com/blevesearch/bleve     | 1.0.14  | docker/go/base/go.mod  |
+| https://osv.dev/GO-2022-0470        |      |           |                                  |         |                        |
+| https://osv.dev/GO-2023-2041        |      | Go        | stdlib                           | 1.21.0  | docker/go/final/go.mod |
+| https://osv.dev/GO-2023-2043        |      | Go        | stdlib                           | 1.21.0  | docker/go/final/go.mod |
+| https://osv.dev/GO-2023-2044        |      | Go        | stdlib                           | 1.21.0  | docker/go/final/go.mod |
+| https://osv.dev/GO-2023-2045        |      | Go        | stdlib                           | 1.21.0  | docker/go/final/go.mod |
+| https://osv.dev/GO-2023-2102        |      | Go        | stdlib                           | 1.21.0  | docker/go/final/go.mod |
+| https://osv.dev/GO-2023-2185        |      | Go        | stdlib                           | 1.21.0  | docker/go/final/go.mod |
+| https://osv.dev/GO-2023-2186        |      | Go        | stdlib                           | 1.21.0  | docker/go/final/go.mod |
+| https://osv.dev/GO-2023-2382        |      | Go        | stdlib                           | 1.21.0  | docker/go/final/go.mod |
++-------------------------------------+------+-----------+----------------------------------+---------+------------------------+

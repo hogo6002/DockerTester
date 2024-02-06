@@ -12,4 +12,4 @@ COPY src/ src
 RUN cd src && npm ci
 
 # Execute the test script
-CMD ["node", "./src/test.js"]
+ENTRYPOINT ["node", "./src/test.js"]

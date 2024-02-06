@@ -1,6 +1,6 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2024-02-04T15:15:33.146293858Z",
+  "CreatedAt": "2024-02-05T06:09:58.347068715Z",
   "ArtifactName": "docker-scanning-test-go",
   "ArtifactType": "container_image",
   "Metadata": {
@@ -8,24 +8,24 @@
       "Family": "debian",
       "Name": "trixie/sid"
     },
-    "ImageID": "sha256:49ddc6ef61a1e7b3f1b85698d63bf78d3852858a736331911af29c5ed9e5bb69",
+    "ImageID": "sha256:2efa62263d4124764e097ea958d8cfc52ffe4ecd1212c47ed3ea46b13b9ec97e",
     "DiffIDs": [
       "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e",
       "sha256:5565b0e6eea6ac0d3cc3e8ba1805d58b4948eabd799d5c2c1bb307b4e5aaa067",
       "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-      "sha256:a06dd2645ed66226a66044c37bd762db150b7d8a5985945665dc794f8a40c5d5",
-      "sha256:2193e9a42c8f852087c338618eddf6e1e514dfa74252a9e8f806578a2b0b457c",
-      "sha256:fa062fbee8551ef0bb29bbd95e7064c9071a225f7ebc4e4703e7343f7575253a",
-      "sha256:dd905273ca68f8c8d9288b2d7f8a2759e2a5ca224b516df43dedfe24a019464f",
-      "sha256:d09bd5c01a96e11b3c9f00435a23736bc259d71257256508d9452872d0975a1a",
-      "sha256:01c7128819d260561e7e975d37edc77e72b304a89c8639cf2d9fcda4358f7333"
+      "sha256:39bc37e6df5aacf9ea1ec28ab4b2ee772ae281f1bde4fe4c49fd9bfccd512d5c",
+      "sha256:55efc4a72b02ae22cf81cd626061c69308d2395590e90de54b7cf2b12c1594a9",
+      "sha256:4ade82bbfa084f8e86d80afbb488bbb575a197a2a970f67671e5d4a87f31f844",
+      "sha256:427156c0c084a5b063f1952856c10fdd61b943672c7d626933f72ce7a4df41b8",
+      "sha256:94a02a473cbcc01de68567b8bacd509c8ca41cf8eb8e479ee8b06368d802213f",
+      "sha256:a7c4b10b815212584a5f5d66110cd2f40558100799cd4941c1828d2209202bdd"
     ],
     "RepoTags": [
       "docker-scanning-test-go:latest"
     ],
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2024-02-02T13:18:36.119682462Z",
+      "created": "2024-02-05T06:08:56.15223124Z",
       "history": [
         {
           "created": "2024-01-31T22:37:49Z",
@@ -47,37 +47,37 @@
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-02T13:17:13Z",
+          "created": "2024-02-05T06:07:38Z",
           "created_by": "COPY base/ ./base # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-02T13:17:58Z",
+          "created": "2024-02-05T06:08:22Z",
           "created_by": "RUN /bin/sh -c apt-get update \u0026\u0026 apt-get upgrade -y \u0026\u0026     apt-get install -y     golang     git # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-02T13:18:26Z",
+          "created": "2024-02-05T06:08:50Z",
           "created_by": "RUN /bin/sh -c cd ./base \u0026\u0026 go build -o main . # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-02T13:18:27Z",
+          "created": "2024-02-05T06:08:50Z",
           "created_by": "RUN /bin/sh -c mkdir ./final # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-02T13:18:27Z",
+          "created": "2024-02-05T06:08:51Z",
           "created_by": "COPY final/ ./final # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-02T13:18:36Z",
+          "created": "2024-02-05T06:08:56Z",
           "created_by": "RUN /bin/sh -c cd ./final \u0026\u0026 go build -o main . # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-02T13:18:36Z",
+          "created": "2024-02-05T06:08:56Z",
           "created_by": "ENTRYPOINT [\"./final/main\"]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
@@ -90,12 +90,12 @@
           "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e",
           "sha256:5565b0e6eea6ac0d3cc3e8ba1805d58b4948eabd799d5c2c1bb307b4e5aaa067",
           "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-          "sha256:a06dd2645ed66226a66044c37bd762db150b7d8a5985945665dc794f8a40c5d5",
-          "sha256:2193e9a42c8f852087c338618eddf6e1e514dfa74252a9e8f806578a2b0b457c",
-          "sha256:fa062fbee8551ef0bb29bbd95e7064c9071a225f7ebc4e4703e7343f7575253a",
-          "sha256:dd905273ca68f8c8d9288b2d7f8a2759e2a5ca224b516df43dedfe24a019464f",
-          "sha256:d09bd5c01a96e11b3c9f00435a23736bc259d71257256508d9452872d0975a1a",
-          "sha256:01c7128819d260561e7e975d37edc77e72b304a89c8639cf2d9fcda4358f7333"
+          "sha256:39bc37e6df5aacf9ea1ec28ab4b2ee772ae281f1bde4fe4c49fd9bfccd512d5c",
+          "sha256:55efc4a72b02ae22cf81cd626061c69308d2395590e90de54b7cf2b12c1594a9",
+          "sha256:4ade82bbfa084f8e86d80afbb488bbb575a197a2a970f67671e5d4a87f31f844",
+          "sha256:427156c0c084a5b063f1952856c10fdd61b943672c7d626933f72ce7a4df41b8",
+          "sha256:94a02a473cbcc01de68567b8bacd509c8ca41cf8eb8e479ee8b06368d802213f",
+          "sha256:a7c4b10b815212584a5f5d66110cd2f40558100799cd4941c1828d2209202bdd"
         ]
       },
       "config": {
@@ -128,7 +128,7 @@
           "FixedVersion": "1.1.4, 2.1.1",
           "Status": "fixed",
           "Layer": {
-            "DiffID": "sha256:fa062fbee8551ef0bb29bbd95e7064c9071a225f7ebc4e4703e7343f7575253a"
+            "DiffID": "sha256:4ade82bbfa084f8e86d80afbb488bbb575a197a2a970f67671e5d4a87f31f844"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-32708",
@@ -187,7 +187,7 @@
           "InstalledVersion": "v1.0.14",
           "Status": "affected",
           "Layer": {
-            "DiffID": "sha256:fa062fbee8551ef0bb29bbd95e7064c9071a225f7ebc4e4703e7343f7575253a"
+            "DiffID": "sha256:4ade82bbfa084f8e86d80afbb488bbb575a197a2a970f67671e5d4a87f31f844"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31022",
@@ -243,7 +243,7 @@
           "FixedVersion": "1.24.0",
           "Status": "fixed",
           "Layer": {
-            "DiffID": "sha256:01c7128819d260561e7e975d37edc77e72b304a89c8639cf2d9fcda4358f7333"
+            "DiffID": "sha256:a7c4b10b815212584a5f5d66110cd2f40558100799cd4941c1828d2209202bdd"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-23840",

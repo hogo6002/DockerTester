@@ -1,0 +1,1212 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/usr/local/google/home/gongh/Desktop/code/DockerTester/docker/go/base/go.mod",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/blevesearch/bleve",
+            "version": "1.0.14",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:09:22Z",
+              "published": "2022-06-03T22:17:51Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-9w9f-6mg8-jp7w",
+              "aliases": [
+                "CVE-2022-31022",
+                "GO-2022-0470"
+              ],
+              "summary": "Missing Role Based Access Control for the REST handlers in bleve/http package",
+              "details": "### Impact\n_What kind of vulnerability is it? Who is impacted?_\n\nBleve includes HTTP utilities under bleve/http package, that are used by its sample application. \n(https://github.com/blevesearch/bleve-explorer)\nThese HTTP methods paves way for exploitation of a node’s filesystem where the bleve index resides, \nif the user has used bleve’s own HTTP (bleve/http) handlers for exposing the access to the indexes. \nFor instance, the CreateIndexHandler (http/index_create.go) and DeleteIndexHandler (http/index_delete.go) \nenable an attacker to create a bleve index (directory structure) anywhere where the user running the server \nhas the write permissions and to delete recursively any directory owned by the same user account.\n \nUsers who have used the bleve/http package for exposing access to bleve index without the explicit \nhandling for the Role Based Access Controls(RBAC) of the index assets would be impacted.\n\n\n### Patches\n_Has the problem been patched? What versions should users upgrade to?_\n\n**No**. The http package is purely intended to be used for demonstration purposes. \nAnd bleve is never designed to be handling the RBACs or it was ever advertised to be used in that way. \nHence the collaborators of this project have decided to stay away from adding any authentication or \nauthorization to bleve project at the moment.\n\n### Workarounds\n_Is there a way for users to fix or remediate the vulnerability without upgrading?_\n\nThe bleve/http package is mainly for demonstration purposes and it lacks exhaustive validation of the user \ninputs as well as any authentication and authorization measures. \nSo it is recommended to not use that in production use cases.\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue [here](https://github.com/blevesearch/bleve/issues).\n* Email us at [mailto:security@couchbase.com, fts-team@couchbase.com].\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/blevesearch/bleve",
+                    "purl": "pkg:golang/github.com/blevesearch/bleve"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.10.14"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-9w9f-6mg8-jp7w/GHSA-9w9f-6mg8-jp7w.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/blevesearch/bleve/v2",
+                    "purl": "pkg:golang/github.com/blevesearch/bleve/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "2.3.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-9w9f-6mg8-jp7w/GHSA-9w9f-6mg8-jp7w.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/blevesearch/bleve/security/advisories/GHSA-9w9f-6mg8-jp7w"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31022"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/blevesearch/bleve/commit/1c7509d6a17d36f265c90b4e8f4e3a3182fe79ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2022-0470"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "github.com/blevesearch/bleve"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-306"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-03T22:17:51Z",
+                "nvd_published_at": "2022-06-01T20:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:09:22Z",
+              "published": "2022-07-15T23:29:55Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2022-0470",
+              "aliases": [
+                "CVE-2022-31022",
+                "GHSA-9w9f-6mg8-jp7w"
+              ],
+              "summary": "No access control in github.com/blevesearch/bleve and bleve/v2",
+              "details": "HTTP handlers provide unauthenticated access to the local filesystem.\n\nThe Bleve http package is intended for demonstration purposes and contains no authentication, authorization, or validation of user inputs. Exposing handlers from this package can permit attackers to create files and delete directories.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/blevesearch/bleve",
+                    "purl": "pkg:golang/github.com/blevesearch/bleve"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2022-0470.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/blevesearch/bleve/http",
+                        "symbols": [
+                          "AliasHandler.ServeHTTP",
+                          "CreateIndexHandler.ServeHTTP",
+                          "DebugDocumentHandler.ServeHTTP",
+                          "DeleteIndexHandler.ServeHTTP",
+                          "DocCountHandler.ServeHTTP",
+                          "DocDeleteHandler.ServeHTTP",
+                          "DocGetHandler.ServeHTTP",
+                          "DocIndexHandler.ServeHTTP",
+                          "GetIndexHandler.ServeHTTP",
+                          "ListFieldsHandler.ServeHTTP",
+                          "SearchHandler.ServeHTTP"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/blevesearch/bleve/v2",
+                    "purl": "pkg:golang/github.com/blevesearch/bleve/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2022-0470.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/blevesearch/bleve/v2/http",
+                        "symbols": [
+                          "AliasHandler.ServeHTTP",
+                          "CreateIndexHandler.ServeHTTP",
+                          "DebugDocumentHandler.ServeHTTP",
+                          "DeleteIndexHandler.ServeHTTP",
+                          "DocCountHandler.ServeHTTP",
+                          "DocDeleteHandler.ServeHTTP",
+                          "DocGetHandler.ServeHTTP",
+                          "DocIndexHandler.ServeHTTP",
+                          "GetIndexHandler.ServeHTTP",
+                          "ListFieldsHandler.ServeHTTP",
+                          "SearchHandler.ServeHTTP"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/blevesearch/bleve/commit/1c7509d6a17d36f265c90b4e8f4e3a3182fe79ff"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2022-0470"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-9w9f-6mg8-jp7w",
+                "GO-2022-0470"
+              ],
+              "aliases": [
+                "CVE-2022-31022",
+                "GHSA-9w9f-6mg8-jp7w",
+                "GO-2022-0470"
+              ],
+              "experimentalAnalysis": {
+                "GO-2022-0470": {
+                  "called": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "/usr/local/google/home/gongh/Desktop/code/DockerTester/docker/go/final/go.mod",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/goreleaser/goreleaser",
+            "version": "1.23.0",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-01-30T20:57:52Z",
+              "published": "2024-01-30T20:57:52Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-h3q2-8whx-c29h",
+              "aliases": [
+                "CVE-2024-23840"
+              ],
+              "summary": "`goreleaser release --debug` shows secrets",
+              "details": "### Summary\nHello 👋 \n\n`goreleaser release --debug` log shows secret values used in the in the custom publisher.\n\n\nHow to reproduce the issue:\n\n- Define a custom publisher as the one below. Make sure to provide a custom script to the `cmd` field and to provide a secret to `env` \n\n```\n#.goreleaser.yml \npublishers:\n  - name: my-publisher\n  # IDs of the artifacts we want to sign\n    ids:\n      - linux_archives\n      - linux_package\n    cmd: \"./build/package/linux_notarize.sh\"\n    env:\n      - VERSION={{ .Version }}\n      - SECRET_1={{.Env.SECRET_1}}\n      - SECRET_2={{.Env.SECRET_2}}\n```\n\n- run `goreleaser release --debug`\n\nYou should see your secret value in the gorelease log. The log shows also the `GITHUB_TOKEN`\n\nExample:\n\n```\nrunning                                        cmd= ....\nSECRET_1=secret_value\n```\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/goreleaser/goreleaser",
+                    "purl": "pkg:golang/github.com/goreleaser/goreleaser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.23.0"
+                        },
+                        {
+                          "fixed": "1.24.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.23.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-h3q2-8whx-c29h/GHSA-h3q2-8whx-c29h.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/goreleaser/goreleaser/security/advisories/GHSA-h3q2-8whx-c29h"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23840"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/goreleaser/goreleaser/commit/d5b6a533ca1dc3366983d5d31ee2d2b6232b83c0"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/goreleaser/goreleaser"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-532"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-30T20:57:52Z",
+                "nvd_published_at": "2024-01-30T17:15:11Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-h3q2-8whx-c29h"
+              ],
+              "aliases": [
+                "CVE-2024-23840",
+                "GHSA-h3q2-8whx-c29h"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "stdlib",
+            "version": "1.21.0",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T01:03:09Z",
+              "published": "2023-09-07T16:11:17Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2041",
+              "aliases": [
+                "BIT-golang-2023-39318",
+                "CVE-2023-39318"
+              ],
+              "summary": "Improper handling of HTML-like comments in script contexts in html/template",
+              "details": "The html/template package does not properly handle HTML-like \"\" comment tokens, nor hashbang \"#!\" comment tokens, in \u003cscript\u003e contexts. This may cause the template parser to improperly interpret the contents of \u003cscript\u003e contexts, causing actions to be improperly escaped. This may be leveraged to perform an XSS attack.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.8"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2041.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "html/template",
+                        "symbols": [
+                          "Template.Execute",
+                          "Template.ExecuteTemplate",
+                          "escaper.escapeText",
+                          "isComment",
+                          "tJS",
+                          "tLineCmt"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/62196"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/526156"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/2C5vbR-UNkI/m/L1hdrPhfBAAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Takeshi Kaneko (GMO Cybersecurity by Ierae, Inc.)"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2041"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:03:09Z",
+              "published": "2023-09-07T16:11:59Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2043",
+              "aliases": [
+                "BIT-golang-2023-39319",
+                "CVE-2023-39319"
+              ],
+              "summary": "Improper handling of special tags within script contexts in html/template",
+              "details": "The html/template package does not apply the proper rules for handling occurrences of \"\u003cscript\", \"\u003c!--\", and \"\u003c/script\" within JS literals in \u003cscript\u003e contexts. This may cause the template parser to improperly consider script contexts to be terminated early, causing actions to be improperly escaped. This could be leveraged to perform an XSS attack.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.8"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2043.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "html/template",
+                        "symbols": [
+                          "Template.Execute",
+                          "Template.ExecuteTemplate",
+                          "escaper.escapeText",
+                          "indexTagEnd",
+                          "tSpecialTagEnd"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/62197"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/526157"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/2C5vbR-UNkI/m/L1hdrPhfBAAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Takeshi Kaneko (GMO Cybersecurity by Ierae, Inc.)"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2043"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:03:10Z",
+              "published": "2023-09-07T16:12:03Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2044",
+              "aliases": [
+                "BIT-golang-2023-39321",
+                "CVE-2023-39321"
+              ],
+              "summary": "Panic when processing post-handshake message on QUIC connections in crypto/tls",
+              "details": "Processing an incomplete post-handshake message for a QUIC connection can cause a panic.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2044.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "crypto/tls",
+                        "symbols": [
+                          "QUICConn.HandleData"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/62266"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/523039"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/2C5vbR-UNkI/m/L1hdrPhfBAAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Marten Seemann"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2044"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:03:10Z",
+              "published": "2023-09-07T16:12:01Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2045",
+              "aliases": [
+                "BIT-golang-2023-39322",
+                "CVE-2023-39322"
+              ],
+              "summary": "Memory exhaustion in QUIC connection handling in crypto/tls",
+              "details": "QUIC connections do not set an upper bound on the amount of data buffered when reading post-handshake messages, allowing a malicious QUIC connection to cause unbounded memory growth.\n\nWith fix, connections now consistently reject messages larger than 65KiB in size.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2045.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "crypto/tls",
+                        "symbols": [
+                          "QUICConn.HandleData"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/62266"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/523039"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/2C5vbR-UNkI/m/L1hdrPhfBAAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Marten Seemann"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2045"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:03:10Z",
+              "published": "2023-10-11T16:49:53Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2102",
+              "aliases": [
+                "BIT-golang-2023-39325",
+                "CVE-2023-39325",
+                "GHSA-4374-p667-p6c8"
+              ],
+              "related": [
+                "CVE-2023-44487"
+              ],
+              "summary": "HTTP/2 rapid reset can cause excessive work in net/http",
+              "details": "A malicious HTTP/2 client which rapidly creates requests and immediately resets them can cause excessive server resource consumption. While the total number of requests is bounded by the http2.Server.MaxConcurrentStreams setting, resetting an in-progress request allows the attacker to create a new request while the existing one is still executing.\n\nWith the fix applied, HTTP/2 servers now bound the number of simultaneously executing handler goroutines to the stream concurrency limit (MaxConcurrentStreams). New requests arriving when at the limit (which can only happen after the client has reset an existing, in-flight request) will be queued until a handler exits. If the request queue grows too large, the server will terminate the connection.\n\nThis issue is also fixed in golang.org/x/net/http2 for users manually configuring HTTP/2.\n\nThe default stream concurrency limit is 250 streams (requests) per HTTP/2 connection. This value may be adjusted using the golang.org/x/net/http2 package; see the Server.MaxConcurrentStreams setting and the ConfigureServer function.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.10"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2102.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "net/http",
+                        "symbols": [
+                          "ListenAndServe",
+                          "ListenAndServeTLS",
+                          "Serve",
+                          "ServeTLS",
+                          "Server.ListenAndServe",
+                          "Server.ListenAndServeTLS",
+                          "Server.Serve",
+                          "Server.ServeTLS",
+                          "http2Server.ServeConn",
+                          "http2serverConn.processHeaders",
+                          "http2serverConn.runHandler",
+                          "http2serverConn.serve",
+                          "http2serverConn.upgradeRequest"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/net",
+                    "purl": "pkg:golang/golang.org/x/net"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2102.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "golang.org/x/net/http2",
+                        "symbols": [
+                          "Server.ServeConn",
+                          "serverConn.processHeaders",
+                          "serverConn.runHandler",
+                          "serverConn.serve",
+                          "serverConn.upgradeRequest"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/63417"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/534215"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/534235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/iNNxDTCjZvo/m/UDd7VKQuAAAJ"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2102"
+              }
+            },
+            {
+              "modified": "2023-12-06T16:22:45Z",
+              "published": "2023-11-08T22:42:14Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2185",
+              "aliases": [
+                "BIT-golang-2023-45283",
+                "CVE-2023-45283"
+              ],
+              "summary": "Insecure parsing of Windows paths with a \\??\\ prefix in path/filepath",
+              "details": "The filepath package does not recognize paths with a \\??\\ prefix as special.\n\nOn Windows, a path beginning with \\??\\ is a Root Local Device path equivalent to a path beginning with \\\\?\\. Paths with a \\??\\ prefix may be used to access arbitrary locations on the system. For example, the path \\??\\c:\\x is equivalent to the more common path c:\\x.\n\nBefore fix, Clean could convert a rooted path such as \\a\\..\\??\\b into the root local device path \\??\\b. Clean will now convert this to .\\??\\b.\n\nSimilarly, Join(\\, ??, b) could convert a seemingly innocent sequence of path elements into the root local device path \\??\\b. Join will now convert this to \\.\\??\\b.\n\nIn addition, with fix, IsAbs now correctly reports paths beginning with \\??\\ as absolute, and VolumeName correctly reports the \\??\\ prefix as a volume name.\n\nUPDATE: Go 1.20.11 and Go 1.21.4 inadvertently changed the definition of the volume name in Windows paths starting with \\?, resulting in filepath.Clean(\\?\\c:) returning \\?\\c: rather than \\?\\c:\\ (among other effects). The previous behavior has been restored.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.11"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2185.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "goos": [
+                          "windows"
+                        ],
+                        "path": "path/filepath",
+                        "symbols": [
+                          "Abs",
+                          "Base",
+                          "Clean",
+                          "Dir",
+                          "EvalSymlinks",
+                          "Glob",
+                          "IsLocal",
+                          "Join",
+                          "Rel",
+                          "Split",
+                          "VolumeName",
+                          "Walk",
+                          "WalkDir",
+                          "join",
+                          "volumeNameLen"
+                        ]
+                      },
+                      {
+                        "goos": [
+                          "windows"
+                        ],
+                        "path": "internal/safefilepath",
+                        "symbols": [
+                          "FromFS",
+                          "fromFS"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.20.11"
+                        },
+                        {
+                          "fixed": "1.20.12"
+                        },
+                        {
+                          "introduced": "1.21.4"
+                        },
+                        {
+                          "fixed": "1.21.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2185.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "goos": [
+                          "windows"
+                        ],
+                        "path": "path/filepath",
+                        "symbols": [
+                          "Abs",
+                          "Base",
+                          "Clean",
+                          "Dir",
+                          "EvalSymlinks",
+                          "Glob",
+                          "IsLocal",
+                          "Join",
+                          "Rel",
+                          "Split",
+                          "VolumeName",
+                          "Walk",
+                          "WalkDir",
+                          "volumeNameLen"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/63713"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/540277"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/4tU8LZfBFkY"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/64028"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/541175"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/6ypN5EjibjM/m/KmLVYH_uAgAJ"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2185"
+              }
+            },
+            {
+              "modified": "2023-11-18T08:11:32Z",
+              "published": "2023-11-08T22:42:19Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2186",
+              "aliases": [
+                "BIT-golang-2023-45284",
+                "CVE-2023-45284"
+              ],
+              "summary": "Incorrect detection of reserved device names on Windows in path/filepath",
+              "details": "On Windows, The IsLocal function does not correctly detect reserved device names in some cases.\n\nReserved names followed by spaces, such as \"COM1 \", and reserved names \"COM\" and \"LPT\" followed by superscript 1, 2, or 3, are incorrectly reported as local.\n\nWith fix, IsLocal now correctly reports these names as non-local.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.11"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2186.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "path/filepath",
+                        "symbols": [
+                          "IsLocal"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/63713"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/540277"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/4tU8LZfBFkY"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2186"
+              }
+            },
+            {
+              "modified": "2023-12-13T08:12:25Z",
+              "published": "2023-12-06T16:22:36Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2382",
+              "aliases": [
+                "BIT-golang-2023-39326",
+                "CVE-2023-39326"
+              ],
+              "summary": "Denial of service via chunk extensions in net/http",
+              "details": "A malicious HTTP sender can use chunk extensions to cause a receiver reading from a request or response body to read many more bytes from the network than are in the body.\n\nA malicious HTTP client can further exploit this to cause a server to automatically read a large amount of data (up to about 1GiB) when a handler fails to read the entire body of a request.\n\nChunk extensions are a little-used HTTP feature which permit including additional metadata in a request or response body sent using the chunked encoding. The net/http chunked encoding reader discards this metadata. A sender can exploit this by inserting a large metadata segment with each byte transferred. The chunk reader now produces an error if the ratio of real body to encoded bytes grows too small.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.12"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2382.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "net/http/internal",
+                        "symbols": [
+                          "chunkedReader.Read",
+                          "chunkedReader.beginChunk",
+                          "readChunkLine"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/64433"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/547335"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/6ypN5EjibjM/m/KmLVYH_uAgAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Bartek Nowotarski"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2382"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2023-2041"
+              ],
+              "aliases": [
+                "BIT-golang-2023-39318",
+                "CVE-2023-39318",
+                "GO-2023-2041"
+              ],
+              "experimentalAnalysis": {
+                "GO-2023-2041": {
+                  "called": false
+                }
+              }
+            },
+            {
+              "ids": [
+                "GO-2023-2043"
+              ],
+              "aliases": [
+                "BIT-golang-2023-39319",
+                "CVE-2023-39319",
+                "GO-2023-2043"
+              ],
+              "experimentalAnalysis": {
+                "GO-2023-2043": {
+                  "called": false
+                }
+              }
+            },
+            {
+              "ids": [
+                "GO-2023-2044"
+              ],
+              "aliases": [
+                "BIT-golang-2023-39321",
+                "CVE-2023-39321",
+                "GO-2023-2044"
+              ],
+              "experimentalAnalysis": {
+                "GO-2023-2044": {
+                  "called": false
+                }
+              }
+            },
+            {
+              "ids": [
+                "GO-2023-2045"
+              ],
+              "aliases": [
+                "BIT-golang-2023-39322",
+                "CVE-2023-39322",
+                "GO-2023-2045"
+              ],
+              "experimentalAnalysis": {
+                "GO-2023-2045": {
+                  "called": false
+                }
+              }
+            },
+            {
+              "ids": [
+                "GO-2023-2102"
+              ],
+              "aliases": [
+                "BIT-golang-2023-39325",
+                "CVE-2023-39325",
+                "GHSA-4374-p667-p6c8",
+                "GO-2023-2102"
+              ],
+              "experimentalAnalysis": {
+                "GO-2023-2102": {
+                  "called": false
+                }
+              }
+            },
+            {
+              "ids": [
+                "GO-2023-2185"
+              ],
+              "aliases": [
+                "BIT-golang-2023-45283",
+                "CVE-2023-45283",
+                "GO-2023-2185"
+              ],
+              "experimentalAnalysis": {
+                "GO-2023-2185": {
+                  "called": false
+                }
+              }
+            },
+            {
+              "ids": [
+                "GO-2023-2186"
+              ],
+              "aliases": [
+                "BIT-golang-2023-45284",
+                "CVE-2023-45284",
+                "GO-2023-2186"
+              ],
+              "experimentalAnalysis": {
+                "GO-2023-2186": {
+                  "called": false
+                }
+              }
+            },
+            {
+              "ids": [
+                "GO-2023-2382"
+              ],
+              "aliases": [
+                "BIT-golang-2023-39326",
+                "CVE-2023-39326",
+                "GO-2023-2382"
+              ],
+              "experimentalAnalysis": {
+                "GO-2023-2382": {
+                  "called": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

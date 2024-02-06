@@ -1,0 +1,11 @@
+Scanning dir ./docker/cargo/
+Scanned /usr/local/google/home/gongh/Desktop/code/DockerTester/docker/cargo/example/Cargo.lock file and found 10 packages
+Scanning directory for vendored libs: /usr/local/google/home/gongh/Desktop/code/DockerTester/docker/cargo/example/target/debug/deps
++-------------------------------------+------+-----------+-----------+---------+---------------------------------+
+| OSV URL                             | CVSS | ECOSYSTEM | PACKAGE   | VERSION | SOURCE                          |
++-------------------------------------+------+-----------+-----------+---------+---------------------------------+
+| https://osv.dev/GHSA-36xm-35qq-795w |      | crates.io | inventory | 0.1.11  | docker/cargo/example/Cargo.lock |
+| https://osv.dev/GHSA-ghc8-5cgm-5rpf |      | crates.io | inventory | 0.1.11  | docker/cargo/example/Cargo.lock |
+| https://osv.dev/RUSTSEC-2023-0057   |      | crates.io | inventory | 0.1.11  | docker/cargo/example/Cargo.lock |
+| https://osv.dev/RUSTSEC-2023-0058   |      | crates.io | inventory | 0.1.11  | docker/cargo/example/Cargo.lock |
++-------------------------------------+------+-----------+-----------+---------+---------------------------------+
