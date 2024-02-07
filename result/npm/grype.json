@@ -367,6 +367,131 @@
   },
   {
    "vulnerability": {
+    "id": "CVE-2024-0684",
+    "dataSource": "https://security-tracker.debian.org/tracker/CVE-2024-0684",
+    "namespace": "debian:distro:debian:unstable",
+    "severity": "Medium",
+    "urls": [
+     "https://security-tracker.debian.org/tracker/CVE-2024-0684"
+    ],
+    "cvss": [],
+    "fix": {
+     "versions": [],
+     "state": "not-fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2024-0684",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2024-0684",
+     "namespace": "nvd:cpe",
+     "severity": "Medium",
+     "urls": [
+      "https://access.redhat.com/security/cve/CVE-2024-0684",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2258948",
+      "https://www.openwall.com/lists/oss-security/2024/01/18/2"
+     ],
+     "description": "A flaw was found in the GNU coreutils \"split\" program. A heap overflow with user-controlled data of multiple hundred bytes in length could occur in the line_bytes_split() function, potentially leading to an application crash and denial of service.",
+     "cvss": [
+      {
+       "source": "patrick@puiterwijk.org",
+       "type": "Secondary",
+       "version": "3.1",
+       "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+       "metrics": {
+        "baseScore": 5.5,
+        "exploitabilityScore": 1.8,
+        "impactScore": 3.6
+       },
+       "vendorMetadata": {}
+      }
+     ]
+    }
+   ],
+   "matchDetails": [
+    {
+     "type": "exact-direct-match",
+     "matcher": "dpkg-matcher",
+     "searchedBy": {
+      "distro": {
+       "type": "debian",
+       "version": "unstable"
+      },
+      "namespace": "debian:distro:debian:unstable",
+      "package": {
+       "name": "coreutils",
+       "version": "9.4-3+b1"
+      }
+     },
+     "found": {
+      "versionConstraint": "none (deb)",
+      "vulnerabilityID": "CVE-2024-0684"
+     }
+    },
+    {
+     "type": "exact-indirect-match",
+     "matcher": "dpkg-matcher",
+     "searchedBy": {
+      "distro": {
+       "type": "debian",
+       "version": "unstable"
+      },
+      "namespace": "debian:distro:debian:unstable",
+      "package": {
+       "name": "coreutils",
+       "version": "9.4-3"
+      }
+     },
+     "found": {
+      "versionConstraint": "none (deb)",
+      "vulnerabilityID": "CVE-2024-0684"
+     }
+    }
+   ],
+   "artifact": {
+    "id": "ad87a1b1f5578ccc",
+    "name": "coreutils",
+    "version": "9.4-3+b1",
+    "type": "deb",
+    "locations": [
+     {
+      "path": "/usr/share/doc/coreutils/copyright",
+      "layerID": "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e"
+     },
+     {
+      "path": "/var/lib/dpkg/info/coreutils.md5sums",
+      "layerID": "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e"
+     },
+     {
+      "path": "/var/lib/dpkg/status",
+      "layerID": "sha256:6d7147b0e28db1ed232eea562c6defa0d4155d0388938a5a87c3ca09b635062a"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "BSD-4-clause-UC",
+     "FSFULLR",
+     "GFDL-1.3",
+     "GFDL-NIV-1.3",
+     "GPL-3",
+     "GPL-3+",
+     "ISC"
+    ],
+    "cpes": [
+     "cpe:2.3:a:coreutils:coreutils:9.4-3+b1:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:deb/debian/coreutils@9.4-3+b1?arch=amd64&upstream=coreutils%409.4-3&distro=debian",
+    "upstreams": [
+     {
+      "name": "coreutils",
+      "version": "9.4-3"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
     "id": "CVE-2016-2781",
     "dataSource": "https://security-tracker.debian.org/tracker/CVE-2016-2781",
     "namespace": "debian:distro:debian:unstable",
@@ -595,104 +720,6 @@
      "found": {
       "versionConstraint": "none (deb)",
       "vulnerabilityID": "CVE-2017-18018"
-     }
-    }
-   ],
-   "artifact": {
-    "id": "ad87a1b1f5578ccc",
-    "name": "coreutils",
-    "version": "9.4-3+b1",
-    "type": "deb",
-    "locations": [
-     {
-      "path": "/usr/share/doc/coreutils/copyright",
-      "layerID": "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e"
-     },
-     {
-      "path": "/var/lib/dpkg/info/coreutils.md5sums",
-      "layerID": "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e"
-     },
-     {
-      "path": "/var/lib/dpkg/status",
-      "layerID": "sha256:6d7147b0e28db1ed232eea562c6defa0d4155d0388938a5a87c3ca09b635062a"
-     }
-    ],
-    "language": "",
-    "licenses": [
-     "BSD-4-clause-UC",
-     "FSFULLR",
-     "GFDL-1.3",
-     "GFDL-NIV-1.3",
-     "GPL-3",
-     "GPL-3+",
-     "ISC"
-    ],
-    "cpes": [
-     "cpe:2.3:a:coreutils:coreutils:9.4-3+b1:*:*:*:*:*:*:*"
-    ],
-    "purl": "pkg:deb/debian/coreutils@9.4-3+b1?arch=amd64&upstream=coreutils%409.4-3&distro=debian",
-    "upstreams": [
-     {
-      "name": "coreutils",
-      "version": "9.4-3"
-     }
-    ]
-   }
-  },
-  {
-   "vulnerability": {
-    "id": "CVE-2024-0684",
-    "dataSource": "https://security-tracker.debian.org/tracker/CVE-2024-0684",
-    "namespace": "debian:distro:debian:unstable",
-    "severity": "Unknown",
-    "urls": [
-     "https://security-tracker.debian.org/tracker/CVE-2024-0684"
-    ],
-    "cvss": [],
-    "fix": {
-     "versions": [],
-     "state": "not-fixed"
-    },
-    "advisories": []
-   },
-   "relatedVulnerabilities": [],
-   "matchDetails": [
-    {
-     "type": "exact-direct-match",
-     "matcher": "dpkg-matcher",
-     "searchedBy": {
-      "distro": {
-       "type": "debian",
-       "version": "unstable"
-      },
-      "namespace": "debian:distro:debian:unstable",
-      "package": {
-       "name": "coreutils",
-       "version": "9.4-3+b1"
-      }
-     },
-     "found": {
-      "versionConstraint": "none (deb)",
-      "vulnerabilityID": "CVE-2024-0684"
-     }
-    },
-    {
-     "type": "exact-indirect-match",
-     "matcher": "dpkg-matcher",
-     "searchedBy": {
-      "distro": {
-       "type": "debian",
-       "version": "unstable"
-      },
-      "namespace": "debian:distro:debian:unstable",
-      "package": {
-       "name": "coreutils",
-       "version": "9.4-3"
-      }
-     },
-     "found": {
-      "versionConstraint": "none (deb)",
-      "vulnerabilityID": "CVE-2024-0684"
      }
     }
    ],
@@ -1244,6 +1271,7 @@
      "severity": "High",
      "urls": [
       "http://packetstormsecurity.com/files/176932/glibc-syslog-Heap-Based-Buffer-Overflow.html",
+      "http://seclists.org/fulldisclosure/2024/Feb/3",
       "https://access.redhat.com/security/cve/CVE-2023-6779",
       "https://bugzilla.redhat.com/show_bug.cgi?id=2254395",
       "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D2FIH77VHY3KCRROCXOT6L27WMZXSJ2G/",
@@ -1361,6 +1389,8 @@
      "urls": [
       "http://packetstormsecurity.com/files/176931/glibc-qsort-Out-Of-Bounds-Read-Write.html",
       "http://packetstormsecurity.com/files/176932/glibc-syslog-Heap-Based-Buffer-Overflow.html",
+      "http://seclists.org/fulldisclosure/2024/Feb/3",
+      "http://seclists.org/fulldisclosure/2024/Feb/5",
       "https://access.redhat.com/security/cve/CVE-2023-6246",
       "https://bugzilla.redhat.com/show_bug.cgi?id=2249053",
       "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D2FIH77VHY3KCRROCXOT6L27WMZXSJ2G/",
@@ -1489,6 +1519,7 @@
      "severity": "Medium",
      "urls": [
       "http://packetstormsecurity.com/files/176932/glibc-syslog-Heap-Based-Buffer-Overflow.html",
+      "http://seclists.org/fulldisclosure/2024/Feb/3",
       "https://access.redhat.com/security/cve/CVE-2023-6780",
       "https://bugzilla.redhat.com/show_bug.cgi?id=2254396",
       "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D2FIH77VHY3KCRROCXOT6L27WMZXSJ2G/",
@@ -2458,6 +2489,7 @@
      "severity": "High",
      "urls": [
       "http://packetstormsecurity.com/files/176932/glibc-syslog-Heap-Based-Buffer-Overflow.html",
+      "http://seclists.org/fulldisclosure/2024/Feb/3",
       "https://access.redhat.com/security/cve/CVE-2023-6779",
       "https://bugzilla.redhat.com/show_bug.cgi?id=2254395",
       "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D2FIH77VHY3KCRROCXOT6L27WMZXSJ2G/",
@@ -2570,6 +2602,8 @@
      "urls": [
       "http://packetstormsecurity.com/files/176931/glibc-qsort-Out-Of-Bounds-Read-Write.html",
       "http://packetstormsecurity.com/files/176932/glibc-syslog-Heap-Based-Buffer-Overflow.html",
+      "http://seclists.org/fulldisclosure/2024/Feb/3",
+      "http://seclists.org/fulldisclosure/2024/Feb/5",
       "https://access.redhat.com/security/cve/CVE-2023-6246",
       "https://bugzilla.redhat.com/show_bug.cgi?id=2249053",
       "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D2FIH77VHY3KCRROCXOT6L27WMZXSJ2G/",
@@ -2693,6 +2727,7 @@
      "severity": "Medium",
      "urls": [
       "http://packetstormsecurity.com/files/176932/glibc-syslog-Heap-Based-Buffer-Overflow.html",
+      "http://seclists.org/fulldisclosure/2024/Feb/3",
       "https://access.redhat.com/security/cve/CVE-2023-6780",
       "https://bugzilla.redhat.com/show_bug.cgi?id=2254396",
       "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D2FIH77VHY3KCRROCXOT6L27WMZXSJ2G/",
@@ -3591,6 +3626,178 @@
     "upstreams": [
      {
       "name": "glibc"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2023-52426",
+    "dataSource": "https://security-tracker.debian.org/tracker/CVE-2023-52426",
+    "namespace": "debian:distro:debian:unstable",
+    "severity": "Unknown",
+    "urls": [
+     "https://security-tracker.debian.org/tracker/CVE-2023-52426"
+    ],
+    "description": "libexpat through 2.5.0 allows recursive XML Entity Expansion if XML_DTD is undefined at compile time.",
+    "cvss": [],
+    "fix": {
+     "versions": [],
+     "state": "not-fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2023-52426",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2023-52426",
+     "namespace": "nvd:cpe",
+     "urls": [
+      "https://cwe.mitre.org/data/definitions/776.html",
+      "https://github.com/libexpat/libexpat/commit/0f075ec8ecb5e43f8fdca5182f8cca4703da0404",
+      "https://github.com/libexpat/libexpat/pull/777"
+     ],
+     "description": "libexpat through 2.5.0 allows recursive XML Entity Expansion if XML_DTD is undefined at compile time.",
+     "cvss": []
+    }
+   ],
+   "matchDetails": [
+    {
+     "type": "exact-indirect-match",
+     "matcher": "dpkg-matcher",
+     "searchedBy": {
+      "distro": {
+       "type": "debian",
+       "version": "unstable"
+      },
+      "namespace": "debian:distro:debian:unstable",
+      "package": {
+       "name": "expat",
+       "version": "2.5.0-2"
+      }
+     },
+     "found": {
+      "versionConstraint": "none (deb)",
+      "vulnerabilityID": "CVE-2023-52426"
+     }
+    }
+   ],
+   "artifact": {
+    "id": "b6c291cdbfd0db9c",
+    "name": "libexpat1",
+    "version": "2.5.0-2+b2",
+    "type": "deb",
+    "locations": [
+     {
+      "path": "/usr/share/doc/libexpat1/copyright",
+      "layerID": "sha256:6d7147b0e28db1ed232eea562c6defa0d4155d0388938a5a87c3ca09b635062a"
+     },
+     {
+      "path": "/var/lib/dpkg/info/libexpat1:amd64.md5sums",
+      "layerID": "sha256:6d7147b0e28db1ed232eea562c6defa0d4155d0388938a5a87c3ca09b635062a"
+     },
+     {
+      "path": "/var/lib/dpkg/status",
+      "layerID": "sha256:6d7147b0e28db1ed232eea562c6defa0d4155d0388938a5a87c3ca09b635062a"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "MIT"
+    ],
+    "cpes": [
+     "cpe:2.3:a:libexpat1:libexpat1:2.5.0-2+b2:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:deb/debian/libexpat1@2.5.0-2+b2?arch=amd64&upstream=expat%402.5.0-2&distro=debian",
+    "upstreams": [
+     {
+      "name": "expat",
+      "version": "2.5.0-2"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2023-52425",
+    "dataSource": "https://security-tracker.debian.org/tracker/CVE-2023-52425",
+    "namespace": "debian:distro:debian:unstable",
+    "severity": "Unknown",
+    "urls": [
+     "https://security-tracker.debian.org/tracker/CVE-2023-52425"
+    ],
+    "description": "libexpat through 2.5.0 allows a denial of service (resource consumption) because many full reparsings are required in the case of a large token for which multiple buffer fills are needed.",
+    "cvss": [],
+    "fix": {
+     "versions": [],
+     "state": "not-fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2023-52425",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2023-52425",
+     "namespace": "nvd:cpe",
+     "urls": [
+      "https://github.com/libexpat/libexpat/pull/789"
+     ],
+     "description": "libexpat through 2.5.0 allows a denial of service (resource consumption) because many full reparsings are required in the case of a large token for which multiple buffer fills are needed.",
+     "cvss": []
+    }
+   ],
+   "matchDetails": [
+    {
+     "type": "exact-indirect-match",
+     "matcher": "dpkg-matcher",
+     "searchedBy": {
+      "distro": {
+       "type": "debian",
+       "version": "unstable"
+      },
+      "namespace": "debian:distro:debian:unstable",
+      "package": {
+       "name": "expat",
+       "version": "2.5.0-2"
+      }
+     },
+     "found": {
+      "versionConstraint": "none (deb)",
+      "vulnerabilityID": "CVE-2023-52425"
+     }
+    }
+   ],
+   "artifact": {
+    "id": "b6c291cdbfd0db9c",
+    "name": "libexpat1",
+    "version": "2.5.0-2+b2",
+    "type": "deb",
+    "locations": [
+     {
+      "path": "/usr/share/doc/libexpat1/copyright",
+      "layerID": "sha256:6d7147b0e28db1ed232eea562c6defa0d4155d0388938a5a87c3ca09b635062a"
+     },
+     {
+      "path": "/var/lib/dpkg/info/libexpat1:amd64.md5sums",
+      "layerID": "sha256:6d7147b0e28db1ed232eea562c6defa0d4155d0388938a5a87c3ca09b635062a"
+     },
+     {
+      "path": "/var/lib/dpkg/status",
+      "layerID": "sha256:6d7147b0e28db1ed232eea562c6defa0d4155d0388938a5a87c3ca09b635062a"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "MIT"
+    ],
+    "cpes": [
+     "cpe:2.3:a:libexpat1:libexpat1:2.5.0-2+b2:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:deb/debian/libexpat1@2.5.0-2+b2?arch=amd64&upstream=expat%402.5.0-2&distro=debian",
+    "upstreams": [
+     {
+      "name": "expat",
+      "version": "2.5.0-2"
      }
     ]
    }
@@ -4504,7 +4711,21 @@
     },
     "advisories": []
    },
-   "relatedVulnerabilities": [],
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2024-22365",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2024-22365",
+     "namespace": "nvd:cpe",
+     "urls": [
+      "http://www.openwall.com/lists/oss-security/2024/01/18/3",
+      "https://github.com/linux-pam/linux-pam",
+      "https://github.com/linux-pam/linux-pam/commit/031bb5a5d0d950253b68138b498dc93be69a64cb",
+      "https://github.com/linux-pam/linux-pam/releases/tag/v1.6.0"
+     ],
+     "description": "linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+     "cvss": []
+    }
+   ],
    "matchDetails": [
     {
      "type": "exact-indirect-match",
@@ -4596,7 +4817,21 @@
     },
     "advisories": []
    },
-   "relatedVulnerabilities": [],
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2024-22365",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2024-22365",
+     "namespace": "nvd:cpe",
+     "urls": [
+      "http://www.openwall.com/lists/oss-security/2024/01/18/3",
+      "https://github.com/linux-pam/linux-pam",
+      "https://github.com/linux-pam/linux-pam/commit/031bb5a5d0d950253b68138b498dc93be69a64cb",
+      "https://github.com/linux-pam/linux-pam/releases/tag/v1.6.0"
+     ],
+     "description": "linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+     "cvss": []
+    }
+   ],
    "matchDetails": [
     {
      "type": "exact-indirect-match",
@@ -4688,7 +4923,21 @@
     },
     "advisories": []
    },
-   "relatedVulnerabilities": [],
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2024-22365",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2024-22365",
+     "namespace": "nvd:cpe",
+     "urls": [
+      "http://www.openwall.com/lists/oss-security/2024/01/18/3",
+      "https://github.com/linux-pam/linux-pam",
+      "https://github.com/linux-pam/linux-pam/commit/031bb5a5d0d950253b68138b498dc93be69a64cb",
+      "https://github.com/linux-pam/linux-pam/releases/tag/v1.6.0"
+     ],
+     "description": "linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+     "cvss": []
+    }
+   ],
    "matchDetails": [
     {
      "type": "exact-indirect-match",
@@ -4779,7 +5028,21 @@
     },
     "advisories": []
    },
-   "relatedVulnerabilities": [],
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2024-22365",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2024-22365",
+     "namespace": "nvd:cpe",
+     "urls": [
+      "http://www.openwall.com/lists/oss-security/2024/01/18/3",
+      "https://github.com/linux-pam/linux-pam",
+      "https://github.com/linux-pam/linux-pam/commit/031bb5a5d0d950253b68138b498dc93be69a64cb",
+      "https://github.com/linux-pam/linux-pam/releases/tag/v1.6.0"
+     ],
+     "description": "linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+     "cvss": []
+    }
+   ],
    "matchDetails": [
     {
      "type": "exact-indirect-match",
@@ -4875,6 +5138,7 @@
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/4ZAEFSFZDNBNJPNOUTLG5COISGQDLMGV/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/75DTHSTNOFFNAWHXKMDXS7EJWC6W2FUC/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ARI7VDSNTQVXRQFM6IK5GSSLEIYV4VZH/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HXYVPEZUA3465AEFX5JVFVP7KIFZMF3N/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/N6M5I6OQHJABNEYY555HUMMKX3Y4P25Z/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NEUNZSZ3CVSM2QWVYH3N2XGOCDWNYUA3/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORLXS5YTKN65E2Q2NWKXMFS5FWQHRNZW/",
@@ -5118,6 +5382,7 @@
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/4ZAEFSFZDNBNJPNOUTLG5COISGQDLMGV/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/75DTHSTNOFFNAWHXKMDXS7EJWC6W2FUC/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ARI7VDSNTQVXRQFM6IK5GSSLEIYV4VZH/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HXYVPEZUA3465AEFX5JVFVP7KIFZMF3N/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/N6M5I6OQHJABNEYY555HUMMKX3Y4P25Z/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NEUNZSZ3CVSM2QWVYH3N2XGOCDWNYUA3/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORLXS5YTKN65E2Q2NWKXMFS5FWQHRNZW/",
@@ -8860,6 +9125,7 @@
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/4ZAEFSFZDNBNJPNOUTLG5COISGQDLMGV/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/75DTHSTNOFFNAWHXKMDXS7EJWC6W2FUC/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ARI7VDSNTQVXRQFM6IK5GSSLEIYV4VZH/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HXYVPEZUA3465AEFX5JVFVP7KIFZMF3N/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/N6M5I6OQHJABNEYY555HUMMKX3Y4P25Z/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NEUNZSZ3CVSM2QWVYH3N2XGOCDWNYUA3/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORLXS5YTKN65E2Q2NWKXMFS5FWQHRNZW/",
@@ -9077,6 +9343,7 @@
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/4ZAEFSFZDNBNJPNOUTLG5COISGQDLMGV/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/75DTHSTNOFFNAWHXKMDXS7EJWC6W2FUC/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ARI7VDSNTQVXRQFM6IK5GSSLEIYV4VZH/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HXYVPEZUA3465AEFX5JVFVP7KIFZMF3N/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/N6M5I6OQHJABNEYY555HUMMKX3Y4P25Z/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NEUNZSZ3CVSM2QWVYH3N2XGOCDWNYUA3/",
       "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORLXS5YTKN65E2Q2NWKXMFS5FWQHRNZW/",
@@ -9752,8 +10019,8 @@
   "type": "image",
   "target": {
    "userInput": "docker-scanning-test-npm",
-   "imageID": "sha256:c62cf11b41098358c6d6651bc377277a93aa293bf0ebdc1bdc72860e7a8fddc2",
-   "manifestDigest": "sha256:6e2d7b33ba0f06a72844b6a0046de8b5df510d5447880c905d0c3cdf80111bb7",
+   "imageID": "sha256:424835b32f848ea2e71c0f853d2232a72013597fb983df5f78e280949c1d8e7f",
+   "manifestDigest": "sha256:9ebef892042befb4f2447a682ea1130360ed10c1cead2b1127b5509892165fe1",
    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
    "tags": [
     "docker-scanning-test-npm:latest"
@@ -9791,8 +10058,8 @@
      "size": 314258
     }
    ],
-   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjoxOTEwLCJkaWdlc3QiOiJzaGEyNTY6YzYyY2YxMWI0MTA5ODM1OGM2ZDY2NTFiYzM3NzI3N2E5M2FhMjkzYmYwZWJkYzFiZGM3Mjg2MGU3YThmZGRjMiJ9LCJsYXllcnMiOlt7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo4NDE3MDI0MCwiZGlnZXN0Ijoic2hhMjU2Ojk0MWJiMTU0NzA5Njg4YTQxYzc0MzIzOGExZGNhMGUwZDFkMjhhMjQ3Yjg5NTY3Y2IyYzE4NDM2MjcxZWJlMWUifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjoyNjY0MTgxNzYsImRpZ2VzdCI6InNoYTI1Njo2ZDcxNDdiMGUyOGRiMWVkMjMyZWVhNTYyYzZkZWZhMGQ0MTU1ZDAzODg5MzhhNWE4N2MzY2EwOWI2MzUwNjJhIn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6MjA0OCwiZGlnZXN0Ijoic2hhMjU2OjNmY2MxNmRiN2M4Nzc0N2VkYWU0MmZkZjMyMjQ5NWM0Nzg2N2NhYmJlYWExZGEzYzI3MjdlZjc3YTlhYTEzNjUifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjoxMDI0LCJkaWdlc3QiOiJzaGEyNTY6NWY3MGJmMThhMDg2MDA3MDE2ZTk0OGIwNGFlZDNiODIxMDNhMzZiZWE0MTc1NWI2Y2RkZmFmMTBhY2UzYzZlZiJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjEwNzUyLCJkaWdlc3QiOiJzaGEyNTY6YzIxZTdjNTlhYWY2MjUyOThkZjI3YWUyODU2YWExZGFhZDVjZDhiYjliMDYyNjE1MjM2N2EyN2ZlMjA0NGRlNSJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjQ2NTkyMCwiZGlnZXN0Ijoic2hhMjU2OjdhZWNjM2MyYTE2OWFmOWFiNmUxMjBjNDU1MDA3ODVjODBjZDFkOGM0MGNlOWNjOWM5Njk2NTBjNWMzZjZjMmQifV19",
-   "config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNvbmZpZyI6eyJFbnYiOlsiUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iXSwiQ21kIjpbIm5vZGUiLCIuL3NyYy90ZXN0LmpzIl0sIldvcmtpbmdEaXIiOiIvc3JjIiwiQXJnc0VzY2FwZWQiOnRydWUsIk9uQnVpbGQiOm51bGx9LCJjcmVhdGVkIjoiMjAyNC0wMi0wMVQxMjo1MjoyOS43MTA1OTg4ODNaIiwiaGlzdG9yeSI6W3siY3JlYXRlZCI6IjIwMjQtMDEtMzFUMjI6Mzc6NDkuMzQyMzE4MjAyWiIsImNyZWF0ZWRfYnkiOiIvYmluL3NoIC1jICMobm9wKSBBREQgZmlsZTo3OGY1ZTU4NGU0NWNjMzMxNmRiMmY5MDg1MTdhNzUzOTllNDFiMTBmOTA1NWRlODkxNTY0NmMyMDUzNTI5OGZjIGluIC8gIn0seyJjcmVhdGVkIjoiMjAyNC0wMS0zMVQyMjozNzo0OS42Mjk0ODk2NzVaIiwiY3JlYXRlZF9ieSI6Ii9iaW4vc2ggLWMgIyhub3ApICBDTUQgW1wiYmFzaFwiXSIsImVtcHR5X2xheWVyIjp0cnVlfSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTAxVDEyOjUyOjI2LjM1NzMxNDU5OVoiLCJjcmVhdGVkX2J5IjoiUlVOIC9iaW4vc2ggLWMgYXB0LWdldCB1cGRhdGUgXHUwMDI2XHUwMDI2IGFwdC1nZXQgdXBncmFkZSAteSBcdTAwMjZcdTAwMjYgICAgIGFwdC1nZXQgaW5zdGFsbCAteSAgICAgbnBtIC0tbm8taW5zdGFsbC1yZWNvbW1lbmRzICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDFUMTI6NTI6MjYuNzQzMzY3NDI1WiIsImNyZWF0ZWRfYnkiOiJSVU4gL2Jpbi9zaCAtYyBta2RpciAvc3JjICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDFUMTI6NTI6MjYuNzk0ODk4OTAxWiIsImNyZWF0ZWRfYnkiOiJXT1JLRElSIC9zcmMiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDFUMTI6NTI6MjYuODQzNTg2MTM0WiIsImNyZWF0ZWRfYnkiOiJDT1BZIHNyYy8gc3JjICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDFUMTI6NTI6MjkuNzEwNTk4ODgzWiIsImNyZWF0ZWRfYnkiOiJSVU4gL2Jpbi9zaCAtYyBjZCBzcmMgXHUwMDI2XHUwMDI2IG5wbSBjaSAjIGJ1aWxka2l0IiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAifSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTAxVDEyOjUyOjI5LjcxMDU5ODg4M1oiLCJjcmVhdGVkX2J5IjoiQ01EIFtcIm5vZGVcIiBcIi4vc3JjL3Rlc3QuanNcIl0iLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCIsImVtcHR5X2xheWVyIjp0cnVlfV0sIm9zIjoibGludXgiLCJyb290ZnMiOnsidHlwZSI6ImxheWVycyIsImRpZmZfaWRzIjpbInNoYTI1Njo5NDFiYjE1NDcwOTY4OGE0MWM3NDMyMzhhMWRjYTBlMGQxZDI4YTI0N2I4OTU2N2NiMmMxODQzNjI3MWViZTFlIiwic2hhMjU2OjZkNzE0N2IwZTI4ZGIxZWQyMzJlZWE1NjJjNmRlZmEwZDQxNTVkMDM4ODkzOGE1YTg3YzNjYTA5YjYzNTA2MmEiLCJzaGEyNTY6M2ZjYzE2ZGI3Yzg3NzQ3ZWRhZTQyZmRmMzIyNDk1YzQ3ODY3Y2FiYmVhYTFkYTNjMjcyN2VmNzdhOWFhMTM2NSIsInNoYTI1Njo1ZjcwYmYxOGEwODYwMDcwMTZlOTQ4YjA0YWVkM2I4MjEwM2EzNmJlYTQxNzU1YjZjZGRmYWYxMGFjZTNjNmVmIiwic2hhMjU2OmMyMWU3YzU5YWFmNjI1Mjk4ZGYyN2FlMjg1NmFhMWRhYWQ1Y2Q4YmI5YjA2MjYxNTIzNjdhMjdmZTIwNDRkZTUiLCJzaGEyNTY6N2FlY2MzYzJhMTY5YWY5YWI2ZTEyMGM0NTUwMDc4NWM4MGNkMWQ4YzQwY2U5Y2M5Yzk2OTY1MGM1YzNmNmMyZCJdfX0=",
+   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjoxOTA1LCJkaWdlc3QiOiJzaGEyNTY6NDI0ODM1YjMyZjg0OGVhMmU3MWMwZjg1M2QyMjMyYTcyMDEzNTk3ZmI5ODNkZjVmNzhlMjgwOTQ5YzFkOGU3ZiJ9LCJsYXllcnMiOlt7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo4NDE3MDI0MCwiZGlnZXN0Ijoic2hhMjU2Ojk0MWJiMTU0NzA5Njg4YTQxYzc0MzIzOGExZGNhMGUwZDFkMjhhMjQ3Yjg5NTY3Y2IyYzE4NDM2MjcxZWJlMWUifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjoyNjY0MTgxNzYsImRpZ2VzdCI6InNoYTI1Njo2ZDcxNDdiMGUyOGRiMWVkMjMyZWVhNTYyYzZkZWZhMGQ0MTU1ZDAzODg5MzhhNWE4N2MzY2EwOWI2MzUwNjJhIn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6MjA0OCwiZGlnZXN0Ijoic2hhMjU2OjNmY2MxNmRiN2M4Nzc0N2VkYWU0MmZkZjMyMjQ5NWM0Nzg2N2NhYmJlYWExZGEzYzI3MjdlZjc3YTlhYTEzNjUifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjoxMDI0LCJkaWdlc3QiOiJzaGEyNTY6NWY3MGJmMThhMDg2MDA3MDE2ZTk0OGIwNGFlZDNiODIxMDNhMzZiZWE0MTc1NWI2Y2RkZmFmMTBhY2UzYzZlZiJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjEwNzUyLCJkaWdlc3QiOiJzaGEyNTY6YzIxZTdjNTlhYWY2MjUyOThkZjI3YWUyODU2YWExZGFhZDVjZDhiYjliMDYyNjE1MjM2N2EyN2ZlMjA0NGRlNSJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjQ2NTkyMCwiZGlnZXN0Ijoic2hhMjU2OjdhZWNjM2MyYTE2OWFmOWFiNmUxMjBjNDU1MDA3ODVjODBjZDFkOGM0MGNlOWNjOWM5Njk2NTBjNWMzZjZjMmQifV19",
+   "config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNvbmZpZyI6eyJFbnYiOlsiUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iXSwiRW50cnlwb2ludCI6WyJub2RlIiwiLi9zcmMvdGVzdC5qcyJdLCJXb3JraW5nRGlyIjoiL3NyYyIsIk9uQnVpbGQiOm51bGx9LCJjcmVhdGVkIjoiMjAyNC0wMi0wMVQxMjo1MjoyOS43MTA1OTg4ODNaIiwiaGlzdG9yeSI6W3siY3JlYXRlZCI6IjIwMjQtMDEtMzFUMjI6Mzc6NDkuMzQyMzE4MjAyWiIsImNyZWF0ZWRfYnkiOiIvYmluL3NoIC1jICMobm9wKSBBREQgZmlsZTo3OGY1ZTU4NGU0NWNjMzMxNmRiMmY5MDg1MTdhNzUzOTllNDFiMTBmOTA1NWRlODkxNTY0NmMyMDUzNTI5OGZjIGluIC8gIn0seyJjcmVhdGVkIjoiMjAyNC0wMS0zMVQyMjozNzo0OS42Mjk0ODk2NzVaIiwiY3JlYXRlZF9ieSI6Ii9iaW4vc2ggLWMgIyhub3ApICBDTUQgW1wiYmFzaFwiXSIsImVtcHR5X2xheWVyIjp0cnVlfSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTAxVDEyOjUyOjI2LjM1NzMxNDU5OVoiLCJjcmVhdGVkX2J5IjoiUlVOIC9iaW4vc2ggLWMgYXB0LWdldCB1cGRhdGUgXHUwMDI2XHUwMDI2IGFwdC1nZXQgdXBncmFkZSAteSBcdTAwMjZcdTAwMjYgICAgIGFwdC1nZXQgaW5zdGFsbCAteSAgICAgbnBtIC0tbm8taW5zdGFsbC1yZWNvbW1lbmRzICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDFUMTI6NTI6MjYuNzQzMzY3NDI1WiIsImNyZWF0ZWRfYnkiOiJSVU4gL2Jpbi9zaCAtYyBta2RpciAvc3JjICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDFUMTI6NTI6MjYuNzk0ODk4OTAxWiIsImNyZWF0ZWRfYnkiOiJXT1JLRElSIC9zcmMiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDFUMTI6NTI6MjYuODQzNTg2MTM0WiIsImNyZWF0ZWRfYnkiOiJDT1BZIHNyYy8gc3JjICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDFUMTI6NTI6MjkuNzEwNTk4ODgzWiIsImNyZWF0ZWRfYnkiOiJSVU4gL2Jpbi9zaCAtYyBjZCBzcmMgXHUwMDI2XHUwMDI2IG5wbSBjaSAjIGJ1aWxka2l0IiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAifSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTAxVDEyOjUyOjI5LjcxMDU5ODg4M1oiLCJjcmVhdGVkX2J5IjoiRU5UUllQT0lOVCBbXCJub2RlXCIgXCIuL3NyYy90ZXN0LmpzXCJdIiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAiLCJlbXB0eV9sYXllciI6dHJ1ZX1dLCJvcyI6ImxpbnV4Iiwicm9vdGZzIjp7InR5cGUiOiJsYXllcnMiLCJkaWZmX2lkcyI6WyJzaGEyNTY6OTQxYmIxNTQ3MDk2ODhhNDFjNzQzMjM4YTFkY2EwZTBkMWQyOGEyNDdiODk1NjdjYjJjMTg0MzYyNzFlYmUxZSIsInNoYTI1Njo2ZDcxNDdiMGUyOGRiMWVkMjMyZWVhNTYyYzZkZWZhMGQ0MTU1ZDAzODg5MzhhNWE4N2MzY2EwOWI2MzUwNjJhIiwic2hhMjU2OjNmY2MxNmRiN2M4Nzc0N2VkYWU0MmZkZjMyMjQ5NWM0Nzg2N2NhYmJlYWExZGEzYzI3MjdlZjc3YTlhYTEzNjUiLCJzaGEyNTY6NWY3MGJmMThhMDg2MDA3MDE2ZTk0OGIwNGFlZDNiODIxMDNhMzZiZWE0MTc1NWI2Y2RkZmFmMTBhY2UzYzZlZiIsInNoYTI1NjpjMjFlN2M1OWFhZjYyNTI5OGRmMjdhZTI4NTZhYTFkYWFkNWNkOGJiOWIwNjI2MTUyMzY3YTI3ZmUyMDQ0ZGU1Iiwic2hhMjU2OjdhZWNjM2MyYTE2OWFmOWFiNmUxMjBjNDU1MDA3ODVjODBjZDFkOGM0MGNlOWNjOWM5Njk2NTBjNWMzZjZjMmQiXX19",
    "repoDigests": [],
    "architecture": "amd64",
    "os": "linux"
@@ -9884,12 +10151,12 @@
    "vex-add": []
   },
   "db": {
-   "built": "2024-02-04T01:26:30Z",
+   "built": "2024-02-06T16:19:57Z",
    "schemaVersion": 5,
    "location": "/usr/local/google/home/gongh/.cache/grype/db/5",
-   "checksum": "sha256:ed12c5336813ee260772d4fbf89c1c2b908a2bab63edad99d363d1e1ed5bf184",
+   "checksum": "sha256:a594a02e3670dc284e49d4c6a7119754c5f0381b491b949bb056aa36992f37ce",
    "error": null
   },
-  "timestamp": "2024-02-04T15:23:05.519873075Z"
+  "timestamp": "2024-02-07T02:39:03.554410943Z"
  }
 }

@@ -3,6 +3,7 @@ module final
 go 1.21.0
 
 require (
+	github.com/dvsekhvalnov/jose2go v1.5.0
 	github.com/goreleaser/goreleaser v1.23.0
 	github.com/urfave/cli/v2 v2.27.1
 )

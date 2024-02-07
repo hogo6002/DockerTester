@@ -1,6 +1,6 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2024-02-04T15:22:22.379679555Z",
+  "CreatedAt": "2024-02-07T02:38:39.064880329Z",
   "ArtifactName": "docker-scanning-test-npm",
   "ArtifactType": "container_image",
   "Metadata": {
@@ -8,7 +8,7 @@
       "Family": "debian",
       "Name": "trixie/sid"
     },
-    "ImageID": "sha256:c62cf11b41098358c6d6651bc377277a93aa293bf0ebdc1bdc72860e7a8fddc2",
+    "ImageID": "sha256:424835b32f848ea2e71c0f853d2232a72013597fb983df5f78e280949c1d8e7f",
     "DiffIDs": [
       "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e",
       "sha256:6d7147b0e28db1ed232eea562c6defa0d4155d0388938a5a87c3ca09b635062a",
@@ -60,7 +60,7 @@
         },
         {
           "created": "2024-02-01T12:52:29Z",
-          "created_by": "CMD [\"node\" \"./src/test.js\"]",
+          "created_by": "ENTRYPOINT [\"node\" \"./src/test.js\"]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         }
@@ -78,15 +78,14 @@
         ]
       },
       "config": {
-        "Cmd": [
+        "Entrypoint": [
           "node",
           "./src/test.js"
         ],
         "Env": [
           "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
         ],
-        "WorkingDir": "/src",
-        "ArgsEscaped": true
+        "WorkingDir": "/src"
       }
     }
   },

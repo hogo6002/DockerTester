@@ -451,6 +451,22 @@ Testing docker-scanning-test-go...
   From: git@1:2.43.0-1
   Image layer: 'apt-get install -y golang git'
 
+✗ Low severity vulnerability found in expat/libexpat1
+  Description: CVE-2023-52425
+  Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-EXPAT-6227599
+  Introduced through: git@1:2.43.0-1, glibc/libc-devtools@2.37-15~deb13u1
+  From: git@1:2.43.0-1 > expat/libexpat1@2.5.0-2+b2
+  From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > fontconfig/libfontconfig1@2.14.2-6+b1 > expat/libexpat1@2.5.0-2+b2
+  Image layer: 'apt-get install -y golang git'
+
+✗ Low severity vulnerability found in expat/libexpat1
+  Description: CVE-2023-52426
+  Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-EXPAT-6227600
+  Introduced through: git@1:2.43.0-1, glibc/libc-devtools@2.37-15~deb13u1
+  From: git@1:2.43.0-1 > expat/libexpat1@2.5.0-2+b2
+  From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > fontconfig/libfontconfig1@2.14.2-6+b1 > expat/libexpat1@2.5.0-2+b2
+  Image layer: 'apt-get install -y golang git'
+
 ✗ Low severity vulnerability found in curl/libcurl3-gnutls
   Description: CVE-2024-0853
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-CURL-6225780
@@ -594,12 +610,50 @@ Docker image:      docker-scanning-test-go
 Platform:          linux/amd64
 Licenses:          enabled
 
-Tested 226 dependencies for known issues, found 72 issues.
+Tested 226 dependencies for known issues, found 74 issues.
 
 Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
 Example: $ snyk container test docker-scanning-test-go --file=path/to/Dockerfile
 
 To remove this message in the future, please run `snyk config set disableSuggestions=true`
+
+-------------------------------------------------------
+
+Testing docker-scanning-test-go...
+
+Tested 136 dependencies for known issues, found 3 issues.
+
+
+Issues to fix by upgrading:
+
+  Upgrade cspell@5.12.3 to cspell@8.2.0 to fix
+  ✗ Missing Release of Resource after Effective Lifetime [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-INFLIGHT-6095116] in inflight@1.0.6
+    introduced by cspell@5.12.3 > glob@7.2.0 > inflight@1.0.6 and 1 other path(s)
+
+
+Issues with no direct upgrade or patch:
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-3050818] in minimatch@3.0.4
+    introduced by cspell@5.12.3 > glob@7.2.0 > minimatch@3.0.4 and 1 other path(s)
+  This issue was fixed in versions: 3.0.5
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795] in semver@6.3.0
+    introduced by cspell-lib@5.12.3 > configstore@5.0.1 > make-dir@3.1.0 > semver@6.3.0 and 1 other path(s)
+  This issue was fixed in versions: 5.7.2, 6.3.1, 7.5.2
+
+
+
+Organization:      hogo6002
+Package manager:   npm
+Target file:       /root/go/pkg/mod/github.com/!azure/azure-sdk-for-go@v67.2.0+incompatible/eng/common/spelling/package.json
+Project name:      cspell-version-pin
+Docker image:      docker-scanning-test-go
+Licenses:          enabled
+
+Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
+Example: $ snyk container test docker-scanning-test-go --file=path/to/Dockerfile
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
 
 -------------------------------------------------------
 
@@ -613,6 +667,79 @@ Docker image:      docker-scanning-test-go
 Licenses:          enabled
 
 ✔ Tested 3 dependencies for known issues, no vulnerable paths found.
+
+-------------------------------------------------------
+
+Testing docker-scanning-test-go...
+
+Tested 721 dependencies for known issues, found 11 issues.
+
+
+Issues to fix by upgrading:
+
+  Upgrade @hashicorp/design-system-components@2.3.1 to @hashicorp/design-system-components@3.5.0 to fix
+  ✗ Missing Release of Resource after Effective Lifetime [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-INFLIGHT-6095116] in inflight@1.0.6
+    introduced by @hashicorp/design-system-components@2.3.1 > ember-cli-babel@7.26.11 > babel-plugin-module-resolver@3.2.0 > glob@7.2.0 > inflight@1.0.6 and 638 other path(s)
+  ✗ Prototype Pollution [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-JSON5-3182856] in json5@2.2.0
+    introduced by @hashicorp/design-system-components@2.3.1 > ember-cli-babel@7.26.11 > @babel/core@7.16.0 > json5@2.2.0 and 104 other path(s)
+  ✗ Incomplete List of Disallowed Inputs [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-BABELTRAVERSE-5962462] in @babel/traverse@7.16.3
+    introduced by @hashicorp/design-system-components@2.3.1 > ember-cli-babel@7.26.11 > @babel/core@7.16.0 > @babel/traverse@7.16.3 and 934 other path(s)
+
+
+Issues with no direct upgrade or patch:
+  ✗ Prototype Pollution [High Severity][https://security.snyk.io/vuln/SNYK-JS-ASYNC-2441827] in async@2.6.3
+    introduced by @hashicorp/design-system-components@2.3.1 > ember-cli-htmlbars@6.2.0 > broccoli-persistent-filter@3.1.2 > async-promise-queue@1.0.5 > async@2.6.3 and 29 other path(s)
+  This issue was fixed in versions: 2.6.4, 3.2.2
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LOADERUTILS-3042992] in loader-utils@2.0.2
+    introduced by @hashicorp/design-system-components@2.3.1 > ember-auto-import@2.6.1 > babel-loader@8.2.2 > loader-utils@1.4.0 and 5 other path(s)
+  This issue was fixed in versions: 1.4.2, 2.0.4, 3.2.1
+  ✗ Prototype Pollution [High Severity][https://security.snyk.io/vuln/SNYK-JS-LOADERUTILS-3043105] in loader-utils@2.0.2
+    introduced by @hashicorp/design-system-components@2.3.1 > ember-auto-import@2.6.1 > babel-loader@8.2.2 > loader-utils@1.4.0 and 5 other path(s)
+  This issue was fixed in versions: 1.4.1, 2.0.3
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-LOADERUTILS-3105943] in loader-utils@2.0.2
+    introduced by @hashicorp/design-system-components@2.3.1 > ember-auto-import@2.6.1 > babel-loader@8.2.2 > loader-utils@1.4.0 and 5 other path(s)
+  This issue was fixed in versions: 1.4.2, 2.0.4, 3.2.1
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-MINIMATCH-3050818] in minimatch@3.0.4
+    introduced by @hashicorp/design-system-components@2.3.1 > ember-cli-babel@7.26.11 > broccoli-funnel@2.0.2 > minimatch@3.0.4 and 906 other path(s)
+  This issue was fixed in versions: 3.0.5
+  ✗ Improper Input Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-POSTCSS-5926692] in postcss@8.4.14
+    introduced by @hashicorp/design-system-components@2.3.1 > ember-auto-import@2.6.1 > css-loader@5.2.7 > postcss@8.4.14 and 1 other path(s)
+  This issue was fixed in versions: 8.4.31
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795] in semver@7.3.8
+    introduced by node-notifier@8.0.2 > semver@7.3.5 and 876 other path(s)
+  This issue was fixed in versions: 5.7.2, 6.3.1, 7.5.2
+  ✗ Regular Expression Denial of Service (ReDoS) [High Severity][https://security.snyk.io/vuln/npm:underscore.string:20170908] in underscore.string@3.3.5
+    introduced by @hashicorp/design-system-components@2.3.1 > ember-cli-htmlbars@6.2.0 > broccoli-plugin@4.0.7 > quick-temp@0.1.8 > underscore.string@3.3.5 and 192 other path(s)
+  This issue was fixed in versions: 3.3.6
+
+
+
+Organization:      hogo6002
+Package manager:   yarn
+Target file:       /root/go/pkg/mod/github.com/hashicorp/vault@v1.14.1/ui/package.json
+Project name:      vault
+Docker image:      docker-scanning-test-go
+Licenses:          enabled
+
+Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
+Example: $ snyk container test docker-scanning-test-go --file=path/to/Dockerfile
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
+
+-------------------------------------------------------
+
+Testing docker-scanning-test-go...
+
+Organization:      hogo6002
+Package manager:   npm
+Target file:       /root/go/pkg/mod/github.com/hashicorp/vault@v1.14.1/website/package.json
+Project name:      vault-docs
+Docker image:      docker-scanning-test-go
+Licenses:          enabled
+
+✔ Tested docker-scanning-test-go for known issues, no vulnerable paths found.
 
 -------------------------------------------------------
 
@@ -646,6 +773,15 @@ To remove these messages in the future, please run `snyk config set disableSugge
 
 Testing docker-scanning-test-go...
 
+✗ Medium severity vulnerability found in github.com/dvsekhvalnov/jose2go
+  Description: Uncontrolled Resource Consumption ('Resource Exhaustion')
+  Info: https://security.snyk.io/vuln/SNYK-GOLANG-GITHUBCOMDVSEKHVALNOVJOSE2GO-6137739
+  Introduced through: github.com/dvsekhvalnov/jose2go@v1.5.0
+  From: github.com/dvsekhvalnov/jose2go@v1.5.0
+  Fixed in: 1.6.0
+
+
+
 Organization:      hogo6002
 Package manager:   gomodules
 Target file:       /src/final/main
@@ -653,11 +789,34 @@ Project name:      final
 Docker image:      docker-scanning-test-go
 Licenses:          enabled
 
-✔ Tested 26 dependencies for known issues, no vulnerable paths found.
+Tested 34 dependencies for known issues, found 1 issue.
+
+Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
+Example: $ snyk container test docker-scanning-test-go --file=path/to/Dockerfile
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
 
 -------------------------------------------------------
 
 Testing docker-scanning-test-go...
+
+✗ Medium severity vulnerability found in google.golang.org/protobuf/encoding/protojson
+  Description: Stack-based Buffer Overflow
+  Info: https://security.snyk.io/vuln/SNYK-GOLANG-GOOGLEGOLANGORGPROTOBUFENCODINGPROTOJSON-6137908
+  Introduced through: google.golang.org/protobuf/encoding/protojson@v1.31.0
+  From: google.golang.org/protobuf/encoding/protojson@v1.31.0
+  Fixed in: 1.32.0
+
+✗ High severity vulnerability found in github.com/go-jose/go-jose/v3
+  Description: Denial of Service (DoS)
+  Info: https://security.snyk.io/vuln/SNYK-GOLANG-GITHUBCOMGOJOSEGOJOSEV3-6070737
+  Introduced through: github.com/go-jose/go-jose/v3@v3.0.0
+  From: github.com/go-jose/go-jose/v3@v3.0.0
+  Fixed in: 3.0.1
+
+
 
 Organization:      hogo6002
 Package manager:   gomodules
@@ -666,7 +825,14 @@ Project name:      main
 Docker image:      docker-scanning-test-go
 Licenses:          enabled
 
-✔ Tested 78 dependencies for known issues, no vulnerable paths found.
+Tested 842 dependencies for known issues, found 2 issues.
+
+Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
+Example: $ snyk container test docker-scanning-test-go --file=path/to/Dockerfile
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
 
 -------------------------------------------------------
 
@@ -942,7 +1108,7 @@ Licenses:          enabled
 ✔ Tested docker-scanning-test-go for known issues, no vulnerable paths found.
 
 
-Tested 26 projects, 2 contained vulnerable paths.
+Tested 29 projects, 6 contained vulnerable paths.
 
 
 

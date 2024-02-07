@@ -554,6 +554,316 @@
       "version": "9.4-3+b1"
     },
     {
+      "id": "SNYK-DEBIANUNSTABLE-EXPAT-6227599",
+      "cpes": [],
+      "title": "CVE-2023-52425",
+      "CVSSv3": null,
+      "credit": [
+        ""
+      ],
+      "semver": {
+        "vulnerable": [
+          "*"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "linux",
+      "severity": "low",
+      "cvssScore": null,
+      "malicious": false,
+      "isDisputed": false,
+      "references": [
+        {
+          "url": "https://security-tracker.debian.org/tracker/CVE-2023-52425",
+          "title": "https://security-tracker.debian.org/tracker/CVE-2023-52425"
+        },
+        {
+          "url": "https://github.com/libexpat/libexpat/pull/789",
+          "title": "https://github.com/libexpat/libexpat/pull/789"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2024-02-06T13:57:33.167998Z"
+        }
+      ],
+      "description": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `expat` package and not the `expat` package as distributed by `Debian`._\n_See `How to fix?` for `Debian:unstable` relevant fixed versions and status._\n\nlibexpat through 2.5.0 allows a denial of service (resource consumption) because many full reparsings are required in the case of a large token for which multiple buffer fills are needed.\n## Remediation\nThere is no fixed version for `Debian:unstable` `expat`.\n## References\n- [ADVISORY](https://security-tracker.debian.org/tracker/CVE-2023-52425)\n- [cve@mitre.org](https://github.com/libexpat/libexpat/pull/789)\n",
+      "epssDetails": null,
+      "identifiers": {
+        "CVE": [
+          "CVE-2023-52425"
+        ],
+        "CWE": [],
+        "ALTERNATIVE": []
+      },
+      "nvdSeverity": null,
+      "packageName": "expat",
+      "creationTime": "2024-02-05T12:57:30.757184Z",
+      "disclosureTime": "2024-02-04T20:15:46.063000Z",
+      "packageManager": "debian:unstable",
+      "publicationTime": "2024-02-05T12:57:30.763610Z",
+      "modificationTime": "2024-02-06T13:57:33.167998Z",
+      "socialTrendAlert": false,
+      "relativeImportance": "not yet assigned",
+      "severityWithCritical": "low",
+      "from": [
+        "docker-image|docker-scanning-test-npm@latest",
+        "expat/libexpat1@2.5.0-2+b2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "expat/libexpat1",
+      "version": "2.5.0-2+b2"
+    },
+    {
+      "id": "SNYK-DEBIANUNSTABLE-EXPAT-6227600",
+      "cpes": [],
+      "title": "CVE-2023-52426",
+      "CVSSv3": null,
+      "credit": [
+        ""
+      ],
+      "semver": {
+        "vulnerable": [
+          "*"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "linux",
+      "severity": "low",
+      "cvssScore": null,
+      "malicious": false,
+      "isDisputed": false,
+      "references": [
+        {
+          "url": "https://security-tracker.debian.org/tracker/CVE-2023-52426",
+          "title": "https://security-tracker.debian.org/tracker/CVE-2023-52426"
+        },
+        {
+          "url": "https://cwe.mitre.org/data/definitions/776.html",
+          "title": "https://cwe.mitre.org/data/definitions/776.html"
+        },
+        {
+          "url": "https://github.com/libexpat/libexpat/commit/0f075ec8ecb5e43f8fdca5182f8cca4703da0404",
+          "title": "https://github.com/libexpat/libexpat/commit/0f075ec8ecb5e43f8fdca5182f8cca4703da0404"
+        },
+        {
+          "url": "https://github.com/libexpat/libexpat/pull/777",
+          "title": "https://github.com/libexpat/libexpat/pull/777"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2024-02-06T13:57:34.460600Z"
+        }
+      ],
+      "description": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `expat` package and not the `expat` package as distributed by `Debian`._\n_See `How to fix?` for `Debian:unstable` relevant fixed versions and status._\n\nlibexpat through 2.5.0 allows recursive XML Entity Expansion if XML_DTD is undefined at compile time.\n## Remediation\nThere is no fixed version for `Debian:unstable` `expat`.\n## References\n- [ADVISORY](https://security-tracker.debian.org/tracker/CVE-2023-52426)\n- [cve@mitre.org](https://cwe.mitre.org/data/definitions/776.html)\n- [cve@mitre.org](https://github.com/libexpat/libexpat/commit/0f075ec8ecb5e43f8fdca5182f8cca4703da0404)\n- [cve@mitre.org](https://github.com/libexpat/libexpat/pull/777)\n",
+      "epssDetails": null,
+      "identifiers": {
+        "CVE": [
+          "CVE-2023-52426"
+        ],
+        "CWE": [],
+        "ALTERNATIVE": []
+      },
+      "nvdSeverity": null,
+      "packageName": "expat",
+      "creationTime": "2024-02-05T12:57:50.978723Z",
+      "disclosureTime": "2024-02-04T20:15:46.120000Z",
+      "packageManager": "debian:unstable",
+      "publicationTime": "2024-02-05T12:57:50.983038Z",
+      "modificationTime": "2024-02-06T13:57:34.460600Z",
+      "socialTrendAlert": false,
+      "relativeImportance": "not yet assigned",
+      "severityWithCritical": "low",
+      "from": [
+        "docker-image|docker-scanning-test-npm@latest",
+        "expat/libexpat1@2.5.0-2+b2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "expat/libexpat1",
+      "version": "2.5.0-2+b2"
+    },
+    {
+      "id": "SNYK-DEBIANUNSTABLE-EXPAT-6227599",
+      "cpes": [],
+      "title": "CVE-2023-52425",
+      "CVSSv3": null,
+      "credit": [
+        ""
+      ],
+      "semver": {
+        "vulnerable": [
+          "*"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "linux",
+      "severity": "low",
+      "cvssScore": null,
+      "malicious": false,
+      "isDisputed": false,
+      "references": [
+        {
+          "url": "https://security-tracker.debian.org/tracker/CVE-2023-52425",
+          "title": "https://security-tracker.debian.org/tracker/CVE-2023-52425"
+        },
+        {
+          "url": "https://github.com/libexpat/libexpat/pull/789",
+          "title": "https://github.com/libexpat/libexpat/pull/789"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2024-02-06T13:57:33.167998Z"
+        }
+      ],
+      "description": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `expat` package and not the `expat` package as distributed by `Debian`._\n_See `How to fix?` for `Debian:unstable` relevant fixed versions and status._\n\nlibexpat through 2.5.0 allows a denial of service (resource consumption) because many full reparsings are required in the case of a large token for which multiple buffer fills are needed.\n## Remediation\nThere is no fixed version for `Debian:unstable` `expat`.\n## References\n- [ADVISORY](https://security-tracker.debian.org/tracker/CVE-2023-52425)\n- [cve@mitre.org](https://github.com/libexpat/libexpat/pull/789)\n",
+      "epssDetails": null,
+      "identifiers": {
+        "CVE": [
+          "CVE-2023-52425"
+        ],
+        "CWE": [],
+        "ALTERNATIVE": []
+      },
+      "nvdSeverity": null,
+      "packageName": "expat",
+      "creationTime": "2024-02-05T12:57:30.757184Z",
+      "disclosureTime": "2024-02-04T20:15:46.063000Z",
+      "packageManager": "debian:unstable",
+      "publicationTime": "2024-02-05T12:57:30.763610Z",
+      "modificationTime": "2024-02-06T13:57:33.167998Z",
+      "socialTrendAlert": false,
+      "relativeImportance": "not yet assigned",
+      "severityWithCritical": "low",
+      "from": [
+        "docker-image|docker-scanning-test-npm@latest",
+        "python3-defaults/python3@3.11.6-1",
+        "python3.11@3.11.7-2",
+        "python3.11/python3.11-minimal@3.11.7-2",
+        "expat/libexpat1@2.5.0-2+b2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "expat/libexpat1",
+      "version": "2.5.0-2+b2"
+    },
+    {
+      "id": "SNYK-DEBIANUNSTABLE-EXPAT-6227600",
+      "cpes": [],
+      "title": "CVE-2023-52426",
+      "CVSSv3": null,
+      "credit": [
+        ""
+      ],
+      "semver": {
+        "vulnerable": [
+          "*"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "linux",
+      "severity": "low",
+      "cvssScore": null,
+      "malicious": false,
+      "isDisputed": false,
+      "references": [
+        {
+          "url": "https://security-tracker.debian.org/tracker/CVE-2023-52426",
+          "title": "https://security-tracker.debian.org/tracker/CVE-2023-52426"
+        },
+        {
+          "url": "https://cwe.mitre.org/data/definitions/776.html",
+          "title": "https://cwe.mitre.org/data/definitions/776.html"
+        },
+        {
+          "url": "https://github.com/libexpat/libexpat/commit/0f075ec8ecb5e43f8fdca5182f8cca4703da0404",
+          "title": "https://github.com/libexpat/libexpat/commit/0f075ec8ecb5e43f8fdca5182f8cca4703da0404"
+        },
+        {
+          "url": "https://github.com/libexpat/libexpat/pull/777",
+          "title": "https://github.com/libexpat/libexpat/pull/777"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2024-02-06T13:57:34.460600Z"
+        }
+      ],
+      "description": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `expat` package and not the `expat` package as distributed by `Debian`._\n_See `How to fix?` for `Debian:unstable` relevant fixed versions and status._\n\nlibexpat through 2.5.0 allows recursive XML Entity Expansion if XML_DTD is undefined at compile time.\n## Remediation\nThere is no fixed version for `Debian:unstable` `expat`.\n## References\n- [ADVISORY](https://security-tracker.debian.org/tracker/CVE-2023-52426)\n- [cve@mitre.org](https://cwe.mitre.org/data/definitions/776.html)\n- [cve@mitre.org](https://github.com/libexpat/libexpat/commit/0f075ec8ecb5e43f8fdca5182f8cca4703da0404)\n- [cve@mitre.org](https://github.com/libexpat/libexpat/pull/777)\n",
+      "epssDetails": null,
+      "identifiers": {
+        "CVE": [
+          "CVE-2023-52426"
+        ],
+        "CWE": [],
+        "ALTERNATIVE": []
+      },
+      "nvdSeverity": null,
+      "packageName": "expat",
+      "creationTime": "2024-02-05T12:57:50.978723Z",
+      "disclosureTime": "2024-02-04T20:15:46.120000Z",
+      "packageManager": "debian:unstable",
+      "publicationTime": "2024-02-05T12:57:50.983038Z",
+      "modificationTime": "2024-02-06T13:57:34.460600Z",
+      "socialTrendAlert": false,
+      "relativeImportance": "not yet assigned",
+      "severityWithCritical": "low",
+      "from": [
+        "docker-image|docker-scanning-test-npm@latest",
+        "python3-defaults/python3@3.11.6-1",
+        "python3.11@3.11.7-2",
+        "python3.11/python3.11-minimal@3.11.7-2",
+        "expat/libexpat1@2.5.0-2+b2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "expat/libexpat1",
+      "version": "2.5.0-2+b2"
+    },
+    {
       "id": "SNYK-DEBIANUNSTABLE-GLIBC-338097",
       "cpes": [],
       "title": "Uncontrolled Recursion",
@@ -15435,13 +15745,13 @@
       "affectedPkgs": {}
     }
   },
-  "summary": "155 vulnerable dependency paths",
+  "summary": "159 vulnerable dependency paths",
   "filesystemPolicy": false,
   "filtered": {
     "ignore": [],
     "patch": []
   },
-  "uniqueCount": 36,
+  "uniqueCount": 38,
   "projectName": "docker-image|docker-scanning-test-npm",
   "platform": "linux/amd64",
   "hasUnknownVersions": false,

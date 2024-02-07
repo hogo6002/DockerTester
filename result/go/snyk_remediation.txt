@@ -227,16 +227,7 @@ Testing docker-scanning-test-go...
   From: libfido2/libfido2-1@1.14.0-1 > openssl/libssl3@3.1.4-2
   and 7 more...
   Image layer: 'apt-get install -y golang git'
-
-✗ Low severity vulnerability found in openssl/libssl3
-  Description: CVE-2024-0727
-  Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSL-6190222
-  Introduced through: coreutils/coreutils@9.4-3+b1, cyrus-sasl2/libsasl2-modules@2.1.28+dfsg1-4+b1, libfido2/libfido2-1@1.14.0-1, openssh/openssh-client@1:9.6p1-3, ca-certificates@20230311, git@1:2.43.0-1, openssl@3.1.4-2
-  From: coreutils/coreutils@9.4-3+b1 > openssl/libssl3@3.1.4-2
-  From: cyrus-sasl2/libsasl2-modules@2.1.28+dfsg1-4+b1 > openssl/libssl3@3.1.4-2
-  From: libfido2/libfido2-1@1.14.0-1 > openssl/libssl3@3.1.4-2
-  and 7 more...
-  Image layer: 'apt-get install -y golang git'
+  Fixed in: 3.1.5-1
 
 ✗ Low severity vulnerability found in openssh/openssh-client
   Description: CVE-2016-20012
@@ -497,6 +488,22 @@ Testing docker-scanning-test-go...
   From: git@1:2.43.0-1
   Image layer: 'apt-get install -y golang git'
 
+✗ Low severity vulnerability found in expat/libexpat1
+  Description: CVE-2023-52425
+  Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-EXPAT-6227599
+  Introduced through: git@1:2.43.0-1, glibc/libc-devtools@2.37-15~deb13u1
+  From: git@1:2.43.0-1 > expat/libexpat1@2.5.0-2+b2
+  From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > fontconfig/libfontconfig1@2.14.2-6+b1 > expat/libexpat1@2.5.0-2+b2
+  Image layer: 'apt-get install -y golang git'
+
+✗ Low severity vulnerability found in expat/libexpat1
+  Description: CVE-2023-52426
+  Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-EXPAT-6227600
+  Introduced through: git@1:2.43.0-1, glibc/libc-devtools@2.37-15~deb13u1
+  From: git@1:2.43.0-1 > expat/libexpat1@2.5.0-2+b2
+  From: glibc/libc-devtools@2.37-15~deb13u1 > libgd2/libgd3@2.3.3-9+b1 > fontconfig/libfontconfig1@2.14.2-6+b1 > expat/libexpat1@2.5.0-2+b2
+  Image layer: 'apt-get install -y golang git'
+
 ✗ Low severity vulnerability found in curl/libcurl3-gnutls
   Description: CVE-2024-0853
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-CURL-6225780
@@ -604,6 +611,18 @@ Testing docker-scanning-test-go...
   From: libfido2/libfido2-1@1.14.0-1 > openssl/libssl3@3.1.4-2
   and 7 more...
   Image layer: 'apt-get install -y golang git'
+  Fixed in: 3.1.5-1
+
+✗ Medium severity vulnerability found in openssl/libssl3
+  Description: CVE-2024-0727
+  Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-OPENSSL-6190222
+  Introduced through: coreutils/coreutils@9.4-3+b1, cyrus-sasl2/libsasl2-modules@2.1.28+dfsg1-4+b1, libfido2/libfido2-1@1.14.0-1, openssh/openssh-client@1:9.6p1-3, ca-certificates@20230311, git@1:2.43.0-1, openssl@3.1.4-2
+  From: coreutils/coreutils@9.4-3+b1 > openssl/libssl3@3.1.4-2
+  From: cyrus-sasl2/libsasl2-modules@2.1.28+dfsg1-4+b1 > openssl/libssl3@3.1.4-2
+  From: libfido2/libfido2-1@1.14.0-1 > openssl/libssl3@3.1.4-2
+  and 7 more...
+  Image layer: 'apt-get install -y golang git'
+  Fixed in: 3.1.5-1
 
 ✗ High severity vulnerability found in openssh/openssh-client
   Description: CVE-2023-51767
@@ -635,14 +654,14 @@ Testing docker-scanning-test-go...
 
 Organization:      hogo6002
 Package manager:   deb
-Target file:       ../../docker/go/Dockerfile
+Target file:       ./docker/go/Dockerfile
 Project name:      docker-image|docker-scanning-test-go
 Docker image:      docker-scanning-test-go
 Platform:          linux/amd64
 Base image:        debian:testing-slim
 Licenses:          enabled
 
-Tested 219 dependencies for known issues, found 72 issues.
+Tested 219 dependencies for known issues, found 74 issues.
 
 Recommendations for debian:testing-slim are not available, as we haven't found any recent updates to this base image.
 Consider upgrading your base image.
@@ -700,6 +719,15 @@ To remove these messages in the future, please run `snyk config set disableSugge
 
 Testing docker-scanning-test-go...
 
+✗ Medium severity vulnerability found in github.com/dvsekhvalnov/jose2go
+  Description: Uncontrolled Resource Consumption ('Resource Exhaustion')
+  Info: https://security.snyk.io/vuln/SNYK-GOLANG-GITHUBCOMDVSEKHVALNOVJOSE2GO-6137739
+  Introduced through: github.com/dvsekhvalnov/jose2go@v1.5.0
+  From: github.com/dvsekhvalnov/jose2go@v1.5.0
+  Fixed in: 1.6.0
+
+
+
 Organization:      hogo6002
 Package manager:   gomodules
 Target file:       /src/final/main
@@ -707,7 +735,13 @@ Project name:      final
 Docker image:      docker-scanning-test-go
 Licenses:          enabled
 
-✔ Tested 23 dependencies for known issues, no vulnerable paths found.
+Tested 34 dependencies for known issues, found 1 issue.
+
+Pro tip: use `--exclude-base-image-vulns` to exclude from display Docker base image vulnerabilities.
+
+Snyk found some vulnerabilities in your image applications (Snyk searches for these vulnerabilities by default). See https://snyk.co/app-vulns for more information.
+
+To remove these messages in the future, please run `snyk config set disableSuggestions=true`
 
 -------------------------------------------------------
 
@@ -996,7 +1030,7 @@ Licenses:          enabled
 ✔ Tested docker-scanning-test-go for known issues, no vulnerable paths found.
 
 
-Tested 26 projects, 2 contained vulnerable paths.
+Tested 26 projects, 3 contained vulnerable paths.
 
 
 

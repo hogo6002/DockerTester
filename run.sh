@@ -15,8 +15,8 @@ fi
 
 if ! [ -z "$osv" ]; then
   echo "Running osv-scanner for source folder"
-  ~/go/bin/osv-scanner scan -r --json --output ./result/$ecosystem/osv_scanner.json ./docker/$ecosystem/
-  ~/go/bin/osv-scanner scan -r --output ./result/$ecosystem/osv_scanner.txt ./docker/$ecosystem/
+  ~/go/bin/osv-scanner scan -r --json --output ./result/$ecosystem/osv_scanner.json --call-analysis=all ./docker/$ecosystem/
+  ~/go/bin/osv-scanner scan -r --output ./result/$ecosystem/osv_scanner.txt --call-analysis=all ./docker/$ecosystem/
 fi
 
 echo "$(date +"%Y-%m-%d %T") Running trivy" 

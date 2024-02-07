@@ -1,6 +1,6 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2024-02-05T06:09:58.347068715Z",
+  "CreatedAt": "2024-02-07T09:39:44.16857338Z",
   "ArtifactName": "docker-scanning-test-go",
   "ArtifactType": "container_image",
   "Metadata": {
@@ -8,24 +8,24 @@
       "Family": "debian",
       "Name": "trixie/sid"
     },
-    "ImageID": "sha256:2efa62263d4124764e097ea958d8cfc52ffe4ecd1212c47ed3ea46b13b9ec97e",
+    "ImageID": "sha256:18ecaffeccfee11e103d6292a9a5cbb08e2ad38ae8e6bb987935da914252b114",
     "DiffIDs": [
       "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e",
       "sha256:5565b0e6eea6ac0d3cc3e8ba1805d58b4948eabd799d5c2c1bb307b4e5aaa067",
       "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-      "sha256:39bc37e6df5aacf9ea1ec28ab4b2ee772ae281f1bde4fe4c49fd9bfccd512d5c",
-      "sha256:55efc4a72b02ae22cf81cd626061c69308d2395590e90de54b7cf2b12c1594a9",
-      "sha256:4ade82bbfa084f8e86d80afbb488bbb575a197a2a970f67671e5d4a87f31f844",
-      "sha256:427156c0c084a5b063f1952856c10fdd61b943672c7d626933f72ce7a4df41b8",
-      "sha256:94a02a473cbcc01de68567b8bacd509c8ca41cf8eb8e479ee8b06368d802213f",
-      "sha256:a7c4b10b815212584a5f5d66110cd2f40558100799cd4941c1828d2209202bdd"
+      "sha256:a22d93f31b67e3861aafa3b87c6c571fc18ed0720e86ca911d53ecf70b0864aa",
+      "sha256:0970dec0576749aeeeec90ad35c39726a1b757790bd16c906c15128b5a93967c",
+      "sha256:8d32dfde8eadb0cb440f3fc11a457c8f39534a788c756d9cf40b157134fec744",
+      "sha256:4ab43d0033295d4786d85a22ae1c216a44a53604942abd9c6280d2914a7bb280",
+      "sha256:978250d6956bb0020668e61e832550ecf4e1e8bca096785c2d660adc3c37aab2",
+      "sha256:ccb5e79feb0cd89e8c8ce71c3845f0d0672f0b929bbe70e85ea1be46b0d159f6"
     ],
     "RepoTags": [
       "docker-scanning-test-go:latest"
     ],
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2024-02-05T06:08:56.15223124Z",
+      "created": "2024-02-07T09:00:18.760389439Z",
       "history": [
         {
           "created": "2024-01-31T22:37:49Z",
@@ -47,37 +47,37 @@
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-05T06:07:38Z",
+          "created": "2024-02-07T08:56:23Z",
           "created_by": "COPY base/ ./base # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-05T06:08:22Z",
+          "created": "2024-02-07T08:57:31Z",
           "created_by": "RUN /bin/sh -c apt-get update \u0026\u0026 apt-get upgrade -y \u0026\u0026     apt-get install -y     golang     git # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-05T06:08:50Z",
+          "created": "2024-02-07T09:00:12Z",
           "created_by": "RUN /bin/sh -c cd ./base \u0026\u0026 go build -o main . # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-05T06:08:50Z",
+          "created": "2024-02-07T09:00:13Z",
           "created_by": "RUN /bin/sh -c mkdir ./final # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-05T06:08:51Z",
+          "created": "2024-02-07T09:00:13Z",
           "created_by": "COPY final/ ./final # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-05T06:08:56Z",
+          "created": "2024-02-07T09:00:18Z",
           "created_by": "RUN /bin/sh -c cd ./final \u0026\u0026 go build -o main . # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2024-02-05T06:08:56Z",
+          "created": "2024-02-07T09:00:18Z",
           "created_by": "ENTRYPOINT [\"./final/main\"]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
@@ -90,12 +90,12 @@
           "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e",
           "sha256:5565b0e6eea6ac0d3cc3e8ba1805d58b4948eabd799d5c2c1bb307b4e5aaa067",
           "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-          "sha256:39bc37e6df5aacf9ea1ec28ab4b2ee772ae281f1bde4fe4c49fd9bfccd512d5c",
-          "sha256:55efc4a72b02ae22cf81cd626061c69308d2395590e90de54b7cf2b12c1594a9",
-          "sha256:4ade82bbfa084f8e86d80afbb488bbb575a197a2a970f67671e5d4a87f31f844",
-          "sha256:427156c0c084a5b063f1952856c10fdd61b943672c7d626933f72ce7a4df41b8",
-          "sha256:94a02a473cbcc01de68567b8bacd509c8ca41cf8eb8e479ee8b06368d802213f",
-          "sha256:a7c4b10b815212584a5f5d66110cd2f40558100799cd4941c1828d2209202bdd"
+          "sha256:a22d93f31b67e3861aafa3b87c6c571fc18ed0720e86ca911d53ecf70b0864aa",
+          "sha256:0970dec0576749aeeeec90ad35c39726a1b757790bd16c906c15128b5a93967c",
+          "sha256:8d32dfde8eadb0cb440f3fc11a457c8f39534a788c756d9cf40b157134fec744",
+          "sha256:4ab43d0033295d4786d85a22ae1c216a44a53604942abd9c6280d2914a7bb280",
+          "sha256:978250d6956bb0020668e61e832550ecf4e1e8bca096785c2d660adc3c37aab2",
+          "sha256:ccb5e79feb0cd89e8c8ce71c3845f0d0672f0b929bbe70e85ea1be46b0d159f6"
         ]
       },
       "config": {
@@ -128,7 +128,7 @@
           "FixedVersion": "1.1.4, 2.1.1",
           "Status": "fixed",
           "Layer": {
-            "DiffID": "sha256:4ade82bbfa084f8e86d80afbb488bbb575a197a2a970f67671e5d4a87f31f844"
+            "DiffID": "sha256:8d32dfde8eadb0cb440f3fc11a457c8f39534a788c756d9cf40b157134fec744"
           },
           "SeveritySource": "nvd",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-32708",
@@ -160,6 +160,7 @@
             }
           },
           "References": [
+            "https://github.com/FriendsOfPHP/security-advisories/blob/master/league/flysystem/CVE-2021-32708.yaml",
             "https://github.com/thephpleague/flysystem",
             "https://github.com/thephpleague/flysystem/commit/a3c694de9f7e844b76f9d1b61296ebf6e8d89d74",
             "https://github.com/thephpleague/flysystem/commit/f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
@@ -187,7 +188,7 @@
           "InstalledVersion": "v1.0.14",
           "Status": "affected",
           "Layer": {
-            "DiffID": "sha256:4ade82bbfa084f8e86d80afbb488bbb575a197a2a970f67671e5d4a87f31f844"
+            "DiffID": "sha256:8d32dfde8eadb0cb440f3fc11a457c8f39534a788c756d9cf40b157134fec744"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-31022",
@@ -228,6 +229,198 @@
           ],
           "PublishedDate": "2022-06-01T20:15:08.037Z",
           "LastModifiedDate": "2022-06-09T14:13:24.47Z"
+        },
+        {
+          "VulnerabilityID": "GHSA-2c7c-3mj9-8fqh",
+          "PkgName": "github.com/go-jose/go-jose/v3",
+          "InstalledVersion": "v3.0.0",
+          "FixedVersion": "3.0.1",
+          "Status": "fixed",
+          "Layer": {
+            "DiffID": "sha256:8d32dfde8eadb0cb440f3fc11a457c8f39534a788c756d9cf40b157134fec744"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://github.com/advisories/GHSA-2c7c-3mj9-8fqh",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Go",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+          },
+          "Title": "Decryption of malicious PBES2 JWE objects can consume unbounded system resources",
+          "Description": "The go-jose package is subject to a \"billion hashes attack\" causing denial-of-service when decrypting JWE inputs. This occurs when an attacker can provide a PBES2 encrypted JWE blob with a very large p2c value that, when decrypted, produces a denial-of-service.",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "ghsa": 2
+          },
+          "References": [
+            "https://github.com/go-jose/go-jose",
+            "https://github.com/go-jose/go-jose/commit/65351c27657d58960c2e6c9fbb2b00f818e50568",
+            "https://github.com/go-jose/go-jose/issues/64"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2023-5954",
+          "PkgName": "github.com/hashicorp/vault",
+          "InstalledVersion": "v1.14.1",
+          "FixedVersion": "1.13.10, 1.14.6, 1.15.2",
+          "Status": "fixed",
+          "Layer": {
+            "DiffID": "sha256:8d32dfde8eadb0cb440f3fc11a457c8f39534a788c756d9cf40b157134fec744"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-5954",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Go",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+          },
+          "Title": "hashicorp vault: inbound client requests can trigger a denial of service",
+          "Description": "HashiCorp Vault and Vault Enterprise inbound client requests triggering a policy check can lead to an unbounded consumption of memory. A large number of these requests may lead to denial-of-service. Fixed in Vault 1.15.2, 1.14.6, and 1.13.10.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-401"
+          ],
+          "VendorSeverity": {
+            "bitnami": 3,
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-5954",
+            "https://discuss.hashicorp.com/t/hcsec-2023-33-vault-requests-triggering-policy-checks-may-lead-to-unbounded-memory-consumption/59926",
+            "https://github.com/hashicorp/vault",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-5954",
+            "https://security.netapp.com/advisory/ntap-20231227-0001/",
+            "https://www.cve.org/CVERecord?id=CVE-2023-5954"
+          ],
+          "PublishedDate": "2023-11-09T21:15:25.143Z",
+          "LastModifiedDate": "2023-12-27T15:15:45.79Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-6337",
+          "PkgName": "github.com/hashicorp/vault",
+          "InstalledVersion": "v1.14.1",
+          "FixedVersion": "1.15.4, 1.14.8, 1.13.12",
+          "Status": "fixed",
+          "Layer": {
+            "DiffID": "sha256:8d32dfde8eadb0cb440f3fc11a457c8f39534a788c756d9cf40b157134fec744"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-6337",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Go",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+          },
+          "Title": "hashicorp-vault: denial of service through memory exhaustion",
+          "Description": "HashiCorp Vault and Vault Enterprise 1.12.0 and newer are vulnerable to a denial of service through memory exhaustion of the host when handling large unauthenticated and authenticated HTTP requests from a client. Vault will attempt to map the request to memory, resulting in the exhaustion of available memory on the host, which may cause Vault to crash.\n\nFixed in Vault 1.15.4, 1.14.8, 1.13.12.\n\n",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-770"
+          ],
+          "VendorSeverity": {
+            "bitnami": 3,
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-6337",
+            "https://discuss.hashicorp.com/t/hcsec-2023-34-vault-vulnerable-to-denial-of-service-through-memory-exhaustion-when-handling-large-http-requests/60741",
+            "https://github.com/hashicorp/vault",
+            "https://github.com/hashicorp/vault/pull/24354",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-6337",
+            "https://security.netapp.com/advisory/ntap-20240112-0006/",
+            "https://www.cve.org/CVERecord?id=CVE-2023-6337"
+          ],
+          "PublishedDate": "2023-12-08T22:15:07.713Z",
+          "LastModifiedDate": "2024-01-12T14:15:48.907Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-4680",
+          "PkgName": "github.com/hashicorp/vault",
+          "InstalledVersion": "v1.14.1",
+          "FixedVersion": "1.12.11, 1.13.7, 1.14.3",
+          "Status": "fixed",
+          "Layer": {
+            "DiffID": "sha256:8d32dfde8eadb0cb440f3fc11a457c8f39534a788c756d9cf40b157134fec744"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-4680",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Go",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+          },
+          "Title": "HashiCorp Vault Improper Input Validation vulnerability",
+          "Description": "HashiCorp Vault and Vault Enterprise transit secrets engine allowed authorized users to specify arbitrary nonces, even with convergent encryption disabled. The encrypt endpoint, in combination with an offline attack, could be used to decrypt arbitrary ciphertext and potentially derive the authentication subkey when using transit secrets engine without convergent encryption. Introduced in 1.6.0 and fixed in 1.14.3, 1.13.7, and 1.12.11.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "VendorSeverity": {
+            "bitnami": 2,
+            "ghsa": 2,
+            "nvd": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "V3Score": 6.8
+            },
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "V3Score": 6.8
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "V3Score": 6.8
+            }
+          },
+          "References": [
+            "https://discuss.hashicorp.com/t/hcsec-2023-28-vault-s-transit-secrets-engine-allowed-nonce-specified-without-convergent-encryption/58249",
+            "https://github.com/hashicorp/vault",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-4680"
+          ],
+          "PublishedDate": "2023-09-15T00:15:07.967Z",
+          "LastModifiedDate": "2023-09-20T14:55:39.43Z"
         }
       ]
     },
@@ -237,13 +430,48 @@
       "Type": "gobinary",
       "Vulnerabilities": [
         {
+          "VulnerabilityID": "GHSA-mhpq-9638-x6pw",
+          "PkgName": "github.com/dvsekhvalnov/jose2go",
+          "InstalledVersion": "v1.5.0",
+          "FixedVersion": "1.5.1-0.20231206184617-48ba0b76bc88",
+          "Status": "fixed",
+          "Layer": {
+            "DiffID": "sha256:ccb5e79feb0cd89e8c8ce71c3845f0d0672f0b929bbe70e85ea1be46b0d159f6"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://github.com/advisories/GHSA-mhpq-9638-x6pw",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Go",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+          },
+          "Title": "Denial of service when decrypting attack controlled input in github.com/dvsekhvalnov/jose2go",
+          "Description": "An attacker controlled input of a PBES2 encrypted JWE blob can have a very large p2c value that, when decrypted, produces a denial-of-service.",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "ghsa": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://github.com/dvsekhvalnov/jose2go",
+            "https://github.com/dvsekhvalnov/jose2go/commit/a4584e9dd7128608fedbc67892eba9697f0d5317",
+            "https://github.com/dvsekhvalnov/jose2go/issues/31",
+            "https://www.blackhat.com/us-23/briefings/schedule/#three-new-attacks-against-json-web-tokens-31695"
+          ]
+        },
+        {
           "VulnerabilityID": "CVE-2024-23840",
           "PkgName": "github.com/goreleaser/goreleaser",
           "InstalledVersion": "v1.23.0",
           "FixedVersion": "1.24.0",
           "Status": "fixed",
           "Layer": {
-            "DiffID": "sha256:a7c4b10b815212584a5f5d66110cd2f40558100799cd4941c1828d2209202bdd"
+            "DiffID": "sha256:ccb5e79feb0cd89e8c8ce71c3845f0d0672f0b929bbe70e85ea1be46b0d159f6"
           },
           "SeveritySource": "ghsa",
           "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-23840",
@@ -260,10 +488,15 @@
           ],
           "VendorSeverity": {
             "ghsa": 2,
+            "nvd": 2,
             "redhat": 2
           },
           "CVSS": {
             "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.5
+            },
+            "nvd": {
               "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
               "V3Score": 5.5
             },
@@ -281,7 +514,7 @@
             "https://www.cve.org/CVERecord?id=CVE-2024-23840"
           ],
           "PublishedDate": "2024-01-30T17:15:11.81Z",
-          "LastModifiedDate": "2024-01-30T20:48:58.267Z"
+          "LastModifiedDate": "2024-02-05T20:56:21.88Z"
         }
       ]
     }

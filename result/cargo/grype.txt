@@ -19,9 +19,9 @@ binutils-x86-64-linux-gnu  2.42-2                       deb   CVE-2018-20673    
 binutils-x86-64-linux-gnu  2.42-2                       deb   CVE-2018-18483    Negligible  
 binutils-x86-64-linux-gnu  2.42-2                       deb   CVE-2017-13716    Negligible  
 bsdutils                   1:2.39.3-6                   deb   CVE-2022-0563     Negligible  
+coreutils                  9.4-3+b1                     deb   CVE-2024-0684     Medium      
 coreutils                  9.4-3+b1                     deb   CVE-2016-2781     Low         
 coreutils                  9.4-3+b1                     deb   CVE-2017-18018    Negligible  
-coreutils                  9.4-3+b1                     deb   CVE-2024-0684     Unknown     
 curl                       8.5.0-2            8.6.0-1   deb   CVE-2024-0853     Unknown     
 dirmngr                    2.2.40-1.1+b1                deb   CVE-2022-3219     Negligible  
 gnupg                      2.2.40-1.1                   deb   CVE-2022-3219     Negligible  
@@ -175,7 +175,6 @@ linux-libc-dev             6.6.13-1           6.6.15-1  deb   CVE-2024-1086     
 linux-libc-dev             6.6.13-1           6.6.15-1  deb   CVE-2024-1085     High        
 linux-libc-dev             6.6.13-1                     deb   CVE-2024-0841     High        
 linux-libc-dev             6.6.13-1                     deb   CVE-2023-6270     High        
-linux-libc-dev             6.6.13-1                     deb   CVE-2023-6238     High        
 linux-libc-dev             6.6.13-1           6.6.15-1  deb   CVE-2023-46838    High        
 linux-libc-dev             6.6.13-1                     deb   CVE-2023-3640     High        
 linux-libc-dev             6.6.13-1                     deb   CVE-2021-3864     High        
@@ -199,6 +198,7 @@ linux-libc-dev             6.6.13-1                     deb   CVE-2024-22099    
 linux-libc-dev             6.6.13-1                     deb   CVE-2024-0564     Medium      
 linux-libc-dev             6.6.13-1                     deb   CVE-2023-7042     Medium      
 linux-libc-dev             6.6.13-1                     deb   CVE-2023-6240     Medium      
+linux-libc-dev             6.6.13-1                     deb   CVE-2023-6238     Medium      
 linux-libc-dev             6.6.13-1           6.6.15-1  deb   CVE-2023-50431    Medium      
 linux-libc-dev             6.6.13-1                     deb   CVE-2023-47233    Medium      
 linux-libc-dev             6.6.13-1                     deb   CVE-2023-4010     Medium      

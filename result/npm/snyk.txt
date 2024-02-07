@@ -223,6 +223,20 @@ Testing docker-scanning-test-npm...
   From: glibc/libc6@2.37-14
   Fixed in: 2.37-15
 
+✗ Low severity vulnerability found in expat/libexpat1
+  Description: CVE-2023-52425
+  Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-EXPAT-6227599
+  Introduced through: expat/libexpat1@2.5.0-2+b2, python3-defaults/python3@3.11.6-1
+  From: expat/libexpat1@2.5.0-2+b2
+  From: python3-defaults/python3@3.11.6-1 > python3.11@3.11.7-2 > python3.11/python3.11-minimal@3.11.7-2 > expat/libexpat1@2.5.0-2+b2
+
+✗ Low severity vulnerability found in expat/libexpat1
+  Description: CVE-2023-52426
+  Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-EXPAT-6227600
+  Introduced through: expat/libexpat1@2.5.0-2+b2, python3-defaults/python3@3.11.6-1
+  From: expat/libexpat1@2.5.0-2+b2
+  From: python3-defaults/python3@3.11.6-1 > python3.11@3.11.7-2 > python3.11/python3.11-minimal@3.11.7-2 > expat/libexpat1@2.5.0-2+b2
+
 ✗ Low severity vulnerability found in coreutils/coreutils
   Description: Improper Input Validation
   Info: https://security.snyk.io/vuln/SNYK-DEBIANUNSTABLE-COREUTILS-317471
@@ -295,7 +309,7 @@ Docker image:      docker-scanning-test-npm
 Platform:          linux/amd64
 Licenses:          enabled
 
-Tested 474 dependencies for known issues, found 36 issues.
+Tested 474 dependencies for known issues, found 38 issues.
 
 Snyk wasn’t able to auto detect the base image, use `--file` option to get base image remediation advice.
 Example: $ snyk container test docker-scanning-test-npm --file=path/to/Dockerfile

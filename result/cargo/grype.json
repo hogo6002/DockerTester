@@ -2397,6 +2397,131 @@
   },
   {
    "vulnerability": {
+    "id": "CVE-2024-0684",
+    "dataSource": "https://security-tracker.debian.org/tracker/CVE-2024-0684",
+    "namespace": "debian:distro:debian:unstable",
+    "severity": "Medium",
+    "urls": [
+     "https://security-tracker.debian.org/tracker/CVE-2024-0684"
+    ],
+    "cvss": [],
+    "fix": {
+     "versions": [],
+     "state": "not-fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2024-0684",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2024-0684",
+     "namespace": "nvd:cpe",
+     "severity": "Medium",
+     "urls": [
+      "https://access.redhat.com/security/cve/CVE-2024-0684",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2258948",
+      "https://www.openwall.com/lists/oss-security/2024/01/18/2"
+     ],
+     "description": "A flaw was found in the GNU coreutils \"split\" program. A heap overflow with user-controlled data of multiple hundred bytes in length could occur in the line_bytes_split() function, potentially leading to an application crash and denial of service.",
+     "cvss": [
+      {
+       "source": "patrick@puiterwijk.org",
+       "type": "Secondary",
+       "version": "3.1",
+       "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+       "metrics": {
+        "baseScore": 5.5,
+        "exploitabilityScore": 1.8,
+        "impactScore": 3.6
+       },
+       "vendorMetadata": {}
+      }
+     ]
+    }
+   ],
+   "matchDetails": [
+    {
+     "type": "exact-direct-match",
+     "matcher": "dpkg-matcher",
+     "searchedBy": {
+      "distro": {
+       "type": "debian",
+       "version": "unstable"
+      },
+      "namespace": "debian:distro:debian:unstable",
+      "package": {
+       "name": "coreutils",
+       "version": "9.4-3+b1"
+      }
+     },
+     "found": {
+      "versionConstraint": "none (deb)",
+      "vulnerabilityID": "CVE-2024-0684"
+     }
+    },
+    {
+     "type": "exact-indirect-match",
+     "matcher": "dpkg-matcher",
+     "searchedBy": {
+      "distro": {
+       "type": "debian",
+       "version": "unstable"
+      },
+      "namespace": "debian:distro:debian:unstable",
+      "package": {
+       "name": "coreutils",
+       "version": "9.4-3"
+      }
+     },
+     "found": {
+      "versionConstraint": "none (deb)",
+      "vulnerabilityID": "CVE-2024-0684"
+     }
+    }
+   ],
+   "artifact": {
+    "id": "ad87a1b1f5578ccc",
+    "name": "coreutils",
+    "version": "9.4-3+b1",
+    "type": "deb",
+    "locations": [
+     {
+      "path": "/usr/share/doc/coreutils/copyright",
+      "layerID": "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e"
+     },
+     {
+      "path": "/var/lib/dpkg/info/coreutils.md5sums",
+      "layerID": "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e"
+     },
+     {
+      "path": "/var/lib/dpkg/status",
+      "layerID": "sha256:2063ea9d3a4800d9e3183626d759d8db122d290af136f9c3ecc7e23f1a715a39"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "BSD-4-clause-UC",
+     "FSFULLR",
+     "GFDL-1.3",
+     "GFDL-NIV-1.3",
+     "GPL-3",
+     "GPL-3+",
+     "ISC"
+    ],
+    "cpes": [
+     "cpe:2.3:a:coreutils:coreutils:9.4-3+b1:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:deb/debian/coreutils@9.4-3+b1?arch=amd64&upstream=coreutils%409.4-3&distro=debian",
+    "upstreams": [
+     {
+      "name": "coreutils",
+      "version": "9.4-3"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
     "id": "CVE-2016-2781",
     "dataSource": "https://security-tracker.debian.org/tracker/CVE-2016-2781",
     "namespace": "debian:distro:debian:unstable",
@@ -2625,104 +2750,6 @@
      "found": {
       "versionConstraint": "none (deb)",
       "vulnerabilityID": "CVE-2017-18018"
-     }
-    }
-   ],
-   "artifact": {
-    "id": "ad87a1b1f5578ccc",
-    "name": "coreutils",
-    "version": "9.4-3+b1",
-    "type": "deb",
-    "locations": [
-     {
-      "path": "/usr/share/doc/coreutils/copyright",
-      "layerID": "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e"
-     },
-     {
-      "path": "/var/lib/dpkg/info/coreutils.md5sums",
-      "layerID": "sha256:941bb154709688a41c743238a1dca0e0d1d28a247b89567cb2c18436271ebe1e"
-     },
-     {
-      "path": "/var/lib/dpkg/status",
-      "layerID": "sha256:2063ea9d3a4800d9e3183626d759d8db122d290af136f9c3ecc7e23f1a715a39"
-     }
-    ],
-    "language": "",
-    "licenses": [
-     "BSD-4-clause-UC",
-     "FSFULLR",
-     "GFDL-1.3",
-     "GFDL-NIV-1.3",
-     "GPL-3",
-     "GPL-3+",
-     "ISC"
-    ],
-    "cpes": [
-     "cpe:2.3:a:coreutils:coreutils:9.4-3+b1:*:*:*:*:*:*:*"
-    ],
-    "purl": "pkg:deb/debian/coreutils@9.4-3+b1?arch=amd64&upstream=coreutils%409.4-3&distro=debian",
-    "upstreams": [
-     {
-      "name": "coreutils",
-      "version": "9.4-3"
-     }
-    ]
-   }
-  },
-  {
-   "vulnerability": {
-    "id": "CVE-2024-0684",
-    "dataSource": "https://security-tracker.debian.org/tracker/CVE-2024-0684",
-    "namespace": "debian:distro:debian:unstable",
-    "severity": "Unknown",
-    "urls": [
-     "https://security-tracker.debian.org/tracker/CVE-2024-0684"
-    ],
-    "cvss": [],
-    "fix": {
-     "versions": [],
-     "state": "not-fixed"
-    },
-    "advisories": []
-   },
-   "relatedVulnerabilities": [],
-   "matchDetails": [
-    {
-     "type": "exact-direct-match",
-     "matcher": "dpkg-matcher",
-     "searchedBy": {
-      "distro": {
-       "type": "debian",
-       "version": "unstable"
-      },
-      "namespace": "debian:distro:debian:unstable",
-      "package": {
-       "name": "coreutils",
-       "version": "9.4-3+b1"
-      }
-     },
-     "found": {
-      "versionConstraint": "none (deb)",
-      "vulnerabilityID": "CVE-2024-0684"
-     }
-    },
-    {
-     "type": "exact-indirect-match",
-     "matcher": "dpkg-matcher",
-     "searchedBy": {
-      "distro": {
-       "type": "debian",
-       "version": "unstable"
-      },
-      "namespace": "debian:distro:debian:unstable",
-      "package": {
-       "name": "coreutils",
-       "version": "9.4-3"
-      }
-     },
-     "found": {
-      "versionConstraint": "none (deb)",
-      "vulnerabilityID": "CVE-2024-0684"
      }
     }
    ],
@@ -16014,7 +16041,21 @@
     },
     "advisories": []
    },
-   "relatedVulnerabilities": [],
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2024-22365",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2024-22365",
+     "namespace": "nvd:cpe",
+     "urls": [
+      "http://www.openwall.com/lists/oss-security/2024/01/18/3",
+      "https://github.com/linux-pam/linux-pam",
+      "https://github.com/linux-pam/linux-pam/commit/031bb5a5d0d950253b68138b498dc93be69a64cb",
+      "https://github.com/linux-pam/linux-pam/releases/tag/v1.6.0"
+     ],
+     "description": "linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+     "cvss": []
+    }
+   ],
    "matchDetails": [
     {
      "type": "exact-indirect-match",
@@ -16106,7 +16147,21 @@
     },
     "advisories": []
    },
-   "relatedVulnerabilities": [],
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2024-22365",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2024-22365",
+     "namespace": "nvd:cpe",
+     "urls": [
+      "http://www.openwall.com/lists/oss-security/2024/01/18/3",
+      "https://github.com/linux-pam/linux-pam",
+      "https://github.com/linux-pam/linux-pam/commit/031bb5a5d0d950253b68138b498dc93be69a64cb",
+      "https://github.com/linux-pam/linux-pam/releases/tag/v1.6.0"
+     ],
+     "description": "linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+     "cvss": []
+    }
+   ],
    "matchDetails": [
     {
      "type": "exact-indirect-match",
@@ -16198,7 +16253,21 @@
     },
     "advisories": []
    },
-   "relatedVulnerabilities": [],
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2024-22365",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2024-22365",
+     "namespace": "nvd:cpe",
+     "urls": [
+      "http://www.openwall.com/lists/oss-security/2024/01/18/3",
+      "https://github.com/linux-pam/linux-pam",
+      "https://github.com/linux-pam/linux-pam/commit/031bb5a5d0d950253b68138b498dc93be69a64cb",
+      "https://github.com/linux-pam/linux-pam/releases/tag/v1.6.0"
+     ],
+     "description": "linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+     "cvss": []
+    }
+   ],
    "matchDetails": [
     {
      "type": "exact-indirect-match",
@@ -16289,7 +16358,21 @@
     },
     "advisories": []
    },
-   "relatedVulnerabilities": [],
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2024-22365",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2024-22365",
+     "namespace": "nvd:cpe",
+     "urls": [
+      "http://www.openwall.com/lists/oss-security/2024/01/18/3",
+      "https://github.com/linux-pam/linux-pam",
+      "https://github.com/linux-pam/linux-pam/commit/031bb5a5d0d950253b68138b498dc93be69a64cb",
+      "https://github.com/linux-pam/linux-pam/releases/tag/v1.6.0"
+     ],
+     "description": "linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+     "cvss": []
+    }
+   ],
    "matchDetails": [
     {
      "type": "exact-indirect-match",
@@ -20179,7 +20262,8 @@
      "severity": "High",
      "urls": [
       "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f342de4e2f33e0e39165d8639387aa6c19dff660",
-      "https://kernel.dance/f342de4e2f33e0e39165d8639387aa6c19dff660"
+      "https://kernel.dance/f342de4e2f33e0e39165d8639387aa6c19dff660",
+      "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7LSPIOMIJYTLZB6QKPQVVAYSUETUWKPF/"
      ],
      "description": "A use-after-free vulnerability in the Linux kernel's netfilter: nf_tables component can be exploited to achieve local privilege escalation.\n\nThe nft_verdict_init() function allows positive values as drop error within the hook verdict, and hence the nf_hook_slow() function can cause a double free vulnerability when NF_DROP is issued with a drop error which resembles NF_ACCEPT.\n\nWe recommend upgrading past commit f342de4e2f33e0e39165d8639387aa6c19dff660.\n\n",
      "cvss": [
@@ -20608,132 +20692,6 @@
      "found": {
       "versionConstraint": "none (deb)",
       "vulnerabilityID": "CVE-2023-6270"
-     }
-    }
-   ],
-   "artifact": {
-    "id": "fbc0111d8a470f53",
-    "name": "linux-libc-dev",
-    "version": "6.6.13-1",
-    "type": "deb",
-    "locations": [
-     {
-      "path": "/usr/share/doc/linux-libc-dev/copyright",
-      "layerID": "sha256:2063ea9d3a4800d9e3183626d759d8db122d290af136f9c3ecc7e23f1a715a39"
-     },
-     {
-      "path": "/var/lib/dpkg/info/linux-libc-dev.md5sums",
-      "layerID": "sha256:2063ea9d3a4800d9e3183626d759d8db122d290af136f9c3ecc7e23f1a715a39"
-     },
-     {
-      "path": "/var/lib/dpkg/status",
-      "layerID": "sha256:2063ea9d3a4800d9e3183626d759d8db122d290af136f9c3ecc7e23f1a715a39"
-     }
-    ],
-    "language": "",
-    "licenses": [
-     "BSD-2-clause",
-     "CRYPTOGAMS",
-     "GPL-2",
-     "GPL-2+-or-X11",
-     "LGPL-2.1",
-     "Unicode-data",
-     "Xen-interface"
-    ],
-    "cpes": [
-     "cpe:2.3:a:linux-libc-dev:linux-libc-dev:6.6.13-1:*:*:*:*:*:*:*",
-     "cpe:2.3:a:linux-libc-dev:linux_libc_dev:6.6.13-1:*:*:*:*:*:*:*",
-     "cpe:2.3:a:linux_libc_dev:linux-libc-dev:6.6.13-1:*:*:*:*:*:*:*",
-     "cpe:2.3:a:linux_libc_dev:linux_libc_dev:6.6.13-1:*:*:*:*:*:*:*",
-     "cpe:2.3:a:linux-libc:linux-libc-dev:6.6.13-1:*:*:*:*:*:*:*",
-     "cpe:2.3:a:linux-libc:linux_libc_dev:6.6.13-1:*:*:*:*:*:*:*",
-     "cpe:2.3:a:linux_libc:linux-libc-dev:6.6.13-1:*:*:*:*:*:*:*",
-     "cpe:2.3:a:linux_libc:linux_libc_dev:6.6.13-1:*:*:*:*:*:*:*",
-     "cpe:2.3:a:linux:linux-libc-dev:6.6.13-1:*:*:*:*:*:*:*",
-     "cpe:2.3:a:linux:linux_libc_dev:6.6.13-1:*:*:*:*:*:*:*"
-    ],
-    "purl": "pkg:deb/debian/linux-libc-dev@6.6.13-1?arch=all&upstream=linux&distro=debian",
-    "upstreams": [
-     {
-      "name": "linux"
-     }
-    ]
-   }
-  },
-  {
-   "vulnerability": {
-    "id": "CVE-2023-6238",
-    "dataSource": "https://security-tracker.debian.org/tracker/CVE-2023-6238",
-    "namespace": "debian:distro:debian:unstable",
-    "severity": "High",
-    "urls": [
-     "https://security-tracker.debian.org/tracker/CVE-2023-6238"
-    ],
-    "description": "A buffer overflow vulnerability was found in the NVM Express (NVMe) driver in the Linux kernel. An unprivileged user could specify a small meta buffer and let the device perform larger Direct Memory Access (DMA) into the same buffer, overwriting unrelated kernel memory, causing random kernel crashes and memory corruption.",
-    "cvss": [],
-    "fix": {
-     "versions": [],
-     "state": "not-fixed"
-    },
-    "advisories": []
-   },
-   "relatedVulnerabilities": [
-    {
-     "id": "CVE-2023-6238",
-     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2023-6238",
-     "namespace": "nvd:cpe",
-     "severity": "High",
-     "urls": [
-      "https://access.redhat.com/security/cve/CVE-2023-6238",
-      "https://bugzilla.redhat.com/show_bug.cgi?id=2250834"
-     ],
-     "description": "A buffer overflow vulnerability was found in the NVM Express (NVMe) driver in the Linux kernel. An unprivileged user could specify a small meta buffer and let the device perform larger Direct Memory Access (DMA) into the same buffer, overwriting unrelated kernel memory, causing random kernel crashes and memory corruption.",
-     "cvss": [
-      {
-       "source": "nvd@nist.gov",
-       "type": "Primary",
-       "version": "3.1",
-       "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-       "metrics": {
-        "baseScore": 7.8,
-        "exploitabilityScore": 1.8,
-        "impactScore": 5.9
-       },
-       "vendorMetadata": {}
-      },
-      {
-       "source": "secalert@redhat.com",
-       "type": "Secondary",
-       "version": "3.1",
-       "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
-       "metrics": {
-        "baseScore": 7,
-        "exploitabilityScore": 1,
-        "impactScore": 5.9
-       },
-       "vendorMetadata": {}
-      }
-     ]
-    }
-   ],
-   "matchDetails": [
-    {
-     "type": "exact-indirect-match",
-     "matcher": "dpkg-matcher",
-     "searchedBy": {
-      "distro": {
-       "type": "debian",
-       "version": "unstable"
-      },
-      "namespace": "debian:distro:debian:unstable",
-      "package": {
-       "name": "linux",
-       "version": "6.6.13-1"
-      }
-     },
-     "found": {
-      "versionConstraint": "none (deb)",
-      "vulnerabilityID": "CVE-2023-6238"
      }
     }
    ],
@@ -21648,6 +21606,7 @@
     "urls": [
      "https://security-tracker.debian.org/tracker/CVE-2024-24864"
     ],
+    "description": "A race condition was found in the Linux kernel's media/dvb-core in dvbdmx_write() function. This can result in a null pointer dereference issue, possibly leading to a kernel panic or denial of service issue.",
     "cvss": [],
     "fix": {
      "versions": [],
@@ -21760,6 +21719,7 @@
     "urls": [
      "https://security-tracker.debian.org/tracker/CVE-2024-24860"
     ],
+    "description": "A race condition was found in the Linux kernel's bluetooth device driver in {min,max}_key_size_set() function. This can result in a null pointer dereference issue, possibly leading to a kernel panic or denial of service issue.",
     "cvss": [],
     "fix": {
      "versions": [],
@@ -21872,6 +21832,7 @@
     "urls": [
      "https://security-tracker.debian.org/tracker/CVE-2024-24859"
     ],
+    "description": "A race condition was found in the Linux kernel's net/bluetooth in sniff_{min,max}_interval_set() function. This can result in a bluetooth sniffing exception issue, possibly leading denial of service.",
     "cvss": [],
     "fix": {
      "versions": [],
@@ -21984,6 +21945,7 @@
     "urls": [
      "https://security-tracker.debian.org/tracker/CVE-2024-24858"
     ],
+    "description": "A race condition was found in the Linux kernel's net/bluetooth in {conn,adv}_{min,max}_interval_set() function. This can result in I2cap connection or broadcast abnormality issue, possibly leading to denial of service.",
     "cvss": [],
     "fix": {
      "versions": [],
@@ -22096,6 +22058,7 @@
     "urls": [
      "https://security-tracker.debian.org/tracker/CVE-2024-24857"
     ],
+    "description": "A race condition was found in the Linux kernel's net/bluetooth device driver in conn_info_{min,max}_age_set() function. This can result in integrity overflow issue, possibly leading to bluetooth connection abnormality or denial of service.",
     "cvss": [],
     "fix": {
      "versions": [],
@@ -22208,6 +22171,7 @@
     "urls": [
      "https://security-tracker.debian.org/tracker/CVE-2024-24855"
     ],
+    "description": "A race condition was found in the Linux kernel's scsi device driver in lpfc_unregister_fcf_rescan() function. This can result in a null pointer dereference issue, possibly leading to a kernel panic or denial of service issue.",
     "cvss": [],
     "fix": {
      "versions": [],
@@ -22565,6 +22529,8 @@
      "namespace": "nvd:cpe",
      "severity": "Medium",
      "urls": [
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7LSPIOMIJYTLZB6QKPQVVAYSUETUWKPF/",
+      "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/LBVHM4LGMFIHBN4UBESYRFMYX3WUICV5/",
       "https://lore.kernel.org/netdev/1705715319-19199-1-git-send-email-sharath.srinivasan%40oracle.com/",
       "https://lore.kernel.org/netdev/CALGdzuoVdq-wtQ4Az9iottBqC5cv9ZhcE5q8N7LfYFvkRsOVcw%40mail.gmail.com"
      ],
@@ -22777,6 +22743,7 @@
     "urls": [
      "https://security-tracker.debian.org/tracker/CVE-2024-23196"
     ],
+    "description": "A race condition was found in the Linux kernel's sound/hda  device driver in snd_hdac_regmap_sync() function. This can result in a null pointer dereference issue, possibly leading to a kernel panic or denial of service issue.",
     "cvss": [],
     "fix": {
      "versions": [],
@@ -22889,6 +22856,7 @@
     "urls": [
      "https://security-tracker.debian.org/tracker/CVE-2024-22386"
     ],
+    "description": "A race condition was found in the Linux kernel's drm/exynos device driver in exynos_drm_crtc_atomic_disable() function. This can result in a null pointer dereference issue, possibly leading to a kernel panic or denial of service issue.",
     "cvss": [],
     "fix": {
      "versions": [],
@@ -23427,6 +23395,132 @@
      "found": {
       "versionConstraint": "none (deb)",
       "vulnerabilityID": "CVE-2023-6240"
+     }
+    }
+   ],
+   "artifact": {
+    "id": "fbc0111d8a470f53",
+    "name": "linux-libc-dev",
+    "version": "6.6.13-1",
+    "type": "deb",
+    "locations": [
+     {
+      "path": "/usr/share/doc/linux-libc-dev/copyright",
+      "layerID": "sha256:2063ea9d3a4800d9e3183626d759d8db122d290af136f9c3ecc7e23f1a715a39"
+     },
+     {
+      "path": "/var/lib/dpkg/info/linux-libc-dev.md5sums",
+      "layerID": "sha256:2063ea9d3a4800d9e3183626d759d8db122d290af136f9c3ecc7e23f1a715a39"
+     },
+     {
+      "path": "/var/lib/dpkg/status",
+      "layerID": "sha256:2063ea9d3a4800d9e3183626d759d8db122d290af136f9c3ecc7e23f1a715a39"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "BSD-2-clause",
+     "CRYPTOGAMS",
+     "GPL-2",
+     "GPL-2+-or-X11",
+     "LGPL-2.1",
+     "Unicode-data",
+     "Xen-interface"
+    ],
+    "cpes": [
+     "cpe:2.3:a:linux-libc-dev:linux-libc-dev:6.6.13-1:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux-libc-dev:linux_libc_dev:6.6.13-1:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_libc_dev:linux-libc-dev:6.6.13-1:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_libc_dev:linux_libc_dev:6.6.13-1:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux-libc:linux-libc-dev:6.6.13-1:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux-libc:linux_libc_dev:6.6.13-1:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_libc:linux-libc-dev:6.6.13-1:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux_libc:linux_libc_dev:6.6.13-1:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux:linux-libc-dev:6.6.13-1:*:*:*:*:*:*:*",
+     "cpe:2.3:a:linux:linux_libc_dev:6.6.13-1:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:deb/debian/linux-libc-dev@6.6.13-1?arch=all&upstream=linux&distro=debian",
+    "upstreams": [
+     {
+      "name": "linux"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2023-6238",
+    "dataSource": "https://security-tracker.debian.org/tracker/CVE-2023-6238",
+    "namespace": "debian:distro:debian:unstable",
+    "severity": "Medium",
+    "urls": [
+     "https://security-tracker.debian.org/tracker/CVE-2023-6238"
+    ],
+    "description": "A buffer overflow vulnerability was found in the NVM Express (NVMe) driver in the Linux kernel. An unprivileged user could specify a small meta buffer and let the device perform larger Direct Memory Access (DMA) into the same buffer, overwriting unrelated kernel memory, causing random kernel crashes and memory corruption.",
+    "cvss": [],
+    "fix": {
+     "versions": [],
+     "state": "not-fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2023-6238",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2023-6238",
+     "namespace": "nvd:cpe",
+     "severity": "Medium",
+     "urls": [
+      "https://access.redhat.com/security/cve/CVE-2023-6238",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2250834"
+     ],
+     "description": "A buffer overflow vulnerability was found in the NVM Express (NVMe) driver in the Linux kernel. Only privileged user could specify a small meta buffer and let the device perform larger Direct Memory Access (DMA) into the same buffer, overwriting unrelated kernel memory, causing random kernel crashes and memory corruption.",
+     "cvss": [
+      {
+       "source": "nvd@nist.gov",
+       "type": "Primary",
+       "version": "3.1",
+       "vector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+       "metrics": {
+        "baseScore": 6.7,
+        "exploitabilityScore": 0.8,
+        "impactScore": 5.9
+       },
+       "vendorMetadata": {}
+      },
+      {
+       "source": "secalert@redhat.com",
+       "type": "Secondary",
+       "version": "3.1",
+       "vector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+       "metrics": {
+        "baseScore": 6.7,
+        "exploitabilityScore": 0.8,
+        "impactScore": 5.9
+       },
+       "vendorMetadata": {}
+      }
+     ]
+    }
+   ],
+   "matchDetails": [
+    {
+     "type": "exact-indirect-match",
+     "matcher": "dpkg-matcher",
+     "searchedBy": {
+      "distro": {
+       "type": "debian",
+       "version": "unstable"
+      },
+      "namespace": "debian:distro:debian:unstable",
+      "package": {
+       "name": "linux",
+       "version": "6.6.13-1"
+      }
+     },
+     "found": {
+      "versionConstraint": "none (deb)",
+      "vulnerabilityID": "CVE-2023-6238"
      }
     }
    ],
@@ -25217,6 +25311,7 @@
     "urls": [
      "https://security-tracker.debian.org/tracker/CVE-2024-24861"
     ],
+    "description": "A race condition was found in the Linux kernel's media/xc4000 device driver in xc4000 xc4000_get_frequency() function. This can result in return value overflow issue, possibly leading to malfunction or denial of service issue.",
     "cvss": [],
     "fix": {
      "versions": [],
@@ -34883,13 +34978,13 @@
   "type": "image",
   "target": {
    "userInput": "docker-scanning-test-cargo",
-   "imageID": "sha256:2a2eaad163c6718f946c3a7a9b2bfe91928cd0a9bbdc933ab37e00d75e46d803",
-   "manifestDigest": "sha256:96dcb046eb677a32e3cf44eec25158fa5f512b41db5ae001b27088517b9665cf",
+   "imageID": "sha256:8a0dca6a69504bd44d7244d9ae731b17bca115518c83d4d3188163dd52ac53a8",
+   "manifestDigest": "sha256:4a7e31a91124ef77a0b7bc45ec46e5b4f8eb18965dcf85012ec537dfc05d4594",
    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
    "tags": [
     "docker-scanning-test-cargo:latest"
    ],
-   "imageSize": 1777328614,
+   "imageSize": 2294413005,
    "layers": [
     {
      "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
@@ -34923,17 +35018,17 @@
     },
     {
      "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
-     "digest": "sha256:e5f79968552a74b586dd552fc6060ac4d7e85ad099a5da044ec7113bd77897ca",
-     "size": 66924966
+     "digest": "sha256:13fb4f1909c461284e677b530d420a3f42981c8ee7e210a216ea1a5e631f2b35",
+     "size": 586697496
     },
     {
      "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
-     "digest": "sha256:f62baf94e3bb2fb8deb0abae6ef02d4ec2167e1edd1d3d9a238800402948b149",
-     "size": 72499655
+     "digest": "sha256:3356e815eef1b50fc255850e27226e234e6285ed425c43dd39eed31732fa8a5a",
+     "size": 69811516
     }
    ],
-   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjoyNzQ4LCJkaWdlc3QiOiJzaGEyNTY6MmEyZWFhZDE2M2M2NzE4Zjk0NmMzYTdhOWIyYmZlOTE5MjhjZDBhOWJiZGM5MzNhYjM3ZTAwZDc1ZTQ2ZDgwMyJ9LCJsYXllcnMiOlt7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo4NDE3MDI0MCwiZGlnZXN0Ijoic2hhMjU2Ojk0MWJiMTU0NzA5Njg4YTQxYzc0MzIzOGExZGNhMGUwZDFkMjhhMjQ3Yjg5NTY3Y2IyYzE4NDM2MjcxZWJlMWUifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo0MjUwOTAwNDgsImRpZ2VzdCI6InNoYTI1NjoyMDYzZWE5ZDNhNDgwMGQ5ZTMxODM2MjZkNzU5ZDhkYjEyMmQyOTBhZjEzNmY5YzNlY2M3ZTIzZjFhNzE1YTM5In0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6MTE2NDMxMTU1MiwiZGlnZXN0Ijoic2hhMjU2OjJlMzNkODljMDkxNmRmNmU5ZDhlYWM5MzIxMGRiMTQ2YWFmMTIxNTIyMDQ1ZWNhNmQxNTgxNzlkOGFhZDY0Y2MifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjozNTg0LCJkaWdlc3QiOiJzaGEyNTY6ZGE2YjJkYTg4ODFlODVmOTc3MWUyYTE2ODdhNjRhYjRjMzY0NzdlZDMyZDVkNDViMDQ3ZTYzM2VhYzFhYTg1NCJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjIwNDgsImRpZ2VzdCI6InNoYTI1Njo5M2ZiM2Y2NDQxOWY5YjM4NzE3MDQ2ZDdkMDNhZDhiNjc0MDdhZmIwYmU2ZDQ2NDdjYmNhMTcwOWRlYzNlM2NlIn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6MTAyNCwiZGlnZXN0Ijoic2hhMjU2OjVmNzBiZjE4YTA4NjAwNzAxNmU5NDhiMDRhZWQzYjgyMTAzYTM2YmVhNDE3NTViNmNkZGZhZjEwYWNlM2M2ZWYifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo2NzA0ODQ0OCwiZGlnZXN0Ijoic2hhMjU2OmU1Zjc5OTY4NTUyYTc0YjU4NmRkNTUyZmM2MDYwYWM0ZDdlODVhZDA5OWE1ZGEwNDRlYzcxMTNiZDc3ODk3Y2EifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo3Mjk0MzYxNiwiZGlnZXN0Ijoic2hhMjU2OmY2MmJhZjk0ZTNiYjJmYjhkZWIwYWJhZTZlZjAyZDRlYzIxNjdlMWVkZDFkM2Q5YTIzODgwMDQwMjk0OGIxNDkifV19",
-   "config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNvbmZpZyI6eyJFbnYiOlsiUEFUSD0vcm9vdC8uY2FyZ28vYmluOi91c3IvbG9jYWwvc2JpbjovdXNyL2xvY2FsL2JpbjovdXNyL3NiaW46L3Vzci9iaW46L3NiaW46L2JpbiIsIkRFQklBTl9GUk9OVEVORD1ub25pbnRlcmFjdGl2ZSJdLCJFbnRyeXBvaW50IjpbIi4vdGFyZ2V0L3JlbGVhc2UvZXhhbXBsZSJdLCJXb3JraW5nRGlyIjoiL3NyYyIsIk9uQnVpbGQiOm51bGx9LCJjcmVhdGVkIjoiMjAyNC0wMi0wNlQwNjo1Nzo0My42MTUxNDc1NjFaIiwiaGlzdG9yeSI6W3siY3JlYXRlZCI6IjIwMjQtMDEtMzFUMjI6Mzc6NDkuMzQyMzE4MjAyWiIsImNyZWF0ZWRfYnkiOiIvYmluL3NoIC1jICMobm9wKSBBREQgZmlsZTo3OGY1ZTU4NGU0NWNjMzMxNmRiMmY5MDg1MTdhNzUzOTllNDFiMTBmOTA1NWRlODkxNTY0NmMyMDUzNTI5OGZjIGluIC8gIn0seyJjcmVhdGVkIjoiMjAyNC0wMS0zMVQyMjozNzo0OS42Mjk0ODk2NzVaIiwiY3JlYXRlZF9ieSI6Ii9iaW4vc2ggLWMgIyhub3ApICBDTUQgW1wiYmFzaFwiXSIsImVtcHR5X2xheWVyIjp0cnVlfSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTA2VDA2OjUwOjU4LjU3NDU5MzkyNloiLCJjcmVhdGVkX2J5IjoiRU5WIERFQklBTl9GUk9OVEVORD1ub25pbnRlcmFjdGl2ZSIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIiwiZW1wdHlfbGF5ZXIiOnRydWV9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDZUMDY6NTA6NTguNTc0NTkzOTI2WiIsImNyZWF0ZWRfYnkiOiJSVU4gL2Jpbi9zaCAtYyBhcHQtZ2V0IC15IHVwZGF0ZSBcdTAwMjZcdTAwMjYgICAgIGFwdC1nZXQgLXkgaW5zdGFsbCAgICAgcGtnLWNvbmZpZyAgICAgYnVpbGQtZXNzZW50aWFsICAgICBjdXJsICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDZUMDY6NTE6MjAuMDA2ODc3NTZaIiwiY3JlYXRlZF9ieSI6IlJVTiAvYmluL3NoIC1jIGN1cmwgaHR0cHM6Ly9zaC5ydXN0dXAucnMgLXNTZiB8IGJhc2ggLXMgLS0gLXkgIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn0seyJjcmVhdGVkIjoiMjAyNC0wMi0wNlQwNjo1MToyMC4wMDY4Nzc1NloiLCJjcmVhdGVkX2J5IjoiRU5WIFBBVEg9L3Jvb3QvLmNhcmdvL2JpbjovdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCIsImVtcHR5X2xheWVyIjp0cnVlfSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTA2VDA2OjU0OjU1LjI2OTc3MDE3MVoiLCJjcmVhdGVkX2J5IjoiUlVOIC9iaW4vc2ggLWMgcnVzdHVwIGRlZmF1bHQgc3RhYmxlICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDZUMDY6NTQ6NTUuODAxOTk0NTM2WiIsImNyZWF0ZWRfYnkiOiJSVU4gL2Jpbi9zaCAtYyBta2RpciAvc3JjICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDZUMDY6NTQ6NTUuODYxMDU4ODE3WiIsImNyZWF0ZWRfYnkiOiJXT1JLRElSIC9zcmMiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDZUMDY6NTc6MzQuMjAyNjE2MjlaIiwiY3JlYXRlZF9ieSI6IkNPUFkgZXhhbXBsZS8gLi8gIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn0seyJjcmVhdGVkIjoiMjAyNC0wMi0wNlQwNjo1Nzo0My42MTUxNDc1NjFaIiwiY3JlYXRlZF9ieSI6IlJVTiAvYmluL3NoIC1jIGNhcmdvIGJ1aWxkIC0tcmVsZWFzZSAjIGJ1aWxka2l0IiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAifSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTA2VDA2OjU3OjQzLjYxNTE0NzU2MVoiLCJjcmVhdGVkX2J5IjoiRU5UUllQT0lOVCBbXCIuL3RhcmdldC9yZWxlYXNlL2V4YW1wbGVcIl0iLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCIsImVtcHR5X2xheWVyIjp0cnVlfV0sIm9zIjoibGludXgiLCJyb290ZnMiOnsidHlwZSI6ImxheWVycyIsImRpZmZfaWRzIjpbInNoYTI1Njo5NDFiYjE1NDcwOTY4OGE0MWM3NDMyMzhhMWRjYTBlMGQxZDI4YTI0N2I4OTU2N2NiMmMxODQzNjI3MWViZTFlIiwic2hhMjU2OjIwNjNlYTlkM2E0ODAwZDllMzE4MzYyNmQ3NTlkOGRiMTIyZDI5MGFmMTM2ZjljM2VjYzdlMjNmMWE3MTVhMzkiLCJzaGEyNTY6MmUzM2Q4OWMwOTE2ZGY2ZTlkOGVhYzkzMjEwZGIxNDZhYWYxMjE1MjIwNDVlY2E2ZDE1ODE3OWQ4YWFkNjRjYyIsInNoYTI1NjpkYTZiMmRhODg4MWU4NWY5NzcxZTJhMTY4N2E2NGFiNGMzNjQ3N2VkMzJkNWQ0NWIwNDdlNjMzZWFjMWFhODU0Iiwic2hhMjU2OjkzZmIzZjY0NDE5ZjliMzg3MTcwNDZkN2QwM2FkOGI2NzQwN2FmYjBiZTZkNDY0N2NiY2ExNzA5ZGVjM2UzY2UiLCJzaGEyNTY6NWY3MGJmMThhMDg2MDA3MDE2ZTk0OGIwNGFlZDNiODIxMDNhMzZiZWE0MTc1NWI2Y2RkZmFmMTBhY2UzYzZlZiIsInNoYTI1NjplNWY3OTk2ODU1MmE3NGI1ODZkZDU1MmZjNjA2MGFjNGQ3ZTg1YWQwOTlhNWRhMDQ0ZWM3MTEzYmQ3Nzg5N2NhIiwic2hhMjU2OmY2MmJhZjk0ZTNiYjJmYjhkZWIwYWJhZTZlZjAyZDRlYzIxNjdlMWVkZDFkM2Q5YTIzODgwMDQwMjk0OGIxNDkiXX19",
+   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjoyNzQ2LCJkaWdlc3QiOiJzaGEyNTY6OGEwZGNhNmE2OTUwNGJkNDRkNzI0NGQ5YWU3MzFiMTdiY2ExMTU1MThjODNkNGQzMTg4MTYzZGQ1MmFjNTNhOCJ9LCJsYXllcnMiOlt7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo4NDE3MDI0MCwiZGlnZXN0Ijoic2hhMjU2Ojk0MWJiMTU0NzA5Njg4YTQxYzc0MzIzOGExZGNhMGUwZDFkMjhhMjQ3Yjg5NTY3Y2IyYzE4NDM2MjcxZWJlMWUifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo0MjUwOTAwNDgsImRpZ2VzdCI6InNoYTI1NjoyMDYzZWE5ZDNhNDgwMGQ5ZTMxODM2MjZkNzU5ZDhkYjEyMmQyOTBhZjEzNmY5YzNlY2M3ZTIzZjFhNzE1YTM5In0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6MTE2NDMxMTU1MiwiZGlnZXN0Ijoic2hhMjU2OjJlMzNkODljMDkxNmRmNmU5ZDhlYWM5MzIxMGRiMTQ2YWFmMTIxNTIyMDQ1ZWNhNmQxNTgxNzlkOGFhZDY0Y2MifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjozNTg0LCJkaWdlc3QiOiJzaGEyNTY6ZGE2YjJkYTg4ODFlODVmOTc3MWUyYTE2ODdhNjRhYjRjMzY0NzdlZDMyZDVkNDViMDQ3ZTYzM2VhYzFhYTg1NCJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjIwNDgsImRpZ2VzdCI6InNoYTI1Njo5M2ZiM2Y2NDQxOWY5YjM4NzE3MDQ2ZDdkMDNhZDhiNjc0MDdhZmIwYmU2ZDQ2NDdjYmNhMTcwOWRlYzNlM2NlIn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6MTAyNCwiZGlnZXN0Ijoic2hhMjU2OjVmNzBiZjE4YTA4NjAwNzAxNmU5NDhiMDRhZWQzYjgyMTAzYTM2YmVhNDE3NTViNmNkZGZhZjEwYWNlM2M2ZWYifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLCJzaXplIjo1ODkwMjU3OTIsImRpZ2VzdCI6InNoYTI1NjoxM2ZiNGYxOTA5YzQ2MTI4NGU2NzdiNTMwZDQyMGEzZjQyOTgxYzhlZTdlMjEwYTIxNmVhMWE1ZTYzMWYyYjM1In0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6NzExNzk3NzYsImRpZ2VzdCI6InNoYTI1NjozMzU2ZTgxNWVlZjFiNTBmYzI1NTg1MGUyNzIyNmUyMzRlNjI4NWVkNDI1YzQzZGQzOWVlZDMxNzMyZmE4YTVhIn1dfQ==",
+   "config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImNvbmZpZyI6eyJFbnYiOlsiUEFUSD0vcm9vdC8uY2FyZ28vYmluOi91c3IvbG9jYWwvc2JpbjovdXNyL2xvY2FsL2JpbjovdXNyL3NiaW46L3Vzci9iaW46L3NiaW46L2JpbiIsIkRFQklBTl9GUk9OVEVORD1ub25pbnRlcmFjdGl2ZSJdLCJFbnRyeXBvaW50IjpbIi4vdGFyZ2V0L3JlbGVhc2UvZXhhbXBsZSJdLCJXb3JraW5nRGlyIjoiL3NyYyIsIk9uQnVpbGQiOm51bGx9LCJjcmVhdGVkIjoiMjAyNC0wMi0wN1QwODoxMTo0OC4xMTEyNTc2NVoiLCJoaXN0b3J5IjpbeyJjcmVhdGVkIjoiMjAyNC0wMS0zMVQyMjozNzo0OS4zNDIzMTgyMDJaIiwiY3JlYXRlZF9ieSI6Ii9iaW4vc2ggLWMgIyhub3ApIEFERCBmaWxlOjc4ZjVlNTg0ZTQ1Y2MzMzE2ZGIyZjkwODUxN2E3NTM5OWU0MWIxMGY5MDU1ZGU4OTE1NjQ2YzIwNTM1Mjk4ZmMgaW4gLyAifSx7ImNyZWF0ZWQiOiIyMDI0LTAxLTMxVDIyOjM3OjQ5LjYyOTQ4OTY3NVoiLCJjcmVhdGVkX2J5IjoiL2Jpbi9zaCAtYyAjKG5vcCkgIENNRCBbXCJiYXNoXCJdIiwiZW1wdHlfbGF5ZXIiOnRydWV9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDZUMDY6NTA6NTguNTc0NTkzOTI2WiIsImNyZWF0ZWRfYnkiOiJFTlYgREVCSUFOX0ZST05URU5EPW5vbmludGVyYWN0aXZlIiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAiLCJlbXB0eV9sYXllciI6dHJ1ZX0seyJjcmVhdGVkIjoiMjAyNC0wMi0wNlQwNjo1MDo1OC41NzQ1OTM5MjZaIiwiY3JlYXRlZF9ieSI6IlJVTiAvYmluL3NoIC1jIGFwdC1nZXQgLXkgdXBkYXRlIFx1MDAyNlx1MDAyNiAgICAgYXB0LWdldCAteSBpbnN0YWxsICAgICBwa2ctY29uZmlnICAgICBidWlsZC1lc3NlbnRpYWwgICAgIGN1cmwgIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn0seyJjcmVhdGVkIjoiMjAyNC0wMi0wNlQwNjo1MToyMC4wMDY4Nzc1NloiLCJjcmVhdGVkX2J5IjoiUlVOIC9iaW4vc2ggLWMgY3VybCBodHRwczovL3NoLnJ1c3R1cC5ycyAtc1NmIHwgYmFzaCAtcyAtLSAteSAjIGJ1aWxka2l0IiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAifSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTA2VDA2OjUxOjIwLjAwNjg3NzU2WiIsImNyZWF0ZWRfYnkiOiJFTlYgUEFUSD0vcm9vdC8uY2FyZ28vYmluOi91c3IvbG9jYWwvc2JpbjovdXNyL2xvY2FsL2JpbjovdXNyL3NiaW46L3Vzci9iaW46L3NiaW46L2JpbiIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIiwiZW1wdHlfbGF5ZXIiOnRydWV9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDZUMDY6NTQ6NTUuMjY5NzcwMTcxWiIsImNyZWF0ZWRfYnkiOiJSVU4gL2Jpbi9zaCAtYyBydXN0dXAgZGVmYXVsdCBzdGFibGUgIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn0seyJjcmVhdGVkIjoiMjAyNC0wMi0wNlQwNjo1NDo1NS44MDE5OTQ1MzZaIiwiY3JlYXRlZF9ieSI6IlJVTiAvYmluL3NoIC1jIG1rZGlyIC9zcmMgIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn0seyJjcmVhdGVkIjoiMjAyNC0wMi0wNlQwNjo1NDo1NS44NjEwNTg4MTdaIiwiY3JlYXRlZF9ieSI6IldPUktESVIgL3NyYyIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn0seyJjcmVhdGVkIjoiMjAyNC0wMi0wN1QwODoxMToyMy45ODQ1Njc3NzZaIiwiY3JlYXRlZF9ieSI6IkNPUFkgZXhhbXBsZS8gLi8gIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn0seyJjcmVhdGVkIjoiMjAyNC0wMi0wN1QwODoxMTo0OC4xMTEyNTc2NVoiLCJjcmVhdGVkX2J5IjoiUlVOIC9iaW4vc2ggLWMgY2FyZ28gYnVpbGQgLS1yZWxlYXNlICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMDdUMDg6MTE6NDguMTExMjU3NjVaIiwiY3JlYXRlZF9ieSI6IkVOVFJZUE9JTlQgW1wiLi90YXJnZXQvcmVsZWFzZS9leGFtcGxlXCJdIiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAiLCJlbXB0eV9sYXllciI6dHJ1ZX1dLCJvcyI6ImxpbnV4Iiwicm9vdGZzIjp7InR5cGUiOiJsYXllcnMiLCJkaWZmX2lkcyI6WyJzaGEyNTY6OTQxYmIxNTQ3MDk2ODhhNDFjNzQzMjM4YTFkY2EwZTBkMWQyOGEyNDdiODk1NjdjYjJjMTg0MzYyNzFlYmUxZSIsInNoYTI1NjoyMDYzZWE5ZDNhNDgwMGQ5ZTMxODM2MjZkNzU5ZDhkYjEyMmQyOTBhZjEzNmY5YzNlY2M3ZTIzZjFhNzE1YTM5Iiwic2hhMjU2OjJlMzNkODljMDkxNmRmNmU5ZDhlYWM5MzIxMGRiMTQ2YWFmMTIxNTIyMDQ1ZWNhNmQxNTgxNzlkOGFhZDY0Y2MiLCJzaGEyNTY6ZGE2YjJkYTg4ODFlODVmOTc3MWUyYTE2ODdhNjRhYjRjMzY0NzdlZDMyZDVkNDViMDQ3ZTYzM2VhYzFhYTg1NCIsInNoYTI1Njo5M2ZiM2Y2NDQxOWY5YjM4NzE3MDQ2ZDdkMDNhZDhiNjc0MDdhZmIwYmU2ZDQ2NDdjYmNhMTcwOWRlYzNlM2NlIiwic2hhMjU2OjVmNzBiZjE4YTA4NjAwNzAxNmU5NDhiMDRhZWQzYjgyMTAzYTM2YmVhNDE3NTViNmNkZGZhZjEwYWNlM2M2ZWYiLCJzaGEyNTY6MTNmYjRmMTkwOWM0NjEyODRlNjc3YjUzMGQ0MjBhM2Y0Mjk4MWM4ZWU3ZTIxMGEyMTZlYTFhNWU2MzFmMmIzNSIsInNoYTI1NjozMzU2ZTgxNWVlZjFiNTBmYzI1NTg1MGUyNzIyNmUyMzRlNjI4NWVkNDI1YzQzZGQzOWVlZDMxNzMyZmE4YTVhIl19fQ==",
    "repoDigests": [],
    "architecture": "amd64",
    "os": "linux"
@@ -35025,12 +35120,12 @@
    "vex-add": []
   },
   "db": {
-   "built": "2024-02-06T01:24:02Z",
+   "built": "2024-02-07T01:22:20Z",
    "schemaVersion": 5,
    "location": "/usr/local/google/home/gongh/.cache/grype/db/5",
-   "checksum": "sha256:ad56c422331c7a76a17f1a6bc5f01081d8ab744c73d13bb9329904a563c586d2",
+   "checksum": "sha256:ea06b56d696094703caf7e750b132c5e0c4395d59b54a4fa8d41d98f4567b63d",
    "error": null
   },
-  "timestamp": "2024-02-06T07:04:39.238891725Z"
+  "timestamp": "2024-02-07T08:31:44.166580719Z"
  }
 }
