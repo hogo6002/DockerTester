@@ -1,0 +1,65 @@
+Scanning your binary for known vulnerabilities...
+
+=== Symbol Results ===
+
+Vulnerability #1: GO-2024-2687
+    HTTP/2 CONTINUATION flood in net/http
+  More info: https://pkg.go.dev/vuln/GO-2024-2687
+  Standard library
+    Found in: net/http@go1.19.8
+    Fixed in: net/http@go1.21.9
+    Example traces found:
+      #1: http.ProxyFromEnvironment
+      #2: http.http2ConnectionError.Error
+      #3: http.http2ErrCode.String
+      #4: http.http2FrameHeader.String
+      #5: http.http2FrameType.String
+      #6: http.http2StreamError.Error
+      #7: http.http2connError.Error
+
+Vulnerability #2: GO-2023-1840
+    Unsafe behavior in setuid/setgid binaries in runtime
+  More info: https://pkg.go.dev/vuln/GO-2023-1840
+  Standard library
+    Found in: runtime@go1.19.8
+    Fixed in: runtime@go1.19.10
+    Example traces found:
+      #1: runtime.Callers
+      #2: runtime.CallersFrames
+      #3: runtime.Frames.Next
+      #4: runtime.Func.Entry
+      #5: runtime.GOMAXPROCS
+      #6: runtime.GOROOT
+      #7: runtime.Gosched
+      #8: runtime.SetFinalizer
+      #9: runtime.TypeAssertionError.Error
+      #10: runtime.atomicOffAddr.Clear
+      #11: runtime.atomicOffAddr.Load
+      #12: runtime.atomicOffAddr.StoreMarked
+      #13: runtime.atomicOffAddr.StoreMin
+      #14: runtime.atomicOffAddr.StoreUnmark
+      #15: runtime.boundsError.Error
+      #16: runtime.errorAddressString.Error
+      #17: runtime.errorString.Error
+      #18: runtime.goroutineProfileStateHolder.CompareAndSwap
+      #19: runtime.goroutineProfileStateHolder.Load
+      #20: runtime.goroutineProfileStateHolder.Store
+      #21: runtime.lockRank.String
+      #22: runtime.plainError.Error
+      #23: runtime.waitReason.String
+
+Vulnerability #3: GO-2023-1558
+    Denial of service via malformed size parameters in
+    github.com/ipfs/go-bitfield
+  More info: https://pkg.go.dev/vuln/GO-2023-1558
+  Module: github.com/ipfs/go-bitfield
+    Found in: github.com/ipfs/go-bitfield@v1.0.0
+    Fixed in: github.com/ipfs/go-bitfield@v1.1.0
+    Example traces found:
+      #1: bitfield.NewBitfield
+
+Your code is affected by 3 vulnerabilities from 1 module and the Go standard library.
+This scan also found 0 vulnerabilities in packages you import and 17
+vulnerabilities in modules you require, but your code doesn't appear to call
+these vulnerabilities.
+Use '-show verbose' for more details.

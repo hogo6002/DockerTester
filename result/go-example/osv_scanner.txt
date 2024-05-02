@@ -1,0 +1,2 @@
+Scanning image ./docker/go-example/go-example-tester.tar
+No issues found
